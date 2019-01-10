@@ -1,0 +1,40 @@
+<a href="{{ .URL }}" class="tag-{{ anchorize (delimit (.Params.tags | default (slice)) "" ) }}">
+
+<h2>
+	{{ .Title }}
+	<span class="language {{ anchorize .Params.language }}"></span>
+</h2>
+
+<hr>
+
+<div class="info">
+	{{ if.Params.tags }}
+	<div class="tags">
+		{{ range .Params.tags }}
+		<span>{{ . }}</span>
+		{{ end }}
+	</div>
+	{{ end }}
+
+	<div class="complexity">{{ .Params.complexity }}</div>
+	<div class="type type-{{ anchorize .Params.talkType }}">{{ .Params.talkType }}</div>
+</div>
+
+
+<ul class="speakers">
+	{{ range where .Site.RegularPages "Params.id" "in" .Params.speakers }}
+	<li class="speaker">
+		<div class="speaker-img" style="background-image: url({{ .Params.photo }});"></div>
+		<div class="info">
+			<strong class="speaker-name">{{ .Params.name }}</strong>
+			<span class="speaker-country">{{ .Params.country }}</span>
+		</div>
+		<figure class="speaker-company" >
+			<img src="{{ .Params.companyLogo }}">
+			<figcaption>{{ .Params.company }}</figcaption>
+		</figure>
+	</li>
+	{{ end }}
+</ul>
+
+</a>

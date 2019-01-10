@@ -1,0 +1,47 @@
+
+.jumbo {
+  position: relative;
+  height: calc(100vh - var(--toolbar-height));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .inner {
+    padding: var(--space-4);
+    color: var(--primary-txt);
+    background: var(--darken-2);
+    border-radius: var(--space-3);
+  }
+
+  .scroll-down {
+    position: absolute;
+    bottom: 2rem;
+    height: 2.5em;
+    width: 1.5em;
+    color: var(--base);
+    border: var(--space-1) solid currentColor;
+    border-radius: 1em;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: calc(50% - var(--space-1));
+      border: var(--space-1) solid currentColor;
+      border-top-width: var(--space-2);
+      border-bottom-width: var(--space-2);
+      border-radius: 20%;
+      background: currentColor;
+      animation: scrollDownMove .8s ease-in-out alternate infinite;
+    }
+  }
+}
+
+
+@keyframes scrollDownMove {
+  from {
+    top: 1rem;
+  }
+  to {
+    top: .75rem;
+  }
+}

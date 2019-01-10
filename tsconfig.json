@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "none",
+    "lib": [
+      "dom",
+      "es2015"
+    ],
+    "sourceMap": false,
+    "outFile": "static/theme.js",
+    "rootDir": "src/script",
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": false
+  }
+}

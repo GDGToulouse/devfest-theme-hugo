@@ -1,0 +1,15 @@
+body > main {
+  flex-grow: 1;
+
+  & > section {
+    margin: 2rem var(--container-margin);
+    padding-left: 0;
+    padding-right: 0;
+
+    &.primary {
+      background-color: var(--primary);
+      color: var(--primary-txt);
+    }
+
+  }
+}

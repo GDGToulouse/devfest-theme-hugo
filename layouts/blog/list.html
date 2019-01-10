@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+<div class="hero">
+	<h1>{{ $.Page.Params.Title }}</h1>
+	<div class="description">
+		{{ .Content }}
+	</div>
+</div>
+
+<section class="blogs">
+	{{ range .Pages }}
+	<article>
+		<a class="blog" href="{{ .URL }}">
+			<div class="img" style="background-image: url({{ path.Join .URL .Params.image }});"></div>
+			<div class="info">
+				<h2>{{ .Title }}</h2>
+				<span>{{ .Params.brief }}</span>
+				<div class="date">{{ dateFormat "2 Jan 2016" .Date }}</div>
+				<div class="reading">{{ .ReadingTime }}</div>
+			</div>
+			<p>{{ .Summary }} ...</p>
+		</a>
+	</article>
+	{{ end }}
+</section>
+
+
+{{ end }}

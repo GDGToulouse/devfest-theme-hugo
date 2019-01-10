@@ -1,0 +1,10 @@
+/* FAQ */
+.page.faq .content {
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--primary);
+  }
+
+  h3, h4, h5, h6, ul, ol, p {
+    margin-left: calc(var(--container-margin) - 2rem);
+  }
+}

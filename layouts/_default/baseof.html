@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode | default " en" }}">
+{{ partial "head.html" . }}
+
+<body class="{{ .Kind }} {{ anchorize .URL }} {{ .Section }}">
+
+{{ block "header" . }}
+{{ partial "header.html" . }}
+{{ end }}
+
+<main>
+	{{ block "main" . }}
+	<!-- Missing main block -->
+	{{ end }}
+</main>
+
+{{ block "footer.html" . }}
+{{ partial "footer.html" . }}
+{{ end }}
+
+<script src="/theme.js"></script>
+{{ block "scripts" . }}
+<!-- No extra scripts -->
+{{ end }}
+</body>
+
+</html>

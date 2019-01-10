@@ -1,0 +1,124 @@
+body > footer {
+  background-color: var(--darken-1);
+  color: var(--base-secondary-text);
+  padding: var(--space-4) var(--container-margin);
+  font-weight: 200;
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  // Header
+  .footer-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+    flex-wrap: wrap;
+
+    header {
+      margin-right: var(--space-2);
+    }
+
+    & > div {
+      display: flex;
+      align-items: center;
+
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+
+        li {
+          display: inline-block;
+        }
+      }
+    }
+
+    .share, .blog, .follow {
+      text-transform: uppercase;
+    }
+
+    .follow a[class*='social-'] {
+      filter: grayscale(1);
+      transition: filter var(--animation);
+
+      &:hover, &:focus {
+        filter: grayscale(0);
+      }
+    }
+
+    .blog a {
+      text-decoration: underline;
+    }
+  }
+
+  // Content
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    section {
+      header {
+        font-size: 1.125rem;
+        font-weight: 400;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        margin: var(--space-3) 0;
+        font-weight: 100;
+
+        li {
+          margin: var(--space-1) 0;
+        }
+      }
+    }
+
+    section.form form {
+      display: flex;
+      flex-direction: column;
+
+      input {
+        background: transparent;
+        border: none;
+        border-bottom: var(--space-1) solid var(--darken-2);
+        transition: border var(--animation);
+        margin: var(--space-3) 0;
+        outline: thin dotted transparent;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding: var(--space-2);
+        border-radius: var(--space-1);
+        color: var(--base-text);
+
+        &::placeholder {
+          color: var(--darken-3);
+        }
+
+        &:focus {
+          border-bottom-color: var(--primary);
+        }
+
+        &:invalid {
+          border-bottom-color: var(--color-error);
+        }
+      }
+    }
+  }
+
+  // Footer
+  .footer-footer {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      height: 2rem;
+    }
+  }
+}

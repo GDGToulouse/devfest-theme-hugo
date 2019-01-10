@@ -1,0 +1,20 @@
+#TableOfContents ul {
+  padding-left: 0;
+  list-style: none;
+
+  li {
+    font-size: 1rem;
+    margin: var(--space-1) 0;
+    padding: var(--space-1) 0;
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+
+      &:focus, &:hover {
+        text-decoration: underline;
+
+      }
+    }
+  }
+}

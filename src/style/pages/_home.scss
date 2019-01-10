@@ -1,0 +1,134 @@
+.home {
+
+  main > section {
+    margin: 0;
+    padding: 2rem;
+  }
+
+  section > h2 {
+    margin-bottom: 1.5rem;
+    padding: 0;
+    font-size: 2rem;
+    line-height: 1.875rem;
+    font-weight: 300;
+  }
+
+  section.info > div {
+    display: flex;
+
+    .numbers {
+      margin: 0 2rem;
+      min-width: 33vw;
+      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 2rem;
+      width: 100%;
+    }
+
+    .number {
+      strong {
+        font-size: 3.5rem;
+        font-weight: 100;
+
+        &::after {
+          content: '';
+          display: block;
+          height: .125rem;
+          width: 2rem;
+          background-color: var(--primary);
+        }
+      }
+
+      div {
+        margin: var(--space-1) 0;
+      }
+    }
+  }
+
+  section.speakers {
+    ul {
+      padding-left: 0;
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      flex-wrap: wrap;
+
+      li {
+        margin: var(--space-4);
+      }
+
+      // Keep only 4 first speakers
+      li:nth-child(n+5) {
+        display: none;
+      }
+    }
+  }
+
+  section.subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section.tickets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section.location {
+    padding: 0;
+    position: relative;
+    background: var(--darken-1);
+    font-weight: 300;
+
+    .map {
+      display: block;
+      height: 664px;
+      background-position: center center;
+      background-size: cover;
+    }
+
+    .description {
+      display: inline-block;
+      padding: var(--space-4);
+      width: 400px;
+      position: absolute;
+      bottom: -2rem;
+      right: 2rem;
+      background-color: var(--primary);
+      color: var(--primary-txt);
+
+      .direction {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 60rem) {
+
+  .home {
+    .jumbo .inner h1 {
+      img {
+        max-width: 100%;
+      }
+      font-size: 1.5rem;
+    }
+
+    section.info>div  {
+      flex-direction: column;
+    }
+
+    section.location .description {
+      position: relative;
+      top: unset;
+      bottom: unset;
+      right: unset;
+      width: 100%;
+    }
+  }
+}

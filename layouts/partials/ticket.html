@@ -1,0 +1,12 @@
+<div class="ticket" {{ if .soldOut }}aria-disabled="true"{{end}}>
+	<div class="ticket-name">{{ .name }}</div>
+	<div class="ticket-price">{{ .price }} {{ .currency }}</div>
+	<div class="ticket-date">{{ .starts }} - {{ .ends }}</div>
+	<div class="ticket-info">{{ .info }}</div>
+
+	{{ if .soldOut }}
+	<span class="btn" aria-disabled="true">Rupture de stock</span>
+	{{ else }}
+	<a class="btn primary" target="_blank" href="{{ .url }}">Billeterie</a>
+	{{ end }}
+</div>

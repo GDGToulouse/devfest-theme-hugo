@@ -1,0 +1,141 @@
+
+.talk {
+  .complexity::before {
+    content: 'Niveau : ';
+  }
+
+  .type::before {
+    content: 'Type : ';
+  }
+
+  .type::after {
+    font-weight: 100;
+    content: ' (' var(--duration, '') ' min.)';
+  }
+
+  .speakers {
+    .speaker {
+      display: flex;
+      align-items: center;
+      padding: var(--space-1) var(--space-3);
+      --img-size: 2rem;
+
+      .speaker-img {
+        --img-size: 3rem;
+        height: var(--img-size);
+        min-width: var(--img-size);
+        border-radius: 100%;
+        background-size: cover;
+        margin-right: var(--space-4);
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .speaker-company {
+        img {
+          height: 2rem;
+        }
+
+        figcaption {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+
+.page.talks {
+
+  .talk {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: var(--space-3);
+    //grid
+
+    header {
+      grid-column: 1 / -1;
+      border-radius: var(--space-2);
+      padding: var(--space-2);
+      display: flex;
+      align-items: center;
+
+      h1 {
+        flex-grow: 1;
+      }
+
+      .tags {
+        margin-right: 1ch;
+        white-space: nowrap;
+      }
+    }
+
+    .content {
+      margin: var(--space-4) 0;
+      border-top: thin solid var(--darken-1);
+      border-bottom: thin solid var(--darken-1);
+    }
+
+    .speakers {
+      list-style: none;
+      padding: 0;
+      align-self: start;
+      border-radius: var(--space-2);
+
+      .speaker {
+        margin: var(--space-4) 0;
+        border: thin solid var(--darken-1);
+        box-shadow: var(--space-1) var(--space-1) var(--space-2) var(--darken-2);
+        transition: box-shadow var(--animation);
+        border-radius: var(--space-2);
+
+        &:hover, &:focus {
+          box-shadow: var(--space-2) var(--space-2) var(--space-2) var(--darken-3);
+        }
+
+        display: grid;
+        grid-template-columns: 4rem 1fr auto;
+        grid-auto-flow: dense;
+        text-decoration: none;
+        color: inherit;
+
+        p {
+          grid-column: 1 / -1;
+        }
+
+        figure {
+          grid-column: 3;
+          padding: var(--space-2);
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+
+          img {
+            order: 2;
+          }
+        }
+      }
+    }
+
+    .media {
+      grid-column: 1 / -1;
+
+      a {
+        padding: var(--space-3) 0;
+        font-size: 1rem;
+      }
+    }
+
+  }
+}
+
+@media (max-width: 60rem) {
+  .page.talks {
+    .talk {
+      grid-template-columns: 1fr;
+    }
+  }
+}

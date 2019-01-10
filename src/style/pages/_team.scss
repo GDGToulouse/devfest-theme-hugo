@@ -1,0 +1,50 @@
+.page.team {
+  ul.members {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    li {
+      display: flex;
+
+      .photo {
+        --size: 6rem;
+        box-shadow: 0 0 0 var(--space-2) var(--darken-2);
+        height: var(--size);
+        min-width: var(--size);
+        border-radius: 100%;
+        background-size: cover;
+
+        margin: var(--space-2);
+      }
+
+      .label {
+        display: flex;
+        margin-left: var(--space-3);
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      ul.socials {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        font-size: 1.5em;
+
+        li {
+          filter: grayscale(1);
+          transition: filter var(--animation);
+
+          &:hover,
+          &:focus {
+            filter: grayscale(0);
+          }
+        }
+      }
+
+    }
+  }
+}

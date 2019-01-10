@@ -1,0 +1,24 @@
+<header>
+	<div class="logo">
+		<a href="/">
+			<img src="{{ .Site.Params.logos.header }}" alt="logo {{ .Site.Title }}">
+		</a>
+	</div>
+
+	<input type="checkbox" id="menu-burger"  class="visually-hidden"/>
+
+	<label for="menu-burger"></label>
+
+	<nav>
+		{{ $url := .URL }}
+		{{ range .Site.Params.menus }}
+		{{ if (hasPrefix .url "http") }}
+		<a class="external" href="{{ .url }}" target="_blank" >{{ .name }}</a>
+		{{ else }}
+		<a class="{{ if (eq .url $url) }}active{{ end }}" href="{{ .url }}">{{ .name }}</a>
+		{{ end }}
+		{{ end }}
+	</nav>
+
+
+</header>

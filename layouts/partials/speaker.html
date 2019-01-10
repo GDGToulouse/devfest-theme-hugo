@@ -1,0 +1,11 @@
+<a class="speaker" href="{{ .URL }}">
+	<div class="speaker-img" style="background-image: url({{ .Params.photo }});"></div>
+	<div class="info">
+		<figure class="speaker-company">
+			<img src="{{ .Params.companyLogo }}">
+			<figcaption>{{ .Params.company }}</figcaption>
+		</figure>
+		<strong class="speaker-name">{{ .Params.name }}</strong>
+		<span class="speaker-country">{{ .Params.country }}</span>
+	</div>
+</a>

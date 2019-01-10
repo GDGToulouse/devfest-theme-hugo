@@ -1,0 +1,68 @@
+:root {
+  --primary: #673AB7;
+  --primary-txt: #fff;
+
+  --base: #FFF;
+  --base-text: #424242;
+  --base-secondary-text: #757575;
+
+  --darken-1: rgba(0, 0, 0, .125);
+  --darken-2: rgba(0, 0, 0, .25);
+  --darken-3: rgba(0, 0, 0, .5);
+
+  --lighten-1: hsla(0, 100%, 100%, .125);
+  --lighten-2: hsla(0, 100%, 100%, .25);
+  --lighten-3: hsla(0, 100%, 100%, .5);
+
+  --color-hero: ghostwhite;
+
+  --color-platium: #73737a;
+  --color-gold: #b7935b;
+  --color-error: firebrick;
+
+  --space-1: .125rem;
+  --space-2: .25rem;
+  --space-3: .5rem;
+  --space-4: 1rem;
+
+  --container-margin: 10vw;
+  --toolbar-height: 3rem;
+
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  /*--font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+
+  /* Tags */
+  /*from https://github.com/d3/d3-scale-chromatic#schemePastel2*/
+  --tag1: #b3e2cd;
+  --tag2: #fdcdac;
+  --tag3: #cbd5e8;
+  --tag4: #f4cae4;
+  --tag5: #e6f5c9;
+  --tag6: #fff2ae;
+  --tag7: #f1e2cc;
+  --tag8: #cccccc;
+
+  --native-mobile-apps: var(--tag2);
+  --web: var(--tag6);
+  --method-tools: var(--tag5);
+  --big-data-ml-ai: var(--tag3);
+  --iot: var(--tag7);
+  --cloud: var(--tag4);
+  --languages: var(--tag1);
+  --wtf: var(--tag7);
+  --general: var(--tag8);
+
+  /* Partners */
+  --partner-support-height: 60px;
+  --partner-platinum-height: calc(var(--partner-support-height) * 3);
+  --partner-gold-height: calc(var(--partner-support-height) * 2);
+
+  --animation: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  --extruded-dark: 1px 0 0 var(--darken-3);
+  --extruded-light: 1px 0 0 var(--lighten-3);
+
+  --box-shadow-1: 0 0 2px 0 rgba(0, 0, 0, 0.07), 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+  --box-shadow-2: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+}

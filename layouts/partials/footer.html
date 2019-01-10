@@ -1,0 +1,61 @@
+<footer>
+
+	<div class="footer-header">
+		<div class="share">
+			<header>Partager</header>
+			<ul>
+				{{ range .Site.Data.footer.share }}
+				<li><a class="social-{{ .name }}" href="{{ .url }}" target="_blank"></a></li>
+				{{ end }}
+			</ul>
+		</div>
+		<div class="blog">
+			<header>
+				Suivez notre <a href="/blog/">blog</a>
+			</header>
+		</div>
+		<div class="follow">
+			<header>Suivez nous sur</header>
+			<ul>
+				{{ range .Site.Data.footer.follow }}
+				<li><a class="social-{{ .name }}" href="{{ .url }}" target="_blank"></a></li>
+				{{ end }}
+			</ul>
+		</div>
+		<div class="email">
+			<header>
+				<a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+			</header>
+		</div>
+	</div>
+	<hr>
+
+	<div class="footer-content">
+		{{ range .Site.Data.footer.content }}
+		<section>
+			<header>{{ .title }}</header>
+			{{ if .links }}
+			<ul>
+				{{ range .links }}
+				<li><a href="{{ .url }}" {{ if .newTab }}target="_blank" {{end}}>{{ .name }}</a></li>
+				{{ end }}
+			</ul>
+			{{ end }}
+		</section>
+		{{ end }}
+		<section class="form">
+			{{ partial "subscribe.html" . }}
+		</section>
+	</div>
+	<hr>
+
+	<div class="footer-footer">
+		<div>
+			{{ if .Site.Params.logos.footer }}
+			<img src="{{ .Site.Params.logos.footer }}" alt="{{ .Site.Title }}">
+			{{ end }}
+		</div>
+		<div>We ❤️ chocolatines</div>
+	</div>
+
+</footer>

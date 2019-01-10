@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+<div class="hero" >
+	<div class="img" style="color: {{ .Params.color | default "#fff" }};background-image: url({{ .Params.image }})"></div>
+
+	<div class="description">
+
+		<h1>
+			<span>{{ .Title }}</span>
+			<small>{{ .Params.brief }}</small>
+		</h1>
+
+		<hr>
+		{{ .TableOfContents }}
+	</div>
+</div>
+
+<section class="content">
+
+	{{ .Content }}
+</section>
+
+{{ end }}

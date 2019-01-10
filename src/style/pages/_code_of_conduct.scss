@@ -1,0 +1,18 @@
+.page.code-of-conduct .content {
+
+  p {
+    margin-left: var(--space-4);
+    text-align: justify;
+
+    &::first-letter {
+      margin-left: var(--space-4);
+    }
+  }
+
+  ul {
+    margin-left: 2rem;
+    li {
+      line-height: 1.25;
+    }
+  }
+}

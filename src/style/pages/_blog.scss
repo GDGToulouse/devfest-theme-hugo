@@ -1,0 +1,53 @@
+.page.blog {
+
+  .hero {
+    .img {
+      padding: var(--container-margin);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+
+      text-shadow: 1px 0 0 var(--lighten-3);
+    }
+
+    h1 {
+      color: var(--primary);
+      padding-left: 0;
+      padding-right: 0;
+      small {
+        display: block;
+      }
+    }
+  }
+
+  .content {
+    padding-left: 0;
+    padding-right: 0;
+    margin: 2rem var(--container-margin);
+
+    img {
+      max-width: 100%;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--primary);
+    }
+
+    p {
+      margin-left: var(--space-4);
+      text-align: justify;
+
+      &::first-letter {
+        margin-left: var(--space-4);
+      }
+    }
+
+    ul {
+      margin-left: 2rem;
+
+      li {
+        line-height: 1.25;
+      }
+    }
+  }
+}
