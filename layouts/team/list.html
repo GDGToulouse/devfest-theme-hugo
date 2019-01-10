@@ -3,7 +3,7 @@
 
 <section>
 	<ul class="members shuffle">
-		{{ range (shuffle .Site.Data.team) }}
+		{{ range (shuffle .Params.members) }}
 		<li>{{ partial "team.html" . }}</li>
 		{{ end }}
 	</ul>

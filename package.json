@@ -10,7 +10,7 @@
   "scripts": {
     "watch:script": "tsc --watch",
     "watch:style": "node-sass src/style/theme.scss -o static --watch",
-    "start": "yarn run watch:script; yarn run watch:style",
+    "start": "yarn run watch:script & yarn run watch:style",
     "build:script": "tsc; uglifyjs  static/theme.js -o static/theme.js",
     "build:style": "node-sass src/style/theme.scss -o static;postcss static/theme.css --replace",
     "build": "yarn run build:script; yarn run build:style"
