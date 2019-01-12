@@ -1,24 +1,5 @@
 {{ define "main" }}
 
-<div class="hero">
-	<h1>{{ $.Page.Params.Title }}</h1>
-	<div class="description">
-		TODO: filter and search
-	</div>
-</div>
-
-{{ $site := .Site }}
-{{ range .Params.categories }}
-<section class="partners-group partner-{{ . }}">
-	<h3 class="fancy">
-		<span>{{ . }}</span>
-	</h3>
-	<ul>
-		{{ range where $site.Pages "Params.category" . }}
-		<li>{{ partial "partner.html" . }}</li>
-		{{ end }}
-	</ul>
-</section>
-{{ end }}
+{{ .Content }}
 
 {{ end }}

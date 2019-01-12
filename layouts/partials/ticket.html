@@ -5,8 +5,8 @@
 	<div class="ticket-info">{{ .info }}</div>
 
 	{{ if .soldOut }}
-	<span class="btn" aria-disabled="true">Rupture de stock</span>
+	<span class="btn" aria-disabled="true">{{ i18n "home_tickets_soldout" }}</span>
 	{{ else }}
-	<a class="btn primary" target="_blank" href="{{ .url }}">Billeterie</a>
+	<a class="btn primary" target="_blank" href="{{ .url }}">{{ i18n "home_tickets_action" }}</a>
 	{{ end }}
 </div>

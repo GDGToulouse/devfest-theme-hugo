@@ -1,12 +1,5 @@
 {{ define "main" }}
-{{ .Content }}
 
-<section>
-	<ul class="members shuffle">
-		{{ range (shuffle .Params.members) }}
-		<li>{{ partial "team.html" . }}</li>
-		{{ end }}
-	</ul>
-</section>
+{{ .Content }}
 
 {{ end }}

@@ -45,6 +45,13 @@ body > header {
     display: flex;
     align-items: center;
 
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      list-style: none;
+    }
+
     a {
       display: block;
       text-transform: uppercase;
@@ -68,10 +75,15 @@ body > header {
         border-bottom-color: currentColor;
       }
     }
+
+    .languages a.active {
+      display: none;
+    }
+
   }
 }
 
-@media (max-width: 60rem) {
+@media (max-width: 68rem) {
   body > header {
     flex-wrap: wrap;
 
@@ -85,6 +97,10 @@ body > header {
       background: var(--primary);
       flex-direction: column;
       justify-content: flex-start;
+
+      ul {
+        flex-direction: column;
+      }
 
       a {
         width: 100%;

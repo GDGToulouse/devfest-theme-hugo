@@ -5,19 +5,33 @@
 		</a>
 	</div>
 
-	<input type="checkbox" id="menu-burger"  class="visually-hidden"/>
+	<input type="checkbox" id="menu-burger" class="visually-hidden"/>
 
 	<label for="menu-burger"></label>
 
 	<nav>
-		{{ $url := .URL }}
-		{{ range .Site.Params.menus }}
-		{{ if (hasPrefix .url "http") }}
-		<a class="external" href="{{ .url }}" target="_blank" >{{ .name }}</a>
-		{{ else }}
-		<a class="{{ if (eq .url $url) }}active{{ end }}" href="{{ .url }}">{{ .name }}</a>
-		{{ end }}
-		{{ end }}
+		<ul class="menu">
+			{{- $currentPage := . -}}
+			{{ range .Site.Menus.main }}
+				{{ if (hasPrefix .URL "http") }}
+					<a class="external"  target="_blank" href="{{ .URL }}">{{ .Name }}</a>
+				{{ else }}
+					<a class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+			{{ end }}
+			{{ end }}
+		</ul>
+
+		<ul class="languages">
+			{{ range .Site.Home.AllTranslations }}
+			<li>
+				<a class="lang {{ if eq .Language $.Site.Home.Language }}active{{ end}}"
+				   title="{{ .Language.LanguageName }}"
+				   href="{{ .Permalink }}">
+					 {{ emojify (printf ":%s:" .Language.LanguageName) }}
+				</a>
+			</li>
+			{{ end }}
+		</ul>
 	</nav>
 
 

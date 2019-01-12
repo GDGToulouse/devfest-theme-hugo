@@ -1,6 +1,7 @@
 button, a.btn, span.btn {
-  display: inline-block;
-  border: thin solid var(--darken-2);
+  display: inline-flex;
+  align-items: center;
+  border: thin solid var(--darken-3);
   background: var(--darken-1);
   padding: var(--space-3);
   color: inherit;
@@ -18,12 +19,17 @@ button, a.btn, span.btn {
   }
 
   &.btn-icon-only {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--lighten-1);
     border-radius: 50%;
     margin-left: 1ch;
     padding: var(--space-2);
     border-color: transparent;
 
     &::before {
+      margin: var(--space-2);
       --size: 1.5rem;
       width: var(--size);
       height: var(--size);

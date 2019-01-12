@@ -1,4 +1,9 @@
 .section.team {
+
+  h2 {
+    margin: var(--space-4) 0;
+  }
+
   ul.members {
     padding: 0;
     margin: 0;
@@ -44,7 +49,13 @@
           }
         }
       }
-
     }
+  }
+
+
+  .partners-group ul li  {
+    flex-basis: 260px;
+    margin: var(--space-3);
+    height: var(--partner-gold-height);
   }
 }

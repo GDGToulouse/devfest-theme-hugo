@@ -1,0 +1,15 @@
+<section class="speakers">
+
+	<div class="inner">
+		{{ .Inner }}
+	</div>
+
+	<ul class="shuffle">
+		{{ range where $.Site.AllPages "Params.featured" true }}
+		<li>
+			{{ partial "speaker.html" . }}
+		</li>
+		{{ end }}
+	</ul>
+
+</section>

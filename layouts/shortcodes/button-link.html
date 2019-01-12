@@ -1,0 +1,7 @@
+{{ $icon := .Get "icon" }}
+{{ $url := .Get "url" }}
+{{ $label := .Get "label" }}
+
+<a class="btn primary {{ if $icon }}icon-{{ $icon }}{{ end }}"
+   href="{{ $url }}">{{ $label }}</a>
+

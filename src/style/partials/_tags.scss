@@ -34,14 +34,10 @@
   background-color: var(--general);
 }
 
-.tags {
+section .tags {
   padding: var(--space-1);
   border-radius: var(--space-2);
   background: var(--darken-1);
   border: thin solid var(--darken-2);
   text-shadow: var(--extruded-light);
-}
-
-.taxonomy.tags {
-  background: var(--base);
 }

@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+{{ .Content }}
+
+<section>
+	<ul class="talks shuffle">
+		{{ $sessions := where .Site.AllPages ".Section" "sessions" }}
+		{{ range where $sessions ".Params.title" "ne" "Office Hours" }}
+		<li class="talk tag-{{ anchorize (delimit (.Params.tags | default (slice)) "" ) }}">{{ partial "session.html" . }}</li>
+		{{ end }}
+	</ul>
+</section>
+
+{{ end }}

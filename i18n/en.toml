@@ -1,0 +1,57 @@
+########
+# Home #
+########
+
+[home_tickets_action]
+other = "Buy Ticket"
+
+[home_tickets_soldout]
+other = "Sold Out"
+
+[home_location_direction]
+other = "Direction"
+
+##########
+# Footer #
+##########
+
+[footer_share]
+other = "Share"
+
+[footer_follow_blog]
+other = "Follow our"
+
+[footer_follow_blog_blog]
+other = "blog"
+
+[footer_follow_us]
+other = "Follow us"
+
+[footer_about]
+other = "About"
+
+[footer_previous_edition]
+other = "Previous edition"
+
+[footer_become_partners]
+other = "Become partner"
+
+[footer_become_partners_label]
+other = "Partnership Proposition"
+
+[footer_coc]
+other = "Code of Conduct"
+
+
+################
+# Subscription #
+################
+
+[subscribe_notice]
+other = "No spam, only the latest news and updates!"
+
+[subscribe_email]
+other = "Your email"
+
+[subscribe_action]
+other = "Subscribe"

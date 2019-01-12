@@ -1,0 +1,56 @@
+########
+# Home #
+########
+
+[home_tickets_action]
+other = "Billeterie"
+
+[home_tickets_soldout]
+other = "Rupture de stock"
+
+[home_location_direction]
+other = "Itinéraire"
+
+##########
+# Footer #
+##########
+
+[footer_share]
+other = "Partager"
+
+[footer_follow_blog]
+other = "Suivez notre"
+
+[footer_follow_blog_blog]
+other = "blog"
+
+[footer_follow_us]
+other = "Suivez nous sur"
+
+[footer_about]
+other = "A propos"
+
+[footer_previous_edition]
+other = "Précédente édition"
+
+[footer_become_partners]
+other = "Devenir partenaire"
+
+[footer_become_partners_label]
+other = "Proposition de partenariat"
+
+[footer_coc]
+other = "Code de conduite"
+
+################
+# Subscription #
+################
+
+[subscribe_notice]
+other = "Pas de spam, juste les dernières infos !"
+
+[subscribe_email]
+other = "Votre email"
+
+[subscribe_action]
+other = "Souscrire"

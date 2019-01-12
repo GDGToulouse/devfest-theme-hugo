@@ -1,0 +1,17 @@
+<div class="ticket" {{ if .Get "soldOut" }}aria-disabled="true"{{end}}>
+	<div class="ticket-name">{{ .Get "name "}}</div>
+	<div class="ticket-price">{{ .Get "price" }}</div>
+	<div class="ticket-date">
+		{{ $lang := $.Page.Language.Lang }}
+		{{ partial "date-short.html" (dict "time" (.Get "starts") "lang" $lang) }}
+		-
+		{{ partial "date-short.html" (dict "time" (.Get "ends") "lang" $lang) }}
+	</div>
+	<div class="ticket-info">{{ .Get "info" }}</div>
+
+	{{ if .Get "soldOut" }}
+	<span class="btn" aria-disabled="true">{{ i18n "home_tickets_soldout" }}</span>
+	{{ else }}
+	<a class="btn primary icon-ticket" target="_blank" href="{{ .Get "url" }}">{{ i18n "home_tickets_action" }}</a>
+	{{ end }}
+</div>

@@ -1,0 +1,21 @@
+<section class="location">
+
+	<div class="map" style="background-image: url('{{ .Get "image" }}');"></div>
+
+	<div class="description">
+		<div class="inner">
+			{{ .Inner }}
+		</div>
+
+		<div class="direction">
+			{{ .Get "address" }}
+
+			<a class="btn btn-icon-only icon-direction"
+			   target="_blank"
+			   aria-label="{{ i18n "home_location_direction" }}"
+			href="https://www.google.com/maps/dir/?api=1&destination={{ .Get "latitude" }},{{ .Get "longitude" }}"></a>
+
+		</div>
+
+	</div>
+</section>

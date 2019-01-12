@@ -1,15 +1,11 @@
 {{ define "main" }}
 
-<div class="hero">
-	<h1>{{ $.Page.Params.Title }}</h1>
-	<div class="description">
-		TODO: filter and search
-	</div>
-</div>
+{{ .Content }}
 
 <section>
 	<ul class="speakers shuffle">
-		{{ range .Pages }}
+		{{ $speakers := where .Site.AllPages ".Section" "speakers" }}
+		{{ range where $speakers ".Kind" "page" }}
 		<li>{{ partial "speaker.html" . }}</li>
 		{{ end }}
 	</ul>

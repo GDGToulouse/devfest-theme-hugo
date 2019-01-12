@@ -61,6 +61,7 @@ body > footer {
     flex-wrap: wrap;
 
     section {
+      margin: var(--space-2) var(--space-4);
       header {
         font-size: 1.125rem;
         font-weight: 400;

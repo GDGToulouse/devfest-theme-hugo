@@ -1,20 +1,28 @@
-.home {
+.home main {
 
-  main > section {
+  .jumbo {
+    p {
+      margin: var(--space-2) 0;
+      font-size: 2rem;
+    }
+  }
+
+  & > section {
     margin: 0;
     padding: 2rem;
+
+    h2 {
+      margin-bottom: 1.5rem;
+      padding: 0;
+      font-size: 2rem;
+      line-height: 1.875rem;
+      font-weight: 300;
+    }
   }
 
-  section > h2 {
-    margin-bottom: 1.5rem;
-    padding: 0;
-    font-size: 2rem;
-    line-height: 1.875rem;
-    font-weight: 300;
-  }
-
-  section.info > div {
-    display: flex;
+  .info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
 
     .numbers {
       margin: 0 2rem;
@@ -46,7 +54,7 @@
     }
   }
 
-  section.speakers {
+  .speakers {
     ul {
       padding-left: 0;
       list-style: none;
@@ -66,19 +74,23 @@
     }
   }
 
-  section.subscribe {
+  .subscribe {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  section.tickets {
+  .tickets {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    p {
+      font-size: 80%;
+    }
   }
 
-  section.location {
+  .location {
     padding: 0;
     position: relative;
     background: var(--darken-1);
@@ -116,14 +128,11 @@
       img {
         max-width: 100%;
       }
+
       font-size: 1.5rem;
     }
 
-    section.info>div  {
-      flex-direction: column;
-    }
-
-    section.location .description {
+    .location .description {
       position: relative;
       top: unset;
       bottom: unset;
