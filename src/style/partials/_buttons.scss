@@ -1,4 +1,6 @@
-button, a.btn, span.btn {
+button,
+a.btn, span.btn,
+input[type=button], input[type=reset], input[type=submit] {
   display: inline-flex;
   align-items: center;
   border: thin solid var(--darken-3);
@@ -52,4 +54,5 @@ a.btn[aria-disabled],
 span.btn[aria-disabled] {
   opacity: .5;
   cursor: not-allowed;
+  filter: grayscale(100%);;
 }

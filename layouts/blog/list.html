@@ -11,7 +11,7 @@
 	{{ range .Pages }}
 	<article>
 		<a class="blog" href="{{ .URL }}">
-			<div class="img" style="background-image: url({{ path.Join .URL .Params.image }});"></div>
+			<div class="img" style="background-image: url({{ .Params.image }});"></div>
 			<div class="info">
 				<h2>{{ .Title }}</h2>
 				<span>{{ .Params.brief }}</span>

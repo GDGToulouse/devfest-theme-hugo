@@ -62,6 +62,7 @@ body > footer {
 
     section {
       margin: var(--space-2) var(--space-4);
+
       header {
         font-size: 1.125rem;
         font-weight: 400;
@@ -77,37 +78,6 @@ body > footer {
 
         li {
           margin: var(--space-1) 0;
-        }
-      }
-    }
-
-    section.form form {
-      display: flex;
-      flex-direction: column;
-
-      input {
-        background: transparent;
-        border: none;
-        border-bottom: var(--space-1) solid var(--darken-2);
-        transition: border var(--animation);
-        margin: var(--space-3) 0;
-        outline: thin dotted transparent;
-        font-size: 1rem;
-        line-height: 1.5rem;
-        padding: var(--space-2);
-        border-radius: var(--space-1);
-        color: var(--base-text);
-
-        &::placeholder {
-          color: var(--darken-3);
-        }
-
-        &:focus {
-          border-bottom-color: var(--primary);
-        }
-
-        &:invalid {
-          border-bottom-color: var(--color-error);
         }
       }
     }
