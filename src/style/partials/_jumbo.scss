@@ -1,16 +1,15 @@
 
-.jumbo, .inner::before {
-  background: var(--bg-img) 0 / cover fixed;
-  background-position: center center;
-}
-
-
 .jumbo {
   position: relative;
   height: calc(100vh - var(--toolbar-height));
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background-image: linear-gradient(to bottom, var(--darken-3), var(--darken-3)), var(--bg-img);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
 
   img {
     max-width: 100%;
@@ -35,11 +34,14 @@
     box-shadow: inset 0 0 0 1px var(--darken-3),
     0 .5em 1em rgba(0, 0, 0, 0.6);
     text-shadow: 0 1px 1px var(--darken-3);
-
     max-width: 50vw;
 
-
     &::before {
+      background-image: linear-gradient(to bottom, var(--darken-3), var(--darken-3)), var(--bg-img);
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center center;
+
       content: '';
       position: absolute;
       top: 0;
