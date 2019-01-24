@@ -1,10 +1,6 @@
 <section class="subscribe primary">
-
 	<div class="inner">{{ .Inner }}</div>
-
-	<button class="inverse icon-subscribe " id="btnSubscribe">{{ i18n "subscribe_action" }}</button>
-	<dialog close>
-		{{ partial "subscribe.html" .}}
-	</dialog>
-
+	<a class="btn primary icon-subscribe"
+	   target="_blank"
+	   href="{{ .Site.Params.subscriptionUrl }}">{{ i18n "subscribe_action" }}</a>
 </section>

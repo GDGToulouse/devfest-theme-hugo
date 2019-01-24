@@ -60,6 +60,15 @@ body > footer {
     justify-content: space-between;
     flex-wrap: wrap;
 
+    .subscribe {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        align-self: flex-start;
+      }
+    }
+
     section {
       margin: var(--space-2) var(--space-4);
 

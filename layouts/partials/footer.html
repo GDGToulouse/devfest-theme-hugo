@@ -52,8 +52,11 @@
 			{{ end }}
 		</section>
 		{{ end }}
-		<section class="form">
-			{{ partial "subscribe.html" . }}
+		<section class="subscribe">
+			{{ i18n "subscribe_notice" }}
+			<a class="btn"
+			   target="_blank"
+			   href="{{ .Site.Params.subscriptionUrl }}">{{ i18n "subscribe_action" }}</a>
 		</section>
 	</div>
 

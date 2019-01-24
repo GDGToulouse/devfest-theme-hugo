@@ -14,6 +14,10 @@ input[type=button], input[type=reset], input[type=submit] {
   cursor: pointer;
   text-shadow: var(--extruded-light);
 
+  &:hover {
+    text-decoration: none;
+  }
+
   &.primary {
     background-color: var(--primary);
     color: var(--primary-txt);
