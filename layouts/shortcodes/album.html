@@ -1,0 +1,8 @@
+<div class="album shuffle">
+	{{ range (split (.Get "images") ",") }}
+	<div class="img" style="background-image: url('{{ . }}')"></div>
+	{{ end }}
+
+	<div class="inner">{{ .Inner }}</div>
+
+</div>
