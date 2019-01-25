@@ -1,11 +1,12 @@
 <header>
+
 	<div class="logo">
 		<a href="/">
 			<img src="{{ .Site.Params.logos.header }}" alt="logo {{ .Site.Title }}">
 		</a>
 	</div>
-
-	<input type="checkbox" id="menu-burger" class="visually-hidden"/>
+	</l>
+	<input type="checkbox" id="menu-burger" class="visually-hidden" aria-label="Menu"/>
 
 	<label for="menu-burger"></label>
 
@@ -13,26 +14,30 @@
 		<ul class="menu">
 			{{- $currentPage := . -}}
 			{{ range .Site.Menus.main }}
+			<li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" >
 				{{ if (hasPrefix .URL "http") }}
-					<a class="external"  target="_blank" href="{{ .URL }}">{{ .Name }}</a>
+					<a class="external" rel="noreferrer" target="_blank" href="{{ .URL }}">{{ .Name }}</a>
 				{{ else }}
-					<a class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
-			{{ end }}
+				<a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+				{{ end }}
+			</li>
 			{{ end }}
 		</ul>
 
 		<ul class="languages">
 			{{ range .Site.Home.AllTranslations }}
 			<li>
-				<a class="lang {{ if eq .Language $.Site.Home.Language }}active{{ end}}"
+				<a class="lang {{ if eq .Language $.Site.Home.Language }}active{{ end }}"
 				   title="{{ .Language.LanguageName }}"
-				   href="{{ .Permalink }}">
-					 {{ emojify (printf ":%s:" .Language.LanguageName) }}
+				   href="{{ .Permalink }}"
+				   role="radio"
+				   aria-label="{{ i18n "language_switch" }} {{ .Language.LanguageName }}"
+				   aria-checked="{{ if eq .Language $.Site.Home.Language }}true{{ else }}false{{ end }}">
+					{{ emojify (printf ":%s:" .Language.LanguageName) }}
 				</a>
 			</li>
 			{{ end }}
 		</ul>
 	</nav>
-
 
 </header>

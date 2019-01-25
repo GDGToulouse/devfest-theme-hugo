@@ -10,7 +10,10 @@
 			<ul class="socials">
 				{{ range .Page.Params.socials }}
 				<li>
-					<a class="social-{{ .icon }}" href="{{ .link }}" target="_blank">{{ .name }}</a>
+					<a class="social-{{ .icon }}"
+					   href="{{ .link }}"
+					   rel="noreferrer"
+					   target="_blank">{{ .name }}</a>
 				</li>
 				{{ end }}
 			</ul>

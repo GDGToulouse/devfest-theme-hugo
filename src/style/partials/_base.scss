@@ -1,7 +1,9 @@
 html {
   box-sizing: border-box;
   font-family: var(--font-family);
-  background: var(--darken-1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--darken-2);
 }
 
 *,
@@ -43,7 +45,8 @@ a, a:visited {
   text-decoration: none;
 }
 
-.content {🇬🇧
+.content {
+  🇬🇧
   a, a:visited {
     color: var(--primary);
   }
@@ -55,8 +58,13 @@ a, a:visited {
 
 .visually-hidden { /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
   position: absolute !important;
-  height: 1px; width: 1px;
+  height: 1px;
+  width: 1px;
   overflow: hidden;
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
+}
+
+body > main > section.container, body > header.container, body > footer.container {
+  padding: var(--space-4) var(--container-margin);
 }

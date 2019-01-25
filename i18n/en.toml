@@ -1,3 +1,10 @@
+##########
+# Header #
+##########
+
+[language_switch]
+other = "Basculer en"
+
 ########
 # Home #
 ########
@@ -49,9 +56,6 @@ other = "Code of Conduct"
 
 [subscribe_notice]
 other = "No spam, only the latest news and updates!"
-
-[subscribe_email]
-other = "Your email"
 
 [subscribe_action]
 other = "Subscribe"

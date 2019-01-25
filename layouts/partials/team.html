@@ -4,7 +4,13 @@
 	<h4>{{ .Params.subtitle }}</h4>
 	<ul class="socials">
 		{{ range .Params.socials }}
-		<li><a class="social-{{ lower .name }}" title="{{ .name }}" href="{{ .link }}" target="_blank"></a></li>
+		<li>
+			<a class="social-{{ lower .name }}"
+			   title="{{ .name }}"
+			   rel="noreferrer"
+			   href="{{ .link }}"
+			   target="_blank"></a>
+		</li>
 		{{ end }}
 	</ul>
 </div>

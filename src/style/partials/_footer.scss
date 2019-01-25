@@ -1,7 +1,6 @@
 body > footer {
   background-color: var(--darken-1);
   color: var(--base-secondary-text);
-  padding: var(--space-4) var(--container-margin);
   font-weight: 200;
 
   a:hover {
@@ -64,8 +63,9 @@ body > footer {
       display: flex;
       flex-direction: column;
 
-      a {
+      a.btn {
         align-self: flex-start;
+        color: var(--link-secondary-text);
       }
     }
 

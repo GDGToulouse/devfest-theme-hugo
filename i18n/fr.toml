@@ -1,3 +1,10 @@
+##########
+# Header #
+##########
+
+[language_switch]
+other = "Switch to"
+
 ########
 # Home #
 ########
@@ -48,9 +55,6 @@ other = "Code de conduite"
 
 [subscribe_notice]
 other = "Pas de spam, juste les dernières infos !"
-
-[subscribe_email]
-other = "Votre email"
 
 [subscribe_action]
 other = "Souscrire"

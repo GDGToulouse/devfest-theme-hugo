@@ -53,7 +53,10 @@
 		{{ end }}
 
 		{{ if .Params.presentation }}
-		<a class="social-slides" href="{{ .Params.presentation }}" target="_blank">Voir les slides</a>
+		<a class="social-slides"
+		   href="{{ .Params.presentation }}"
+		   rel="noreferrer"
+		   target="_blank">Voir les slides</a>
 		{{ end }}
 
 	</div>

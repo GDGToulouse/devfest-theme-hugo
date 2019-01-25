@@ -1,4 +1,5 @@
-<div class="jumbo" style="--bg-img: url('{{ .Get "img" }}')">
+{{ $imgLabel := .Get "imgLabel" }}
+<div class="jumbo" style="--bg-img: url('{{ .Get "img" }}')" {{ if $imgLabel }}aria-label="{{ $imgLabel }}"{{ end }}>
 	<div class="inner">
 		{{ .Inner }}
 	</div>

@@ -4,6 +4,9 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
+    <meta name="Description" content="{{ .Site.Params.description }}">
+    <meta name="theme-color" content="{{ .Site.Params.themeColor }}"/>
+    <link rel="manifest" href="/manifest.json">
 
     {{/* NOTE: These Hugo Internal Templates can be found starting at
     https://github.com/gohugoio/hugo/tree/master/tpl/tplimpl/embedded/templates */}}
@@ -17,13 +20,7 @@
     {{ end }}
 
     {{ .Hugo.Generator }}
-
-    {{/* NOTE: For Production make sure you add `HUGO_ENV="production"` before your build command */}}
-    {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
     <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
-    {{ else }}
-    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-    {{ end }}
 
     <title>{{ block "title" . }}{{ .Site.Title }} {{ with .Params.Title }} | {{ . }}{{ end }}{{ end }}</title>
 
@@ -36,6 +33,6 @@
     <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
     {{ end }}
 
-    <link rel="stylesheet" href="/theme.css">
+    <link rel="stylesheet" href="/theme.css" media="all">
 
 </head>

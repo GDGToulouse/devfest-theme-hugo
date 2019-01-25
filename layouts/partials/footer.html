@@ -1,11 +1,16 @@
-<footer>
+<footer class="container">
 
 	<div class="footer-header">
 		<div class="share">
 			<header>{{ i18n "footer_share" }}</header>
 			<ul>
 				{{ range .Site.Data.footer.share }}
-				<li><a class="social-{{ .name }}" title="{{ .name }}" href="{{ .url }}" target="_blank"></a></li>
+				<li>
+					<a class="social-{{ .name }}"
+					   title="{{ .name }}"
+					   href="{{ .url }}"
+					   rel="noreferrer"
+					   target="_blank"></a></li>
 				{{ end }}
 			</ul>
 		</div>
@@ -18,7 +23,11 @@
 			<header>{{ i18n "footer_follow_us" }}</header>
 			<ul>
 				{{ range .Site.Data.footer.follow }}
-				<li><a class="social-{{ .name }}" title="{{ .name }}" href="{{ .url }}" target="_blank"></a></li>
+				<li><a class="social-{{ .name }}"
+				       title="{{ .name }}"
+				       href="{{ .url }}"
+				       rel="noreferrer"
+				       target="_blank"></a></li>
 				{{ end }}
 			</ul>
 		</div>
@@ -39,7 +48,7 @@
 			<ul>
 				{{ range .links }}
 				<li>
-					<a href="{{ .url }}" {{ if .newTab }}target="_blank" {{end}}>
+					<a href="{{ .url }}" {{ if .newTab }}target="_blank" rel="noopener"{{end}}>
 						{{ if .nameKey }}
 						{{ i18n .nameKey }}
 						{{ else }}
@@ -54,7 +63,8 @@
 		{{ end }}
 		<section class="subscribe">
 			{{ i18n "subscribe_notice" }}
-			<a class="btn"
+			<a class="btn ripple"
+			   rel="noreferrer"
 			   target="_blank"
 			   href="{{ .Site.Params.subscriptionUrl }}">{{ i18n "subscribe_action" }}</a>
 		</section>
