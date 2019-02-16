@@ -20,16 +20,22 @@ git submodule add https://github.com/GDGToulouse/devfest-theme-hugo.git themes/d
 # ...
 theme = "devfest-theme-hugo00b0f0"
 # ...
-``` 
+```
 
 
 4. It's done. Just start Hugo server to see it live!
 
 ```bash
-hugo server 
+hugo server
 ```
 
 ## Customizing the site
+
+`yarn` to install the dependency
+
+Run `npm start` to watch Sass changes.
+
+When you are happy with the result run `npm run build` to build the minified version
 
 ### Site params
 
