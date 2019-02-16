@@ -1,9 +1,9 @@
 .home main {
 
 
-  & > section {
+  &>section {
     margin: 0;
-    padding: 2rem;
+    padding: 4rem;
 
     h2 {
       margin-bottom: 1.5rem;
@@ -118,8 +118,10 @@
 }
 
 @media (max-width: 60rem) {
-
   .home main {
+    &>section {
+      padding: 2rem;
+    }
 
     .location .description {
       position: relative;
