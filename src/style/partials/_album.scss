@@ -36,7 +36,7 @@
   }
 }
 
-@media (max-width: 60rem) {
+@include mq($until: lg) {
 
   .album {
     grid-template-columns: repeat(3, 1fr);

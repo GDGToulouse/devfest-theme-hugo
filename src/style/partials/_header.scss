@@ -86,7 +86,7 @@ body > header {
   }
 }
 
-@media (max-width: 68rem) {
+@include mq($until: xl) {
   body > header {
     flex-wrap: wrap;
 

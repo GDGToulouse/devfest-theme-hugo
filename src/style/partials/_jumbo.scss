@@ -86,7 +86,7 @@
   }
 }
 
-@media (max-width: 60rem) {
+@include mq($until: lg) {
   .jumbo .inner {
     max-width: 80vw;
   }

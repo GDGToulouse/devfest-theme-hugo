@@ -117,7 +117,7 @@
   }
 }
 
-@media (max-width: 60rem) {
+@include mq($until: lg) {
   .home main {
     &>section {
       padding: 2rem;

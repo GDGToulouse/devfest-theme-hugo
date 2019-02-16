@@ -132,7 +132,7 @@
   }
 }
 
-@media (max-width: 60rem) {
+@include mq($until: lg) {
   .page.talks {
     .talk {
       grid-template-columns: 1fr;

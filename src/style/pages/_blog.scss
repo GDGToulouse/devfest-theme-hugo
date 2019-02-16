@@ -35,12 +35,8 @@
     }
 
     p {
-      margin-left: var(--space-4);
       text-align: justify;
-
-      &::first-letter {
-        margin-left: var(--space-4);
-      }
+      font-size: 1.2rem;
     }
 
     ul {

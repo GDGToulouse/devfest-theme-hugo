@@ -1,4 +1,6 @@
 @import "root";
+@import "variables";
+@import '../../node_modules/sass-mq/mq';
 
 @import "partials/base";
 @import "partials/header";

@@ -7,6 +7,11 @@
     margin: 2rem var(--container-margin);
   }
 
+  @media (max-width: var(--breakpoint-lg)) {
+    main > section {
+      margin: 2rem var(--container-margin-mobile);
+    }
+  }
 
   .blogs {
     display: grid;
@@ -16,22 +21,17 @@
       text-decoration: none;
       padding: var(--space-4);
       border-radius: var(--space-3);
-      min-height: 25vw;
       display: grid;
       grid-template-columns: auto 1fr;
-      grid-template-rows: auto 1fr;
       grid-gap: var(--space-4);
       color: inherit;
-      border: thin solid var(--darken-1);
-
-      box-shadow: var(--space-1) var(--space-1) var(--space-2) var(--darken-2);
-      transition: box-shadow var(--animation);
+      border-bottom: thin solid var(--darken-1);
 
       .img {
         display: inline-block;
         background-position: center center;
         background-size: cover;
-        --size: 6rem;
+        --size: 16rem;
         height: var(--size);
         width: var(--size);
         border-radius: var(--space-2);
@@ -39,6 +39,9 @@
 
       .info {
         justify-content: center;
+        h2 {
+          margin: var(--space-3) 0;
+        }
         .reading {
           align-self: flex-end;
 
@@ -49,17 +52,23 @@
 
         .date {
           align-self: flex-start;
+          color: var(--base-secondary-text);
+        }
+
+        p{
+          line-height: 2rem;
         }
       }
+    }
+    @include mq($until: lg) {
+      a {
+        grid-template-rows: auto 1fr;
+        grid-template-columns: auto;
 
-      p {
-        grid-column: 1 / -1;
+        .img{
+          width: 100%;
+        }
       }
-
-      &:hover, &:focus {
-        box-shadow: var(--space-2) var(--space-2) var(--space-2) var(--darken-3);
-      }
-
     }
   }
 }

@@ -26,8 +26,14 @@
   --space-3: .5rem;
   --space-4: 1rem;
 
+  --breakpoint-sm: 34.375rem; // 540px
+  --breakpoint-md: 45rem; // 720px
+  --breakpoint-lg: 60rem; // 960px
+  --breakpoint-xl: 71.25rem; // 1140px
+
   --container-margin: 10vw;
-  --toolbar-height: 3rem;
+  --container-margin-mobile: 3vw;
+  --toolbar-height: 3.25rem;
 
   --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 

@@ -13,12 +13,12 @@
 		<a class="blog" href="{{ .URL }}">
 			<div class="img" style="background-image: url({{ .Params.image }});"></div>
 			<div class="info">
+				<div class="date">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
 				<h2>{{ .Title }}</h2>
-				<span>{{ .Params.brief }}</span>
-				<div class="date">{{ dateFormat "2 Jan 2016" .Date }}</div>
-				<div class="reading">{{ .ReadingTime }}</div>
+				<span class="brief">{{ .Params.brief }}</span>
+				<!-- <div class="reading">{{ .ReadingTime }}</div> -->
+				<p>{{ .Summary }} ...</p>
 			</div>
-			<p>{{ .Summary }} ...</p>
 		</a>
 	</article>
 	{{ end }}

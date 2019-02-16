@@ -4319,6 +4319,11 @@ sass-graph@^2.2.4:
     scss-tokenizer "^0.2.3"
     yargs "^7.0.0"
 
+sass-mq@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/sass-mq/-/sass-mq-5.0.0.tgz#7e8a8eb0f289591b3521549266f0ff923772809d"
+  integrity sha512-GCN6wGY+l4n10mASeMe2vqISvEEFjv6/NVcywaMU9saZgzw+DKM+fUUAnv07LlxXvDdnHSRf5jGJ10u/iF1BKA==
+
 sax@^1.2.4, sax@~1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
