@@ -3,7 +3,7 @@
 	<div class="footer-header">
 		<div class="share">
 			<header>{{ i18n "footer_share" }}</header>
-			<ul>
+			<ul class="social-list">
 				{{ range .Site.Data.footer.share }}
 				<li>
 					<a class="social-{{ .name }}"
@@ -16,12 +16,12 @@
 		</div>
 		<div class="blog">
 			<header>
-				{{ i18n "footer_follow_blog" }} <a href="/blog/">{{ i18n "footer_follow_blog_blog" }}</a>
+				{{ i18n "footer_follow_blog" }} <a href="blog/">{{ i18n "footer_follow_blog_blog" }}</a>
 			</header>
 		</div>
 		<div class="follow">
 			<header>{{ i18n "footer_follow_us" }}</header>
-			<ul>
+			<ul class="social-list">
 				{{ range .Site.Data.footer.follow }}
 				<li><a class="social-{{ .name }}"
 				       title="{{ .name }}"
@@ -62,7 +62,8 @@
 		</section>
 		{{ end }}
 		<section class="subscribe">
-			{{ i18n "subscribe_notice" }}
+			<header>{{ i18n "newsletter" }}</header>
+			<p>{{ i18n "subscribe_notice" }}</p>
 			<a class="btn ripple"
 			   rel="noreferrer"
 			   target="_blank"
@@ -73,11 +74,9 @@
 	<hr>
 
 	<div class="footer-footer">
-		<div>
-			{{ if .Site.Params.logos.footer }}
-			<img src="{{ .Site.Params.logos.footer }}" alt="{{ .Site.Title }}">
-			{{ end }}
-		</div>
+		{{ if .Site.Params.logos.footer }}
+		<img src="{{ .Site.Params.logos.footer }}" alt="{{ .Site.Title }}">
+		{{ end }}
 		<div>{{ emojify .Site.Params.copyright }}</div>
 	</div>
 

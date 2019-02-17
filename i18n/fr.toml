@@ -52,6 +52,8 @@ other = "Code de conduite"
 ################
 # Subscription #
 ################
+[newsletter]
+other = "Newsletter"
 
 [subscribe_notice]
 other = "Pas de spam, juste les dernières infos !"

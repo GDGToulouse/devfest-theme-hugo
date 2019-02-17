@@ -9,10 +9,20 @@ body > footer {
 
   // Header
   .footer-header {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
-    font-weight: 300;
+    font-weight: 500;
     flex-wrap: wrap;
+    text-transform: uppercase;
+
+    @include mq($until: xl) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mq($until: md) {
+      grid-template-columns: repeat(1, 1fr);
+    }
 
     header {
       margin-right: var(--space-2);
@@ -21,8 +31,9 @@ body > footer {
     & > div {
       display: flex;
       align-items: center;
+      margin-bottom: 1rem;
 
-      ul {
+      ul.social-list {
         padding: 0;
         margin: 0;
         list-style: none;
@@ -31,12 +42,9 @@ body > footer {
 
         li {
           display: inline-block;
+          padding: var(--space-2);
         }
       }
-    }
-
-    .share, .blog, .follow {
-      text-transform: uppercase;
     }
 
     .follow a[class*='social-'] {
@@ -55,16 +63,18 @@ body > footer {
 
   // Content
   .footer-content {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
-    flex-wrap: wrap;
+    margin-top: var(--space-4);
+
+    @include mq($until: md) {
+      grid-template-columns: repeat(1, 1fr);
+    }
 
     .subscribe {
-      display: flex;
-      flex-direction: column;
 
       a.btn {
-        align-self: flex-start;
         color: var(--link-secondary-text);
       }
     }
@@ -72,9 +82,22 @@ body > footer {
     section {
       margin: var(--space-2) var(--space-4);
 
+      @include mq($until: md) {
+        margin: var(--space-2) 0;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
       header {
         font-size: 1.125rem;
-        font-weight: 400;
+        font-weight: 600;
+        margin-bottom: var(--space-2);
       }
 
       ul {
@@ -84,6 +107,7 @@ body > footer {
         padding: 0;
         margin: var(--space-3) 0;
         font-weight: 100;
+        font-size: 0.9rem;
 
         li {
           margin: var(--space-1) 0;
@@ -95,10 +119,21 @@ body > footer {
   // Footer
   .footer-footer {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    margin-top: var(--space-4);
+
+    @include mq($until: md) {
+      flex-direction: column;
+      align-items: start;
+      > * {
+        margin: var(--space-2) 0;
+      }
+    }
 
     img {
       height: 2rem;
+      width: auto;
     }
   }
 }

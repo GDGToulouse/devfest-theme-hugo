@@ -11,5 +11,10 @@ body > main {
       color: var(--primary-txt);
     }
 
+    &.accent {
+      background-color: var(--accent);
+      color: var(--accent-txt);
+    }
+
   }
 }

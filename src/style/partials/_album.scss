@@ -33,6 +33,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
 }
 
@@ -50,7 +51,6 @@
     .img:nth-child(2),
     .img:nth-child(4),
     .img:nth-child(6),
-    .img:nth-child(7),
     .inner {
       grid-column: span 2;
     }
@@ -59,8 +59,8 @@
       grid-row: 2 / 4;
     }
     .inner {
-      grid-column: 1 / 3;
-      grid-row: 3;
+      grid-column: span 3;
+      grid-row: span 5;
     }
 
   }
