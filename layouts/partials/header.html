@@ -25,7 +25,7 @@
 		</ul>
 
 		<ul class="languages">
-			{{ range .Site.Home.AllTranslations }}
+			{{ range .Translations }}
 			<li>
 				<a class="lang {{ if eq .Language $.Site.Home.Language }}active{{ end }}"
 				   title="{{ .Language.LanguageName }}"
