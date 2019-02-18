@@ -5,7 +5,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="Description" content="{{ .Site.Params.description }}">
-    <meta name="theme-color" content="{{ .Site.Params.themeColor }}"/>
+    <meta name="theme-color" content="{{ .Site.Params.themeColor }}" />
     <link rel="manifest" href="/manifest.json">
 
     {{/* NOTE: These Hugo Internal Templates can be found starting at
@@ -33,6 +33,7 @@
     <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
     {{ end }}
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="/theme.css" media="all">
 
 </head>
