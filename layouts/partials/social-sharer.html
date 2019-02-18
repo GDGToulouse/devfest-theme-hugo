@@ -1,0 +1,20 @@
+{{- if (eq .name "facebook") -}}
+<a
+  href="https://www.facebook.com/sharer.php?u={{ .url }}"
+  class="social-{{ .name }}"
+  aria-label="share on Facebook"
+  rel="noreferrer"
+  target="_blank"
+>
+</a>
+{{- else if (eq .name "twitter") -}}
+{{ $text := i18n "twitter_share_text" }}
+<a
+  href="https://twitter.com/share?url={{ .url }}&text={{ $text }}"
+  class="social-{{ .name }}"
+  aria-label="share on Twitter"
+  rel="noreferrer"
+  target="_blank"
+>
+</a>
+{{- end -}}

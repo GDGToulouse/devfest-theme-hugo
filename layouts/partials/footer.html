@@ -6,11 +6,8 @@
 			<ul class="social-list">
 				{{ range .Site.Data.footer.share }}
 				<li>
-					<a class="social-{{ .name }}"
-					   title="{{ .name }}"
-					   href="{{ .url }}"
-					   rel="noreferrer"
-					   target="_blank"></a></li>
+					{{ $url := .URL | absLangURL }}
+					{{ partial "social-sharer.html" (dict "context" . "url" $url "name" .name) }}
 				{{ end }}
 			</ul>
 		</div>
