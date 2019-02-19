@@ -25,8 +25,14 @@ other = "Direction"
 [footer_share]
 other = "Share"
 
+[facebook_share_label]
+other = "Share on Facebook"
+
 [twitter_share_text]
 other = "Come join us at @DevFestToulouse the unavoidable conference for Software developers in Toulouse, France #DevFestToulouse"
+
+[twitter_share_label]
+other = "Share on Twitter"
 
 [footer_follow_blog]
 other = "Follow our"

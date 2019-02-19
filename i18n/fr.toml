@@ -25,8 +25,14 @@ other = "Itinéraire"
 [footer_share]
 other = "Partager"
 
+[facebook_share_label]
+other = "Partager sur Facebook"
+
 [twitter_share_text]
 other = "Venez au @DevFestToulouse la conférence incontournable pour les développeurs à Toulouse #DevFestToulouse"
+
+[twitter_share_label]
+other = "Partager sur Twitter"
 
 [footer_follow_blog]
 other = "Suivez notre"

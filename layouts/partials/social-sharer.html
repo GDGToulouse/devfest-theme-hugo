@@ -2,7 +2,7 @@
 <a
   href="https://www.facebook.com/sharer.php?u={{ .url }}"
   class="social-{{ .name }}"
-  aria-label="share on Facebook"
+  aria-label="{{ i18n "facebook_share_label" }}"
   rel="noreferrer"
   target="_blank"
 >
@@ -12,7 +12,7 @@
 <a
   href="https://twitter.com/share?url={{ .url }}&text={{ $text }}"
   class="social-{{ .name }}"
-  aria-label="share on Twitter"
+  aria-label="{{ i18n "twitter_share_label" }}"
   rel="noreferrer"
   target="_blank"
 >
