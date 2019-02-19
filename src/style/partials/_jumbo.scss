@@ -75,12 +75,12 @@
 
     &::before {
       content: '';
-      position: absolute;
-      left: calc(50% - var(--space-1));
-      border: var(--space-1) solid currentColor;
-      border-top-width: var(--space-2);
-      border-bottom-width: var(--space-2);
-      border-radius: 20%;
+      display: block;
+      width: 25%;
+      height: 15%;
+      background: currentColor;
+      position: relative;
+      border-radius: 50%;
       background: currentColor;
       animation: scrollDownMove .8s ease-in-out alternate infinite;
     }
@@ -90,10 +90,10 @@
 
 @keyframes scrollDownMove {
   from {
-    top: 1rem;
+    transform: translateX(.5em) translateY(.5em);
   }
   to {
-    top: .75rem;
+    transform: translateX(.5em) translateY(1.5em);
   }
 }
 
