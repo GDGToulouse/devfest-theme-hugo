@@ -1,7 +1,7 @@
 {{ $imgLabel := .Get "imgLabel" }}
-<div class="jumbo" style="--bg-img: url('{{ .Get "img" }}')" {{ if $imgLabel }}aria-label="{{ $imgLabel }}"{{ end }}>
+<div class="jumbo" style="background-image: url('{{ .Get "img" }}')" {{ if $imgLabel }}aria-label="{{ $imgLabel }}"{{ end }}>
 	<div class="inner">
 		{{ .Inner }}
 	</div>
-	<div class="scroll-down"></div>
+	<div class="scroll-down" aria-hidden="true"></div>
 </div>

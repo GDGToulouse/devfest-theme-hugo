@@ -8,12 +8,12 @@
 				<li>
 					{{ $url := .URL | absLangURL }}
 					{{ partial "social-sharer.html" (dict "context" . "url" $url "name" .name) }}
-				{{ end }}
+					{{ end }}
 			</ul>
 		</div>
 		<div class="blog">
 			<header>
-				{{ i18n "footer_follow_blog" }} <a href="{{ "blog/" | absLangURL }}">{{ i18n "footer_follow_blog_blog" }}</a>
+				{{ i18n "footer_follow_blog" }} <a href="{{ " blog/" | absLangURL }}">{{ i18n "footer_follow_blog_blog" }}</a>
 			</header>
 		</div>
 		<div class="follow">
@@ -21,10 +21,9 @@
 			<ul class="social-list">
 				{{ range .Site.Data.footer.follow }}
 				<li><a class="social-{{ .name }}"
-				       title="{{ .name }}"
 				       href="{{ .url }}"
 				       rel="noreferrer"
-				       target="_blank"></a></li>
+				       target="_blank">{{ .name }}</a></li>
 				{{ end }}
 			</ul>
 		</div>
@@ -45,7 +44,7 @@
 			<ul>
 				{{ range .links }}
 				<li>
-					<a href="{{ .url }}" {{ if .newTab }}target="_blank" rel="noopener"{{end}}>
+					<a href="{{ .url }}" {{ if .newTab }}target="_blank" rel="noopener" {{end}}>
 						{{ if .nameKey }}
 						{{ i18n .nameKey }}
 						{{ else }}

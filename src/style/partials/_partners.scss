@@ -30,6 +30,7 @@
     box-shadow: var(--box-shadow-1);
     transition: box-shadow var(--animation);
     cursor: pointer;
+    color: transparent;
 
     &:hover, &:focus {
       box-shadow: var(--box-shadow-2);

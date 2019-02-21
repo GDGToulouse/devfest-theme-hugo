@@ -6,13 +6,15 @@ a[class*='social-'] {
   background-repeat: no-repeat;
 
   align-items: center;
-  color: inherit;
   text-decoration: none;
+  width: 1em;
+  color: transparent;
+  overflow: hidden;
 
   &::before {
     --size: 1em;
     height: var(--size);
-    width: var(--size);
+    min-width: var(--size);
     display: inline-block;
     content: '';
     background-repeat: no-repeat;

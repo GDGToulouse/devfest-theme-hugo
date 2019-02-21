@@ -1,4 +1,4 @@
-<div class="photo" style="background-image: url('{{ relURL (path.Join "images" "team" .Params.photo) }}');"></div>
+<div class="photo" role="presentation" style="background-image: url('{{ relURL (path.Join "images" "team" .Params.photo) }}');"></div>
 <div class="label">
 	<h3>{{ .Title }}</h3>
 	<h4>{{ .Params.subtitle }}</h4>
@@ -6,10 +6,9 @@
 		{{ range .Params.socials }}
 		<li>
 			<a class="social-{{ lower .name }}"
-			   title="{{ .name }}"
 			   rel="noreferrer"
 			   href="{{ .link }}"
-			   target="_blank"></a>
+			   target="_blank">{{ .name }}</a>
 		</li>
 		{{ end }}
 	</ul>

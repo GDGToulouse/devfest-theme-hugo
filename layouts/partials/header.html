@@ -27,13 +27,13 @@
 		<ul class="languages">
 			{{ range .Translations }}
 			<li>
-				<a class="lang {{ if eq .Language $.Site.Home.Language }}active{{ end }}"
+				<a class="lang lang-{{ .Language.LanguageName }} {{ if eq .Language $.Site.Home.Language }}active{{ end }}"
 				   title="{{ .Language.LanguageName }}"
 				   href="{{ .Permalink }}"
 				   role="radio"
 				   aria-label="{{ i18n "language_switch" }} {{ .Language.LanguageName }}"
 				   aria-checked="{{ if eq .Language $.Site.Home.Language }}true{{ else }}false{{ end }}">
-					{{ emojify (printf ":%s:" .Language.LanguageName) }}
+					{{ i18n "language_switch" }} {{ .Language.LanguageName }}
 				</a>
 			</li>
 			{{ end }}
