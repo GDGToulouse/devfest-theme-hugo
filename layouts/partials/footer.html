@@ -60,6 +60,7 @@
 			{{ end }}
 		</section>
 		{{ end }}
+		{{ if .Site.Params.subscriptionUrl }}
 		<section class="subscribe">
 			<header>{{ i18n "newsletter" }}</header>
 			<p>{{ i18n "subscribe_notice" }}</p>
@@ -69,6 +70,7 @@
 				{{- i18n "subscribe_action" -}}
 			</a>
 		</section>
+		{{ end }}
 	</div>
 
 	<hr>
