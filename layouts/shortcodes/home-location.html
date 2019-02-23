@@ -10,11 +10,11 @@
 		<div class="direction">
 			{{ .Get "address" }}
 
-			<a class="btn btn-icon-only icon-direction ripple"
-			   target="_blank"
-			   rel="noreferrer"
-			   aria-label="{{ i18n "home_location_direction" }}"
-			href="https://www.google.com/maps/dir/?api=1&destination={{ .Get "latitude" }},{{ .Get "longitude" }}"></a>
+			<a href="https://www.google.com/maps/dir/?api=1&destination={{ .Get "latitude" }},{{ .Get "longitude" }}"
+				class="btn btn-icon-only ripple" target="_blank" rel="noreferrer"
+			   aria-label="{{ i18n "home_location_direction" }}">
+				{{ partial "icon.html" "direction" }}
+			</a>
 
 		</div>
 

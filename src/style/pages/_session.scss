@@ -43,6 +43,10 @@
           display: none;
         }
       }
+
+      p {
+        max-width: 320px;
+      }
     }
   }
 }
@@ -87,15 +91,6 @@
       padding: 0;
       align-self: start;
       border-radius: var(--space-2);
-
-      a.speaker-links {
-        position: absolute !important;
-        height: 1px;
-        width: 1px;
-        overflow: hidden;
-        clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-        clip: rect(1px, 1px, 1px, 1px);
-      }
 
       .speaker {
         margin: var(--space-4) 0;
@@ -145,6 +140,7 @@
         padding: var(--space-3) 0;
         font-size: 1rem;
       }
+
       .social-slides {
         width: auto;
         color: inherit;

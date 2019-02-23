@@ -2,17 +2,16 @@
 .jumbo {
   position: relative;
   height: calc(100vh - var(--toolbar-height));
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  background-image: linear-gradient(to bottom, var(--darken-3), var(--darken-3)), var(--bg-img);
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
 
   img {
-    max-width: 100%;
+    max-width: 75vw;
     filter: drop-shadow(0px 1px 1px var(--darken-3));
   }
 
@@ -26,15 +25,10 @@
     color: var(--primary-txt);
     border-radius: var(--space-3);
     position: relative;
-    margin: 0 auto;
     overflow: hidden;
     text-shadow: 0 1px 1px var(--darken-3);
-    max-width: 50vw;
+    max-width: 75vw;
     text-align: center;
-
-    @include mq($from: lg) {
-      max-width: 1000px;
-    }
 
     h2 {
       font-size: 2rem;
@@ -46,54 +40,35 @@
       font-size: 1.8rem;
       margin: var(--space-3) 0;
     }
-
-    &::before {
-      background-image: linear-gradient(to bottom, var(--darken-3), var(--darken-3)), var(--bg-img);
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center center;
-
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
-      filter: blur(20px);
-    }
   }
 
   .scroll-down {
     position: absolute;
     bottom: 2rem;
-    height: 2.5em;
-    width: 1.5em;
-    color: var(--base);
-    border: var(--space-1) solid currentColor;
-    border-radius: 1em;
+    left: 0;
+    transform: translateX(50vw);
+    transform-origin: center center;
+    color: var(--base, white);
 
-    &::before {
-      content: '';
-      display: block;
-      width: 25%;
-      height: 20%;
-      background: currentColor;
-      position: relative;
-      border-radius: 50%;
-      background: currentColor;
-      animation: scrollDownMove .8s ease-in-out alternate infinite;
+    .icon {
+      height: 2.5em;
+      width: 1.5em;
+
+      .scroller {
+        animation: scrollDownMove .8s ease-in-out alternate infinite;
+      }
     }
+
   }
 }
 
 
 @keyframes scrollDownMove {
   from {
-    transform: translateX(.5em) translateY(.5em);
+    transform: translateY(-.15em);
   }
   to {
-    transform: translateX(.5em) translateY(1.5em);
+    transform: translateY(.65em);
   }
 }
 

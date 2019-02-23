@@ -1,6 +1,6 @@
 .home main {
 
-  &>section {
+  & > section {
     margin: 0;
     padding: 4rem;
 
@@ -21,7 +21,7 @@
       text-align: center;
     }
 
-    .inner{
+    .inner {
       flex: 1 1 auto;
       max-width: 33vw;
       display: flex;
@@ -94,7 +94,7 @@
     justify-content: center;
   }
 
-  .youtube-section{
+  .youtube-section {
     text-align: center;
 
     .inner {
@@ -107,7 +107,7 @@
       max-width: 50vw;
       text-align: center;
 
-      .youtube-player{
+      .youtube-player {
         border: 4px solid white;
         background-color: black;
       }
@@ -162,9 +162,17 @@
   }
 }
 
+@supports (grid-template-columns: repeat(auto-fit,minmax(25vmin,1fr))) {
+  .home main .info .numbers {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @include mq($until: lg) {
   .home main {
-    &>section {
+    & > section {
       padding: 2rem;
     }
 

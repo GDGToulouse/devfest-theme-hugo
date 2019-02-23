@@ -10,10 +10,10 @@
 			<ul class="socials">
 				{{ range .Page.Params.socials }}
 				<li>
-					<a class="social-{{ .icon }}"
-					   href="{{ .link }}"
-					   rel="noreferrer"
-					   target="_blank">{{ .name }}</a>
+					<a href="{{ .link }}" class="social" rel="noreferrer" target="_blank">
+						{{ partial "icon.html" .icon }}
+						{{ .name }}
+					</a>
 				</li>
 				{{ end }}
 			</ul>
@@ -25,7 +25,7 @@
 		<ul class="talks">
 			{{ range where .Site.RegularPages "Params.speakers" "intersect" (slice .Page.Params.id) }}
 			<li>
-				<a href="{{ .URL }}" class="talk talk-link">{{ .Title }}</a>
+				<a href="{{ .URL }}" class="visually-hidden">{{ .Title }}</a>
 				<a href="{{ .URL }}" class="talk tag-{{ anchorize (delimit .Params.tags "" ) }}">
 				<div class="tags">
 					{{ range .Params.tags }}

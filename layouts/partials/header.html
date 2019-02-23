@@ -8,7 +8,10 @@
 
 	<input type="checkbox" id="menu-burger" class="visually-hidden" aria-label="Menu"/>
 
-	<label for="menu-burger"></label>
+	<label for="menu-burger">
+		{{ partial "icon.html" "menu" }}
+		{{ partial "icon.html" "close" }}
+	</label>
 
 	<nav>
 		<ul class="menu">
@@ -33,7 +36,7 @@
 				   role="radio"
 				   aria-label="{{ i18n "language_switch" }} {{ .Language.LanguageName }}"
 				   aria-checked="{{ if eq .Language $.Site.Home.Language }}true{{ else }}false{{ end }}">
-					{{ i18n "language_switch" }} {{ .Language.LanguageName }}
+					{{- i18n "language_switch" }} {{ .Language.LanguageName -}}
 				</a>
 			</li>
 			{{ end }}

@@ -38,17 +38,28 @@ body > footer {
       }
     }
 
-    .follow a[class*='social-'] {
+    .follow a.social {
+      opacity: .75;
       filter: grayscale(1);
       transition: filter var(--animation);
 
       &:hover, &:focus {
+        opacity: 1;
         filter: grayscale(0);
       }
     }
 
     .blog a {
       text-decoration: underline;
+    }
+
+    .email a {
+      display: flex;
+      align-items: center;
+      .icon {
+        width: 1em;
+        height: 1em;
+      }
     }
   }
 

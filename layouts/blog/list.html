@@ -12,7 +12,7 @@
 <section class="blogs">
 	{{ range .Pages }}
 	<article>
-		<a class="blog blog-links" aria-hidden="true" href="{{ .URL }}">{{ .Title }}</a>
+		<a class="visually-hidden" aria-hidden="true" href="{{ .URL }}">{{ .Title }}</a>
 		<a class="blog" href="{{ .URL }}">
 			<div class="img" style="background-image: url({{ .Params.image }});"></div>
 			<div class="info">

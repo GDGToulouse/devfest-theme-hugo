@@ -1,7 +1,8 @@
 <section class="subscribe {{ .Get "class" }}">
 	<div class="inner">{{ .Inner }}</div>
-	<a class="btn primary ripple icon-subscribe"
-	   rel="noreferrer"
-	   target="_blank"
-	   href="{{ .Site.Params.subscriptionUrl }}">{{ i18n "subscribe_action" }}</a>
+	<a href="{{ .Site.Params.subscriptionUrl }}"
+	   class="btn primary ripple" rel="noreferrer" target="_blank">
+		{{ partial "icon.html" "subscribe" }}
+		{{ i18n "subscribe_action" }}
+	</a>
 </section>

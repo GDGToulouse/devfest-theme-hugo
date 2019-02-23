@@ -5,10 +5,10 @@
 	<ul class="socials">
 		{{ range .Params.socials }}
 		<li>
-			<a class="social-{{ lower .name }}"
-			   rel="noreferrer"
-			   href="{{ .link }}"
-			   target="_blank">{{ .name }}</a>
+			<a class="social" rel="noreferrer" href="{{ .link }}" target="_blank">
+				{{ partial "icon.html" (lower .name) }}
+				{{- .name -}}
+			</a>
 		</li>
 		{{ end }}
 	</ul>

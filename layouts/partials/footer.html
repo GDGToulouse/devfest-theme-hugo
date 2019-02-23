@@ -13,24 +13,27 @@
 		</div>
 		<div class="blog">
 			<header>
-				{{ i18n "footer_follow_blog" }} <a href="{{ "blog/" | relLangURL }}">{{ i18n "footer_follow_blog_blog" }}</a>
+				{{ i18n "footer_follow_blog" }} <a href="{{ " blog/" | relLangURL }}">{{ i18n "footer_follow_blog_blog" }}</a>
 			</header>
 		</div>
 		<div class="follow">
 			<header>{{ i18n "footer_follow_us" }}</header>
 			<ul class="social-list">
 				{{ range .Site.Data.footer.follow }}
-				<li><a class="social-{{ .name }}"
-				       href="{{ .url }}"
-				       rel="noreferrer"
-				       target="_blank">{{ .name }}</a></li>
+				<li>
+					<a href="{{ .url }}" class="social" rel="noreferrer" target="_blank">
+						{{ partial "icon.html" .name }}
+						{{ .name }}
+					</a>
+				</li>
 				{{ end }}
 			</ul>
 		</div>
 		<div class="email">
-			<header>
-				<a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
-			</header>
+			<a href="mailto:{{ .Site.Params.email }}">
+				{{ partial "icon.html" "email" }}
+				{{- .Site.Params.email -}}
+			</a>
 		</div>
 	</div>
 
@@ -60,10 +63,11 @@
 		<section class="subscribe">
 			<header>{{ i18n "newsletter" }}</header>
 			<p>{{ i18n "subscribe_notice" }}</p>
-			<a class="btn ripple"
-			   rel="noreferrer"
-			   target="_blank"
-			   href="{{ .Site.Params.subscriptionUrl }}">{{ i18n "subscribe_action" }}</a>
+			<a href="{{ .Site.Params.subscriptionUrl }}"
+			   class="btn ripple" rel="noreferrer" target="_blank">
+				{{ partial "icon.html" "subscribe" }}
+				{{- i18n "subscribe_action" -}}
+			</a>
 		</section>
 	</div>
 

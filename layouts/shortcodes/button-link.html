@@ -2,6 +2,9 @@
 {{ $url := .Get "url" }}
 {{ $label := .Get "label" }}
 
-<a class="btn primary ripple {{ if $icon }}icon-{{ $icon }}{{ end }}"
-   href="{{ $url }}">{{ $label }}</a>
+<a class="btn primary ripple" href="{{ $url }}">
+	{{ if and $icon (not (eq $icon "right")) }}{{ partial "icon.html" $icon }}{{ end }}
+	{{- $label -}}
+	{{ if eq $icon "right" }}{{ partial "icon.html" $icon }}{{ end }}
+</a>
 
