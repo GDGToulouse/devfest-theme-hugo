@@ -7,18 +7,19 @@
   ul.members {
     padding: 0;
     margin: 0;
-    display: grid;
-    grid-gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
 
-    li {
+    & > li {
+      flex: 1 1 300px;
+      margin: 2rem;
       display: flex;
 
       .photo {
         --size: 6rem;
         box-shadow: 0 0 0 var(--space-2) var(--darken-2);
-        height: var(--size);
-        min-width: var(--size);
+        min-width: var(--size, 6rem);
+        height: var(--size, 6rem);
         border-radius: 100%;
         background-size: cover;
 
@@ -34,12 +35,13 @@
 
       ul.socials {
         list-style: none;
-        display: flex;
+        //display: flex;
         margin: 0;
         padding: 0;
         font-size: 1.5em;
 
         li {
+          display: inline-block;
           filter: grayscale(1);
           transition: filter var(--animation);
 

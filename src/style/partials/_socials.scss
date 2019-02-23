@@ -13,8 +13,8 @@ a[class*='social-'] {
 
   &::before {
     --size: 1em;
-    height: var(--size);
-    min-width: var(--size);
+    height: var(--size, 1em);
+    min-width: var(--size, 1em);
     display: inline-block;
     content: '';
     background-repeat: no-repeat;

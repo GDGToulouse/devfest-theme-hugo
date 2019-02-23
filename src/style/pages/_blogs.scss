@@ -14,24 +14,21 @@
   }
 
   .blogs {
-    display: grid;
-    grid-gap: var(--space-4);
 
     a.blog-links {
       position: absolute !important;
-      height: 1px; width: 1px;
+      height: 1px;
+      width: 1px;
       overflow: hidden;
       clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
       clip: rect(1px, 1px, 1px, 1px);
     }
 
-    a {
+    a.blog {
       text-decoration: none;
       padding: var(--space-4);
       border-radius: var(--space-3);
-      display: grid;
-      grid-template-columns: auto 1fr;
-      grid-gap: var(--space-4);
+      display: flex;
       color: inherit;
       border-bottom: thin solid var(--darken-1);
 
@@ -40,16 +37,21 @@
         background-position: center center;
         background-size: cover;
         --size: 16rem;
-        height: var(--size);
-        width: var(--size);
+        flex: 0 0 var(--size, 16rem);
+        height: var(--size, 16rem);
+        width: var(--size, 16rem);
         border-radius: var(--space-2);
       }
 
       .info {
+        flex: 1 1 auto;
+        margin-left: var(--space-4);
         justify-content: center;
+
         h2 {
           margin: var(--space-3) 0;
         }
+
         .reading {
           align-self: flex-end;
 
@@ -63,17 +65,18 @@
           color: var(--base-secondary-text);
         }
 
-        p{
+        p {
           line-height: 2rem;
         }
       }
     }
+
     @include mq($until: lg) {
       a {
         grid-template-rows: auto 1fr;
         grid-template-columns: auto;
 
-        .img{
+        .img {
           width: 100%;
         }
       }

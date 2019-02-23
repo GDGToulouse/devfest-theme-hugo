@@ -4,11 +4,16 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    display: grid;
-    grid-gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
 
-    li a.speaker {
+    & > li {
+      margin: 1rem;
+      flex: 1 0 300px;
+    }
+  }
+
+    a.speaker {
       padding: var(--space-4);
       border: thin solid var(--darken-1);
       box-shadow: var(--space-1) var(--space-1) var(--space-2) var(--darken-2);
@@ -27,6 +32,9 @@
         order: 2;
         text-align: center;
 
+        img {
+          max-width: 100%;
+        }
         figcaption {
           display: block;
         }
@@ -36,6 +44,6 @@
         box-shadow: var(--space-2) var(--space-2) var(--space-2) var(--darken-3);
       }
     }
-  }
 
-}
+
+  }

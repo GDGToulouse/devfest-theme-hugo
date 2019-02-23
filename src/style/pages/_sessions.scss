@@ -1,12 +1,16 @@
-.section.sessions, .taxonomy.tags  {
+.section.sessions, .taxonomy.tags {
 
   ul.talks {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: grid;
-    grid-gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+
+    li.talk {
+      margin: 1rem;
+      flex: 1 0 320px;
+    }
 
     a {
       border: thin solid var(--darken-1);
@@ -44,7 +48,6 @@
         .tags {
           float: right;
         }
-
       }
 
       .speakers {
@@ -58,6 +61,14 @@
         border-top: thin solid var(--darken-1);
       }
 
+    }
+  }
+}
+
+@supports (grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))) {
+  .section.sessions, .taxonomy.tags {
+    ul.talks {
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
   }
 }

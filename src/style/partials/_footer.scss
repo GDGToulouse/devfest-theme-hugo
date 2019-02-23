@@ -9,20 +9,11 @@ body > footer {
 
   // Header
   .footer-header {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
     justify-content: space-between;
     font-weight: 500;
     flex-wrap: wrap;
     text-transform: uppercase;
-
-    @include mq($until: xl) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @include mq($until: md) {
-      grid-template-columns: repeat(1, 1fr);
-    }
 
     header {
       margin-right: var(--space-2);
@@ -63,14 +54,10 @@ body > footer {
 
   // Content
   .footer-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: var(--space-4);
-
-    @include mq($until: md) {
-      grid-template-columns: repeat(1, 1fr);
-    }
 
     .subscribe {
 

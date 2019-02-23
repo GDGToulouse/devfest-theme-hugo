@@ -1,8 +1,8 @@
 
 [class*='icon-']::before {
   --size: 1em;
-  height: var(--size);
-  width: var(--size);
+  height: var(--size, 1em);
+  width: var(--size, 1em);
   display: inline-block;
   content: '';
   background-repeat: no-repeat;
@@ -34,8 +34,8 @@
 }
 .icon-right::after {
   --size: 1em;
-  height: var(--size);
-  width: var(--size);
+  height: var(--size, 1em);
+  width: var(--size, 1em);
   display: inline-block;
   margin-left: var(--space-2);
   content: '';

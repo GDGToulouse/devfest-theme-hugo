@@ -6,6 +6,10 @@ body > main {
     padding-left: 0;
     padding-right: 0;
 
+    @include mq($until: md) {
+      margin: 1rem;
+    }
+
     &.primary {
       background-color: var(--primary);
       color: var(--primary-txt);

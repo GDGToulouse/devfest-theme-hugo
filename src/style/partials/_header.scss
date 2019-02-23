@@ -20,8 +20,8 @@ body > header {
   label {
     display: none;
     --size: 1.5rem;
-    height: var(--size);
-    width: var(--size);
+    height: var(--size, 1.5rem);
+    width: var(--size, 1.5rem);
     opacity: .5;
     padding: .1em;
     border: var(--space-2) solid transparent; // Extending the hit area

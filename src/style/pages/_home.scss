@@ -1,6 +1,5 @@
 .home main {
 
-
   &>section {
     margin: 0;
     padding: 4rem;
@@ -15,26 +14,31 @@
   }
 
   .info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    display: flex;
+    flex-wrap: wrap;
 
     @include mq($until: md) {
       text-align: center;
     }
 
     .inner{
+      flex: 1 1 auto;
+      max-width: 33vw;
       display: flex;
       flex-direction: column;
       justify-content: center;
+
+      @include mq($until: xl) {
+        max-width: 100%;
+      }
     }
 
     .numbers {
+      flex: 1 0 33vw;
       margin: 0 2rem;
       min-width: 33vw;
-      justify-content: center;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-column-gap: 2rem;
+      display: flex;
+      justify-content: space-between;
       width: 100%;
 
       @include mq($until: md) {
@@ -168,6 +172,7 @@
       position: relative;
       top: unset;
       bottom: unset;
+      left: 0;
       right: unset;
       width: 100%;
     }

@@ -11,8 +11,8 @@
 
       .speaker-img {
         --size: 6rem;
-        height: var(--size);
-        min-width: var(--size);
+        height: var(--size, 6rem);
+        min-width: var(--size, 6rem);
         border-radius: 100%;
         background-size: cover;
         box-shadow: 0 0 var(--space-3) var(--darken-3);

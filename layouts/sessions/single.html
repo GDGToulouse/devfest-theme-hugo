@@ -2,45 +2,45 @@
 <section class="talk">
 
 	<header class="tag-{{ anchorize (delimit .Params.tags "" ) }}">
-		<div class="tags">
-			{{ range .Params.tags }}
-			<span>{{ . }}</span>
-			{{ end }}
-		</div>
+	<div class="tags">
+		{{ range .Params.tags }}
+		<span>{{ . }}</span>
+		{{ end }}
+	</div>
 
-		<h1 class="text">{{ .Title }}</h1>
-		<span class="language {{ anchorize .Params.language }}"></span>
+	<h1 class="text">{{ .Title }}</h1>
+	<span class="language {{ anchorize .Params.language }}"></span>
 	</header>
 
 	<div class="info">
 		<div class="complexity">{{ .Params.complexity }}</div>
 		<div class="type type-{{ anchorize .Params.talkType }}">{{ .Params.talkType }}</div>
 
-		<div class="content">
-			{{ .Content }}
+		<div class="detail">
+			<div class="content">{{ .Content }}</div>
+			<ul class="speakers">
+				{{ range where .Site.RegularPages "Params.id" "in" .Params.speakers }}
+				<li>
+					<a class="speaker" href="/speakers/{{ .Params.id }}">
+						<span class="info">
+							<div class="speaker-img" style="background-image: url({{ .Params.photo }});"></div>
+							<div class="info">
+								<strong class="speaker-name">{{ .Params.name }}</strong>
+								<span class="speaker-country">{{ .Params.country }}</span>
+							</div>
+							<figure class="speaker-company">
+								<img src="{{ .Params.companyLogo }}">
+								<figcaption>{{ .Params.company }}</figcaption>
+							</figure>
+						</span>
+						<p>{{ .Params.shortBio }}</p>
+					</a>
+				</li>
+				{{ end }}
+			</ul>
 		</div>
 
 	</div>
-
-
-	<ul class="speakers">
-		{{ range where .Site.RegularPages "Params.id" "in" .Params.speakers }}
-		<li>
-			<a class="speaker" href="/speakers/{{ .Params.id }}">
-				<div class="speaker-img" style="background-image: url({{ .Params.photo }});"></div>
-				<div class="info">
-					<strong class="speaker-name">{{ .Params.name }}</strong>
-					<span class="speaker-country">{{ .Params.country }}</span>
-				</div>
-				<p>{{ .Params.shortBio }}</p>
-				<figure class="speaker-company">
-					<img src="{{ .Params.companyLogo }}">
-					<figcaption>{{ .Params.company }}</figcaption>
-				</figure>
-			</a>
-		</li>
-		{{ end }}
-	</ul>
 
 
 	<div class="media">

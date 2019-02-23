@@ -1,11 +1,11 @@
 <header>
 
 	<div class="logo">
-		<a href="{{"/" | absLangURL}}">
+		<a href="{{"/" | relLangURL}}">
 			<img src="{{ .Site.Params.logos.header }}" alt="logo {{ .Site.Title }}">
 		</a>
 	</div>
-	</l>
+
 	<input type="checkbox" id="menu-burger" class="visually-hidden" aria-label="Menu"/>
 
 	<label for="menu-burger"></label>
@@ -18,7 +18,7 @@
 				{{ if (hasPrefix .URL "http") }}
 					<a class="external" rel="noreferrer" target="_blank" href="{{ .URL }}">{{ .Name }}</a>
 				{{ else }}
-				<a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+				<a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
 				{{ end }}
 			</li>
 			{{ end }}
@@ -29,7 +29,7 @@
 			<li>
 				<a class="lang lang-{{ .Language.LanguageName }} {{ if eq .Language $.Site.Home.Language }}active{{ end }}"
 				   title="{{ .Language.LanguageName }}"
-				   href="{{ .Permalink }}"
+				   href="{{ .RelPermalink }}"
 				   role="radio"
 				   aria-label="{{ i18n "language_switch" }} {{ .Language.LanguageName }}"
 				   aria-checked="{{ if eq .Language $.Site.Home.Language }}true{{ else }}false{{ end }}">

@@ -58,8 +58,8 @@ input[type=button], input[type=reset], input[type=submit] {
     &::before {
       margin: var(--space-2);
       --size: 1.5rem;
-      width: var(--size);
-      height: var(--size);
+      width: var(--size, 1.5rem);
+      height: var(--size, 1.5rem);
       display: inline-block;
       content: '';
       background-repeat: no-repeat;
