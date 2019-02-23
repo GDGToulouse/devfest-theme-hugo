@@ -25,6 +25,7 @@
 		<ul class="talks">
 			{{ range where .Site.RegularPages "Params.speakers" "intersect" (slice .Page.Params.id) }}
 			<li>
+				<a href="{{ .URL }}" class="talk talk-link">{{ .Title }}</a>
 				<a href="{{ .URL }}" class="talk tag-{{ anchorize (delimit .Params.tags "" ) }}">
 				<div class="tags">
 					{{ range .Params.tags }}

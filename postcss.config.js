@@ -4,6 +4,6 @@ module.exports = {
             autoprefixer: {grid: true},
             stage: 3
         }),
-        // require('cssnano')({preset: 'default'})
+        require('cssnano')({preset: 'default'})
     ]
 };
