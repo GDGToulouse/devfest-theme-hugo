@@ -1,12 +1,5 @@
 .section.blog {
 
-
-  main > section {
-    padding-left: 0;
-    padding-right: 0;
-    margin: 2rem var(--container-margin);
-  }
-
   @media (max-width: var(--breakpoint-lg)) {
     main > section {
       margin: 2rem var(--container-margin-mobile);
@@ -66,7 +59,7 @@
         }
 
         p {
-          line-height: 2rem;
+          line-height: 1.75;
         }
       }
     }
@@ -80,6 +73,28 @@
           width: 100%;
         }
       }
+    }
+  }
+}
+
+@include mq($until: sm) {
+  .section.blog .blogs a.blog {
+    display: block;
+
+    .img {
+      display: none;
+    }
+  }
+}
+
+@include mq($until: lg) {
+  .section.blog .blogs a.blog {
+    display: block;
+
+    .img {
+      --size: 8rem;
+      float: left;
+      margin-right: .5em;
     }
   }
 }
