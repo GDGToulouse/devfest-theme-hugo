@@ -6,27 +6,46 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center center;
-
-  img {
-    max-width: 75vw;
-    filter: drop-shadow(0px 1px 1px var(--darken-3));
-  }
 
   p {
     margin: var(--space-2) 0;
     font-size: 2rem;
   }
 
+  .jumbo-cover {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  #jumbo-img {
+    display: none;
+  }
+
+  #jumbo-overlay {
+    background-color: var(--primary);
+    transition: opacity var(--jumbo-overlay-transition, 0.4s);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    &.show {
+      opacity: var(--jumbo-overlay-opacity, 0.6);
+    }
+  }
+
   .inner {
     padding: var(--space-4);
     color: var(--primary-txt);
-    border-radius: var(--space-3);
     position: relative;
     overflow: hidden;
-    text-shadow: 0 1px 1px var(--darken-3);
     max-width: 75vw;
     text-align: center;
 
