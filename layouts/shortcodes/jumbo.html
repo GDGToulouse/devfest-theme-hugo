@@ -1,4 +1,5 @@
 {{ $imgLabel := .Get "imgLabel" }}
+{{ $logo := .Site.Params.logos.jumbo }}
 <script>
 	function decreaseOverlayBackground(){
 		document.querySelector('#jumbo-overlay').classList.add('show')
@@ -8,8 +9,13 @@
 	<div class="jumbo-cover" style="background-image: url('{{ .Get "img" }}')" {{ if $imgLabel }}aria-label="{{ $imgLabel }}"{{ end }}></div>
 	<img id="jumbo-img" onload="decreaseOverlayBackground()" src="{{ .Get "img" }}" />
 	<div id="jumbo-overlay"></div>
-	<div class="inner">
-		{{ .Inner }}
+	<div class="inner-wrapper">
+		{{ if $logo }}
+		<img class="jumbo-logo" src="{{ $logo }}" alt="logo {{ .Site.Title }}">
+		{{ end }}
+		<div class="inner">
+			{{ .Inner }}
+		</div>
 	</div>
 	<div class="scroll-down" aria-hidden="true">
 		{{ partial "icon.html" "scroll-down" }}

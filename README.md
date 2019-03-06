@@ -72,6 +72,7 @@ googleAnalytics = "UA-XXXXXXXX-X"
     themeColor = "#673ab7"
 
 [params.logos]
+    jumbo = "/images/logos/devfest_color_text.png"
     header = "/images/logos/devfest_color_text.png"
     footer = "/images/logos/devfest_gray_text.png"
 
