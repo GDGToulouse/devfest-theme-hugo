@@ -16,6 +16,13 @@ input[type=button], input[type=reset], input[type=submit] {
   --focus-color: var(--darken-1);
   --active-color: var(--darken-1);
 
+  &.btn-lg {
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+  }
+
   &.primary {
     background-color: var(--primary);
     color: var(--primary-txt);
@@ -83,3 +90,4 @@ span.btn[aria-disabled] {
   cursor: not-allowed;
   filter: grayscale(100%);;
 }
+
