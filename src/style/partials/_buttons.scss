@@ -31,22 +31,6 @@ input[type=button], input[type=reset], input[type=submit] {
     --active-color: var(--lighten-1);
   }
 
-  // Ripple
-  &.ripple {
-    background-position: center;
-    transition: background .5s;
-
-    &:hover {
-      background: var(--focus-color) radial-gradient(circle, transparent 1%, var(--focus-color) 1%) center/15000%;
-    }
-
-    &:active {
-      background-color: var(--active-color);
-      background-size: 100%;
-      transition: background 0s;
-    }
-  }
-
   // Icons
 
   &.btn-icon-only {
@@ -71,7 +55,7 @@ input[type=button], input[type=reset], input[type=submit] {
   }
 
   &:hover, &:focus {
-    background-color: var(--focus-color);
+    background-image: linear-gradient(to right, var(--focus-color), var(--focus-color) 100%);
     text-decoration: none;
   }
 

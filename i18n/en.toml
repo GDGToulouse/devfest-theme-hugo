@@ -15,6 +15,9 @@ other = "Buy Ticket"
 [home_tickets_soldout]
 other = "Sold Out"
 
+[home_tickets_close]
+other = "Not available"
+
 [home_location_direction]
 other = "Direction"
 

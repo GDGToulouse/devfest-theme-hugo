@@ -15,6 +15,9 @@ other = "Billeterie"
 [home_tickets_soldout]
 other = "Rupture de stock"
 
+[home_tickets_close]
+other = "Non disponible"
+
 [home_location_direction]
 other = "Itinéraire"
 
