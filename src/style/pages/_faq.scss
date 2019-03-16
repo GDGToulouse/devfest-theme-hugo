@@ -2,6 +2,12 @@
 .page.faq, .page.fr-faq {
 
 
+  @include mq($until: md) {
+    .hero .description {
+      padding: 0;
+    }
+  }
+
   .content {
     h1, h2, h3, h4, h5, h6 {
       color: var(--primary);

@@ -25,6 +25,10 @@
       color: inherit;
       border-bottom: thin solid var(--darken-1);
 
+      @include mq($until: md) {
+        padding: var(--space-2);
+      }
+
       .img {
         display: inline-block;
         background-position: center center;

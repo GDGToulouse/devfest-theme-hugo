@@ -34,6 +34,7 @@ body > header {
     .icon-menu {
       display: block;
     }
+
     .icon-close {
       display: none;
     }
@@ -48,6 +49,7 @@ body > header {
     .icon-menu {
       display: none;
     }
+
     .icon-close {
       display: block;
     }
@@ -84,7 +86,9 @@ body > header {
       line-height: calc(var(--toolbar-height) - (4 * var(--space-2)));;
       color: inherit;
       font-weight: 200;
+    }
 
+    nav a {
       &:focus, &:hover {
         text-shadow: var(--extruded-dark);
         opacity: .75;
@@ -101,9 +105,11 @@ body > header {
         &::before {
           color: initial;
         }
+
         &.lang-fr::before {
           content: '🇫🇷';
         }
+
         &.lang-gb::before {
           content: '🇬🇧';
         }
