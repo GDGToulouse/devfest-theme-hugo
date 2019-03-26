@@ -6,6 +6,11 @@
     }
   }
 
+  main h1, main .blogs {
+    max-width: var(--theJdrSize);
+    margin: 0 auto;
+  }
+
   .blogs {
 
     a.blog-links {

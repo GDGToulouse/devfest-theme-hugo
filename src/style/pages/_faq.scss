@@ -8,6 +8,11 @@
     }
   }
 
+  main h1, #TableOfContents, main .content {
+    max-width: var(--theJdrSize);
+    margin: 0 auto;
+  }
+
   .content {
     h1, h2, h3, h4, h5, h6 {
       color: var(--primary);
