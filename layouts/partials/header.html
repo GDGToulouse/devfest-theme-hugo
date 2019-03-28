@@ -1,46 +1,48 @@
 <header>
+	<div class="top-content">
 
-	<div class="logo">
-		<a href="{{"/" | relLangURL}}">
-			<img src="{{ .Site.Params.logos.header }}" alt="logo {{ .Site.Title }}">
-		</a>
-	</div>
+		<div class="logo">
+			<a href="{{"/" | relLangURL}}">
+				<img src="{{ .Site.Params.logos.header }}" alt="logo {{ .Site.Title }}">
+			</a>
+		</div>
 
-	<input type="checkbox" id="menu-burger" class="visually-hidden" aria-label="Menu"/>
+		<input type="checkbox" id="menu-burger" class="visually-hidden" aria-label="Menu"/>
 
-	<label for="menu-burger">
-		{{ partial "icon.html" "menu" }}
-		{{ partial "icon.html" "close" }}
-	</label>
+		<label for="menu-burger">
+			{{ partial "icon.html" "menu" }}
+			{{ partial "icon.html" "close" }}
+		</label>
 
-	<nav>
-		<ul class="menu">
-			{{- $currentPage := . -}}
-			{{ range .Site.Menus.main }}
-			<li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" >
-				{{ if (hasPrefix .URL "http") }}
-					<a class="external" rel="noreferrer" target="_blank" href="{{ .URL }}">{{ .Name }}</a>
-				{{ else }}
-				<a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+		<nav>
+			<ul class="menu">
+				{{- $currentPage := . -}}
+				{{ range .Site.Menus.main }}
+				<li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" >
+					{{ if (hasPrefix .URL "http") }}
+						<a class="external" rel="noreferrer" target="_blank" href="{{ .URL }}">{{ .Name }}</a>
+					{{ else }}
+					<a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+					{{ end }}
+				</li>
 				{{ end }}
-			</li>
-			{{ end }}
-		</ul>
+			</ul>
 
-		<ul class="languages">
-			{{ range .Translations }}
-			<li>
-				<a class="lang lang-{{ .Language.LanguageName }} {{ if eq .Language $.Site.Home.Language }}active{{ end }}"
-				   title="{{ .Language.LanguageName }}"
-				   href="{{ .RelPermalink }}"
-				   role="radio"
-				   aria-label="{{ i18n "language_switch" }} {{ .Language.LanguageName }}"
-				   aria-checked="{{ if eq .Language $.Site.Home.Language }}true{{ else }}false{{ end }}">
-					{{- i18n "language_switch" }} {{ .Language.LanguageName -}}
-				</a>
-			</li>
-			{{ end }}
-		</ul>
-	</nav>
+			<ul class="languages">
+				{{ range .Translations }}
+				<li>
+					<a class="lang lang-{{ .Language.LanguageName }} {{ if eq .Language $.Site.Home.Language }}active{{ end }}"
+					   title="{{ .Language.LanguageName }}"
+					   href="{{ .RelPermalink }}"
+					   role="radio"
+					   aria-label="{{ i18n "language_switch" }} {{ .Language.LanguageName }}"
+					   aria-checked="{{ if eq .Language $.Site.Home.Language }}true{{ else }}false{{ end }}">
+						{{- i18n "language_switch" }} {{ .Language.LanguageName -}}
+					</a>
+				</li>
+				{{ end }}
+			</ul>
+		</nav>
 
+	</div>
 </header>

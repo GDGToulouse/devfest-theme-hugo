@@ -1,85 +1,87 @@
-<footer class="container">
+<footer>
+	<div class="bottom-content">
 
-	<div class="footer-header">
-		<div class="share">
-			<header>{{ i18n "footer_share" }}</header>
-			<ul class="social-list">
-				{{ range .Site.Data.footer.share }}
-				<li>
-					{{ $url := .URL | relLangURL }}
-					{{ partial "social-sharer.html" (dict "context" . "url" $url "name" .name) }}
-					{{ end }}
-			</ul>
-		</div>
-		<div class="blog">
-			<header>
-				{{ i18n "footer_follow_blog" }} <a href="{{ "blog/" | relLangURL }}">{{ i18n "footer_follow_blog_blog" }}</a>
-			</header>
-		</div>
-		<div class="follow">
-			<header>{{ i18n "footer_follow_us" }}</header>
-			<ul class="social-list">
-				{{ range .Site.Data.footer.follow }}
-				<li>
-					<a href="{{ .url }}" class="social" rel="noreferrer" target="_blank">
-						{{ partial "icon.html" .name }}
-						{{ .name }}
-					</a>
-				</li>
-				{{ end }}
-			</ul>
-		</div>
-		<div class="email">
-			<a href="mailto:{{ .Site.Params.email }}">
-				{{ partial "icon.html" "email" }}
-				{{- .Site.Params.email -}}
-			</a>
-		</div>
-	</div>
-
-	<hr>
-
-	<div class="footer-content">
-		{{ range .Site.Data.footer.content }}
-		<section>
-			<header>{{ i18n .title }}</header>
-			{{ if .links }}
-			<ul>
-				{{ range .links }}
-				<li>
-					<a href="{{ .url }}" {{ if .newTab }}target="_blank" rel="noopener" {{end}}>
-						{{ if .nameKey }}
-						{{ i18n .nameKey }}
-						{{ else }}
-						{{ .name }}
+		<div class="footer-header">
+			<div class="share">
+				<header>{{ i18n "footer_share" }}</header>
+				<ul class="social-list">
+					{{ range .Site.Data.footer.share }}
+					<li>
+						{{ $url := .URL | relLangURL }}
+						{{ partial "social-sharer.html" (dict "context" . "url" $url "name" .name) }}
 						{{ end }}
-					</a>
-				</li>
+				</ul>
+			</div>
+			<div class="blog">
+				<header>
+					{{ i18n "footer_follow_blog" }} <a href="{{ "blog/" | relLangURL }}">{{ i18n "footer_follow_blog_blog" }}</a>
+				</header>
+			</div>
+			<div class="follow">
+				<header>{{ i18n "footer_follow_us" }}</header>
+				<ul class="social-list">
+					{{ range .Site.Data.footer.follow }}
+					<li>
+						<a href="{{ .url }}" class="social" rel="noreferrer" target="_blank">
+							{{ partial "icon.html" .name }}
+							{{ .name }}
+						</a>
+					</li>
+					{{ end }}
+				</ul>
+			</div>
+			<div class="email">
+				<a href="mailto:{{ .Site.Params.email }}">
+					{{ partial "icon.html" "email" }}
+					{{- .Site.Params.email -}}
+				</a>
+			</div>
+			</div>
+
+		<hr>
+
+		<div class="footer-content">
+			{{ range .Site.Data.footer.content }}
+			<section>
+				<header>{{ i18n .title }}</header>
+				{{ if .links }}
+				<ul>
+					{{ range .links }}
+					<li>
+						<a href="{{ .url }}" {{ if .newTab }}target="_blank" rel="noopener" {{end}}>
+							{{ if .nameKey }}
+							{{ i18n .nameKey }}
+							{{ else }}
+							{{ .name }}
+							{{ end }}
+						</a>
+					</li>
+					{{ end }}
+				</ul>
 				{{ end }}
-			</ul>
+			</section>
 			{{ end }}
-		</section>
-		{{ end }}
-		{{ if .Site.Params.subscriptionUrl }}
-		<section class="subscribe">
-			<header>{{ i18n "newsletter" }}</header>
-			<p>{{ i18n "subscribe_notice" }}</p>
-			<a href="{{ .Site.Params.subscriptionUrl }}"
-			   class="btn" rel="noreferrer" target="_blank">
-				{{ partial "icon.html" "subscribe" }}
-				{{- i18n "subscribe_action" -}}
-			</a>
-		</section>
-		{{ end }}
+			{{ if .Site.Params.subscriptionUrl }}
+			<section class="subscribe">
+				<header>{{ i18n "newsletter" }}</header>
+				<p>{{ i18n "subscribe_notice" }}</p>
+				<a href="{{ .Site.Params.subscriptionUrl }}"
+				   class="btn" rel="noreferrer" target="_blank">
+					{{ partial "icon.html" "subscribe" }}
+					{{- i18n "subscribe_action" -}}
+				</a>
+			</section>
+			{{ end }}
+		</div>
+
+		<hr>
+
+		<div class="footer-footer">
+			{{ if .Site.Params.logos.footer }}
+			<img src="{{ .Site.Params.logos.footer }}" alt="{{ .Site.Title }}">
+			{{ end }}
+			<div>{{ emojify .Site.Params.copyright }}</div>
+		</div>
+
 	</div>
-
-	<hr>
-
-	<div class="footer-footer">
-		{{ if .Site.Params.logos.footer }}
-		<img src="{{ .Site.Params.logos.footer }}" alt="{{ .Site.Title }}">
-		{{ end }}
-		<div>{{ emojify .Site.Params.copyright }}</div>
-	</div>
-
 </footer>

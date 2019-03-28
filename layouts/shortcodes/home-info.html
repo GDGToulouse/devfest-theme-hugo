@@ -1,21 +1,21 @@
 <section class="info container {{ .Get "class" }}">
+	<div class="wrapper">
+		<div class="inner">
+			{{ .Inner }}
+		</div>
 
-	<div class="inner">
-		{{ .Inner }}
-	</div>
-
-	{{ with .Get "what" }}
-	<div class="numbers">
-		{{range (split . ",") }}
-		<div class="number">
-			{{ $labelValue := (split . ":") }}
-			{{ $label := (index $labelValue 0) }}
-			{{ $value := (index $labelValue 1) }}
-			<strong>{{ $value }}</strong>
-			<div>{{ $label }}</div>
+		{{ with .Get "what" }}
+		<div class="numbers">
+			{{range (split . ",") }}
+			<div class="number">
+				{{ $labelValue := (split . ":") }}
+				{{ $label := (index $labelValue 0) }}
+				{{ $value := (index $labelValue 1) }}
+				<strong>{{ $value }}</strong>
+				<div>{{ $label }}</div>
+			</div>
+			{{ end }}
 		</div>
 		{{ end }}
 	</div>
-	{{ end }}
-
 </section>

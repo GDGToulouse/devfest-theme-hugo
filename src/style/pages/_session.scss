@@ -54,6 +54,12 @@
 
 .page.sessions {
 
+  main h1, main .hero .description p, main > section {
+    max-width: var(--theJdrSize);
+    margin: 0 auto;
+  }
+
+
   .talk {
 
     header {

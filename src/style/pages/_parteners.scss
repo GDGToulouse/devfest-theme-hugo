@@ -1,5 +1,13 @@
-.page.partners {
+.page.partners, .section.partners {
 
+  main h1, main .hero .description p, main .members, main .content, main .partners {
+    max-width: var(--theJdrSize);
+    margin: 0 auto;
+  }
+
+  main h1 {
+    text-align: left;
+  }
 
   .content {
     img {
