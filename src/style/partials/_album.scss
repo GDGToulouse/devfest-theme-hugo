@@ -22,13 +22,13 @@
   }
 }
 
-@supports (grid-template-rows: repeat(3, calc( var(--theJdrSize) / 3 ))) {
+@supports (grid-template-rows: repeat(3, minmax(30vh, calc( var(--theJdrSize) / 3 )))) {
   .album {
     padding: var(--space-2);
     display: grid;
     grid-gap: var(--space-2);
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, calc( var(--theJdrSize) / 3 ));
+    grid-template-rows: repeat(3, minmax(30vh, calc( var(--theJdrSize) / 3 )));
     grid-auto-flow: dense;
 
     .img {
