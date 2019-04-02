@@ -3,11 +3,6 @@ body > footer {
   color: var(--base-secondary-text);
   font-weight: 200;
 
-  .bottom-content {
-    max-width: var(--theJdrSize);
-    margin: 0 auto;
-  }
-
   a:hover {
     text-decoration: underline;
   }

@@ -1,17 +1,13 @@
 body > header {
+
   position: fixed;
   top: 0;
   z-index: 100;
   width: 100vw;
-
-  .top-content {
-    max-width: var(--theJdrSize);
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2) var(--container-margin) var(--space-1) var(--container-margin);
   box-shadow: 0 var(--space-1) var(--primary),
   0 var(--space-2) var(--space-1) var(--darken-3);
   background: var(--primary);

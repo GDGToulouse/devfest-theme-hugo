@@ -1,10 +1,5 @@
 .page.speakers {
 
-  main h1, main .hero header, .hero .talks, main > section {
-    max-width: var(--theJdrSize);
-    margin: 0 auto;
-  }
-
   .hero {
     header, .description {
       padding: var(--space-4) var(--container-margin);
