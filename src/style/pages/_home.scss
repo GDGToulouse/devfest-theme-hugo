@@ -17,6 +17,12 @@
     display: flex;
     flex-wrap: wrap;
 
+    .wrapper {
+      max-width: var(--theJdrSize);
+      margin: 0 auto;
+      display: flex;
+    }
+
     @include mq($until: md) {
       text-align: center;
     }
@@ -98,13 +104,13 @@
     text-align: center;
 
     .inner {
+      max-width: var(--theJdrSize);
+      margin: 0 auto;
       padding: var(--space-4);
       border-radius: var(--space-3);
       position: relative;
-      margin: 0 auto;
       overflow: hidden;
       text-shadow: 0 1px 1px var(--darken-3);
-      max-width: 50vw;
       text-align: center;
 
       .youtube-player {
