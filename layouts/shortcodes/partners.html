@@ -1,22 +1,20 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
 <section class="partners">
+<div class="inner">
+{{ .Inner }}
+</div>
 
-	<div class="inner">
-		{{ .Inner }}
-	</div>
-
-	{{ $site := .Site }}
-	{{ range (split (.Get "categories") ",") }}
-	<section class="partners-group partner-{{ . }}">
-		<h3 class="fancy">
-			<span>{{ . }}</span>
-		</h3>
-		<ul>
-			{{ range where $site.AllPages "Params.category" . }}
-			<li>{{ partial "partner.html" . }}</li>
-			{{ end }}
-		</ul>
-	</section>
-	{{ end }}
-
+{{ $site := .Site }}
+{{ range (split (.Get "categories") ",") }}
+<section class="partners-group partner-{{ . }}">
+<h3 class="fancy">
+<span>{{ . }}</span>
+</h3>
+<ul>
+{{ range where $site.AllPages "Params.category" . }}
+<li>{{ partial "partner.html" . }}</li>
+{{ end }}
+</ul>
+</section>
+{{ end }}
 </section>

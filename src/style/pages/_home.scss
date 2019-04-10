@@ -166,6 +166,14 @@
       }
     }
   }
+
+  .partners {
+    .inner {
+      h2 {
+        text-align: center;
+      }
+    }
+  }
 }
 
 @supports (grid-template-columns: repeat(auto-fit,minmax(25vmin,1fr))) {
