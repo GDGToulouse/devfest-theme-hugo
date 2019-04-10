@@ -6,3 +6,10 @@ new Konami(function () {
         elt.style.backgroundImage = 'url(/images/wtf/serious.jpg)';
     }
 });
+
+setTimeout(function () {
+    const jumboOverlay = document.querySelector('#jumbo-overlay');
+    if (jumboOverlay) {
+        jumboOverlay.classList.add('show');
+    }
+}, 500);

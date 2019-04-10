@@ -55,6 +55,8 @@
       position: relative;
       overflow: hidden;
       text-align: center;
+      display: flex;
+      flex-direction: column;
       h2 {
         font-size: 2rem;
         margin: var(--space-3) 0;
@@ -63,6 +65,10 @@
       h3 {
         font-size: 1.8rem;
         margin: var(--space-3) 0;
+      }
+      a {
+        align-self: center;
+        margin: .5em;
       }
     }
 

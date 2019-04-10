@@ -1,3 +1,4 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
 <div class="ticket" {{ if .Get "soldOut" }}aria-disabled="true"{{end}}>
 	<div class="ticket-name">{{ .Get "name "}}</div>
 	<div class="ticket-price">{{ .Get "price" }}</div>
