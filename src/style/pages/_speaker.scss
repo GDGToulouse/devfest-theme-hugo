@@ -1,11 +1,16 @@
 .page.speakers {
 
+
   .hero {
     header, .description {
       padding: var(--space-4) var(--container-margin);
     }
 
     header {
+      margin: 0 auto;
+      padding-left: 0;
+      max-width: var(--theJdrSize);
+
       display: flex;
       align-items: center;
 
@@ -49,6 +54,7 @@
 
 
     .description {
+
       .talks {
         padding-left: 0;
         list-style: none;
@@ -77,6 +83,9 @@
   }
 
   section.speaker {
+
+    margin: 0 auto;
+    max-width: var(--theJdrSize);
 
     header {
       display: flex;

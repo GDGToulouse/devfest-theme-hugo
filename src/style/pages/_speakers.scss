@@ -1,5 +1,11 @@
 .section.speakers {
 
+  .hero h1 {
+    margin: 0 auto;
+    max-width: var(--theJdrSize);
+    padding-left: 0;
+  }
+
   ul.speakers {
     list-style: none;
     padding: 0;

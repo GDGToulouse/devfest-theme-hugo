@@ -73,7 +73,14 @@
   }
 
   .speakers {
+    .inner {
+      max-width: var(--theJdrSize);
+      margin: 0 auto;
+    }
     ul {
+      max-width: var(--theJdrSize);
+      margin: 0 auto;
+
       padding-left: 0;
       list-style: none;
       display: flex;

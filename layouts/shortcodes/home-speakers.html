@@ -6,7 +6,7 @@
 	</div>
 
 	<ul class="shuffle">
-		{{ range where $.Site.AllPages "Params.featured" true }}
+		{{ range where $.Site.AllPages "Params.feature" true }}
 		<li>
 			{{ partial "speaker.html" . }}
 		</li>
