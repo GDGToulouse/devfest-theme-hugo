@@ -1,15 +1,23 @@
 .page.speakers {
 
+  main {
+    display: flex;
+    flex-direction: column;
+  }
 
   .hero {
+    display: flex;
+    flex-direction: column;
+
     header, .description {
       padding: var(--space-4) var(--container-margin);
     }
 
     header {
-      margin: 0 auto;
+      align-self: center;
+      margin: 1em;
       padding-left: 0;
-      max-width: var(--theJdrSize);
+      width: var(--theJdrSize);
 
       display: flex;
       align-items: center;
@@ -83,9 +91,9 @@
   }
 
   section.speaker {
-
-    margin: 0 auto;
-    max-width: var(--theJdrSize);
+    align-self: center;
+    margin: 1em;
+    width: var(--theJdrSize);
 
     header {
       display: flex;

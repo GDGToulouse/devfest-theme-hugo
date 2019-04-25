@@ -1,6 +1,4 @@
 
-
-
 .page.code-of-conduct {
 
 
@@ -27,6 +25,14 @@
       li {
         line-height: 1.25;
       }
+    }
+  }
+}
+
+@include mq($until: xl) {
+  .page.code-of-conduct {
+    .content {
+      padding: 0 .5em;
     }
   }
 }

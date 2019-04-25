@@ -52,7 +52,13 @@
 
     }
   }
-
 }
 
 
+@include mq($until: xl) {
+  .page.faq, .page.fr-faq {
+    .content {
+      padding: 0 .5em;
+    }
+  }
+}

@@ -1,9 +1,10 @@
 .section.speakers {
 
   .hero h1 {
-    margin: 0 auto;
-    max-width: var(--theJdrSize);
-    padding-left: 0;
+    //margin: 0 auto;
+    //max-width: var(--theJdrSize);
+    //padding-left: 0;
+    padding: 2rem var(--container-margin);
   }
 
   ul.speakers {

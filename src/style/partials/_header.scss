@@ -8,6 +8,7 @@ body > header {
     max-width: var(--theJdrSize);
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
   }
@@ -137,6 +138,7 @@ body > header {
     nav {
       display: none;
       width: 100%;
+      padding: 0 1em;
       background: var(--primary);
       flex-direction: column;
       justify-content: flex-start;
