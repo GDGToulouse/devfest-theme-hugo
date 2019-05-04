@@ -1,0 +1,60 @@
+{{ define "main" }}
+
+<section class="header">
+	<div class="card" style="background-image: url({{ .Params.logo }});"></div>
+	<h1>{{ .Title }}</h1>
+</section>
+
+<section class="content">
+	{{ .Content }}
+
+</section>
+
+{{ if .Params.why }}
+<section class="why">
+	<h2>{{index .Site.Data.partner .Params.lang "why" }}</h2>
+	<p>{{ .Params.why }}</p>
+</section>
+{{ end }}
+
+{{ if .Params.socials }}
+<section class="socials">
+	<h2>{{index .Site.Data.partner .Params.lang "socials" }}</h2>
+	<ul>
+		{{ range .Page.Params.socials }}
+		<li>
+			<a href="{{ .link }}" class="social" rel="noreferrer" target="_blank">
+				{{ partial "icon.html" .icon }}
+				{{ .name }}
+			</a>
+		</li>
+		{{ end }}
+	</ul>
+</section>
+{{ end }}
+
+{{ if .Params.jobs }}
+<section class="jobs">
+	<h2>{{index .Site.Data.partner .Params.lang "jobs" }}</h2>
+	<ul>
+		{{ range .Page.Params.jobs }}
+		<li class="job">
+				<header>
+					<a href="{{ .url }}" rel="noreferrer" target="_blank">{{ .title }}</a>
+				</header>
+				<div class="city">
+					{{ partial "icon.html" "map-marker" }}
+					{{ .city }}
+				</div>
+				<a href="mailto:{{ .contact }}" class="contact">
+					{{ partial "icon.html" "email" }}
+					{{ .contact }}
+				</a>
+		</li>
+		{{ end }}
+	</ul>
+</section>
+{{ end }}
+
+
+{{ end }}
