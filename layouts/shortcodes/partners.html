@@ -11,7 +11,8 @@
 <span>{{ . }}</span>
 </h3>
 <ul>
-{{ range where $site.AllPages "Params.category" . }}
+	{{ $partners := where $site.AllPages "Params.category" . }}
+{{ range sort $partners ".Params.order" "asc" }}
 <li>{{ partial "partner.html" . }}</li>
 {{ end }}
 </ul>
