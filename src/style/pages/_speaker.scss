@@ -17,7 +17,7 @@
       align-self: center;
       margin: 1em;
       padding-left: 0;
-      width: var(--theJdrSize);
+      max-width: var(--theJdrSize);
 
       display: flex;
       align-items: center;
@@ -93,7 +93,7 @@
   section.speaker {
     align-self: center;
     margin: 1em;
-    width: var(--theJdrSize);
+    max-width: var(--theJdrSize);
 
     header {
       display: flex;
