@@ -1,10 +1,15 @@
 .page.partners {
 
   .header {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "logo title"
+      "logo website";
     align-items: center;
 
     .card {
+      grid-area: logo;
       height: 8em;
       width: 12em;
       display: inline-block;
@@ -20,7 +25,13 @@
     }
 
     h1 {
+      grid-area: title;
+      align-self: end;
       font-size: 2.5em;
+    }
+    a {
+      grid-area: website;
+      align-self: start;
     }
   }
 

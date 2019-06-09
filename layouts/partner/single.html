@@ -3,6 +3,9 @@
 <section class="header">
 	<div class="card" style="background-image: url({{ .Params.logo }});"></div>
 	<h1>{{ .Title }}</h1>
+	{{ if .Params.website }}
+	<a href="{{ .Params.website }}">{{ .Params.website }}</a>
+	{{ end }}
 </section>
 
 <section class="content">
