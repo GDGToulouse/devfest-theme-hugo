@@ -23,7 +23,7 @@
 	<div class="description">
 
 		<ul class="talks">
-			{{ range where .Site.RegularPages "Params.speakers" "intersect" (slice .Page.Params.id) }}
+			{{ range where .Site.RegularPages "Params.speakers" "intersect" (slice .Page.Params.key) }}
 			<li>
 				<a href="{{ .URL }}" class="visually-hidden">{{ .Title }}</a>
 				<a href="{{ .URL }}" class="talk tag-{{ anchorize (delimit .Params.tags "" ) }}">
@@ -45,7 +45,7 @@
 <section class="speaker">
 
 	<header>
-		<h2>{{ .Page.Params.country }}</h2>
+		<h2>{{ .Page.Params.city }}</h2>
 		<div class="speaker-company">{{ .Page.Params.company }}</div>
 	</header>
 
