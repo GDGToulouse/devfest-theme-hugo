@@ -17,28 +17,20 @@
 		<div class="type type-{{ anchorize .Params.talkType }}">{{ .Params.talkType }}</div>
 
 		<div class="detail">
-			<div class="content">{{ .Content }}</div>
 			<ul class="speakers">
-				{{ range where .Site.RegularPages "Params.id" "in" .Params.speakers }}
+				{{ range where .Site.RegularPages "Params.key" "in" .Params.speakers }}
 				<li>
-					<a class="visually-hidden" aria-hidden="true" href="/speakers/{{ .Params.id }}">{{ .Params.name }}</a>
-					<a class="speaker" href="/speakers/{{ .Params.id }}">
-						<span class="info">
-							<div class="speaker-img" style="background-image: url({{ .Params.photo }});"></div>
-							<div class="info">
-								<strong class="speaker-name">{{ .Params.name }}</strong>
-								<span class="speaker-country">{{ .Params.country }}</span>
-							</div>
-							<figure class="speaker-company">
-								<img src="{{ .Params.companyLogo }}">
-								<figcaption>{{ .Params.company }}</figcaption>
-							</figure>
-						</span>
-						<p>{{ .Params.shortBio }}</p>
+					<a class="visually-hidden" aria-hidden="true" href="/speakers/{{ .Params.key }}">{{ .Params.name }}</a>
+					<a class="speaker" href="/speakers/{{ .Params.key }}">
+						<div class="speaker-img" style="background-image: url({{ .Params.photoURL }});"></div>
+						<strong class="speaker-name">{{ .Params.name }}</strong>
+						<span class="speaker-country">{{ .Params.city }}</span>
+						<div class="speaker-company">{{ .Params.company }}</div>
 					</a>
 				</li>
 				{{ end }}
 			</ul>
+			<div class="content">{{ .Content }}</div>
 		</div>
 
 	</div>

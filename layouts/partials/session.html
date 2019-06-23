@@ -22,17 +22,12 @@
 
 
 <ul class="speakers">
-	{{ range where .Site.RegularPages "Params.id" "in" .Params.speakers }}
+	{{ range where .Site.RegularPages "Params.key" "in" .Params.speakers }}
 	<li class="speaker">
-		<div class="speaker-img" style="background-image: url({{ .Params.photo }});"></div>
-		<div class="info">
-			<strong class="speaker-name">{{ .Params.name }}</strong>
-			<span class="speaker-country">{{ .Params.country }}</span>
-		</div>
-		<figure class="speaker-company" >
-			<img src="{{ .Params.companyLogo }}">
-			<figcaption>{{ .Params.company }}</figcaption>
-		</figure>
+		<div class="speaker-img" style="background-image: url({{ .Params.photoURL }});"></div>
+		<strong class="speaker-name">{{ .Params.name }}</strong>
+		<span class="speaker-country">{{ .Params.country }}</span>
+		<div class="speaker-company">{{ .Params.company }}</div>
 	</li>
 	{{ end }}
 </ul>

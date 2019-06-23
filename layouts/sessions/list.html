@@ -5,7 +5,7 @@
 <section>
 	<ul class="talks shuffle">
 		{{ $sessions := where .Site.AllPages ".Section" "sessions" }}
-		{{ $types := (slice "Conférence" "Quickie" "Keynote") }}
+		{{ $types := (slice "Conference" "Quickie" "Keynote") }}
 		{{ range $sessions }}
 			{{ if intersect (slice .Params.talkType) $types }}
 		<li class="talk tag-{{ anchorize (delimit (.Params.tags | default (slice)) "" ) }}">{{ partial "session.html" . }}</li>

@@ -35,13 +35,9 @@
       }
 
       .speaker-company {
-        img {
-          height: 2rem;
-        }
-
-        figcaption {
-          display: none;
-        }
+        flex-grow: 1;
+        text-align: right;
+        margin-left: var(--space-3);
       }
 
       p {
@@ -77,7 +73,7 @@
       padding: var(--space-2) 0;
       border-top: thin solid var(--darken-1);
       border-bottom: thin solid var(--darken-1);
-      display: flex;
+      //display: flex;
     }
 
     .content {
@@ -85,22 +81,45 @@
       flex: 1 1 auto;
     }
 
+    .speakers .speaker {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-template-rows: 1fr auto auto;
+
+      .speaker-img {
+        grid-row: 1 / -1;
+        align-self: center;
+        --img-size: 3rem;
+        height: var(--img-size, 3rem);
+        min-width: var(--img-size, 3rem);
+        border-radius: 100%;
+        background-size: cover;
+        margin-right: var(--space-4);
+      }
+
+      .speaker-company {
+        text-align: left;
+        margin-left: 0;
+      }
+    }
+
+
     .speakers {
-      flex: 0 1 auto;
+      //flex: 0 1 auto;
+      float: right;
+      margin: var(--space-1) var(--space-3);
       list-style: none;
       padding: 0;
       align-self: start;
       border-radius: var(--space-2);
 
       .speaker {
+        padding: var(--space-3);
         margin: var(--space-4) 0;
         border: thin solid var(--darken-1);
         box-shadow: var(--space-1) var(--space-1) var(--space-2) var(--darken-2);
         transition: box-shadow var(--animation);
         border-radius: var(--space-2);
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
 
         &:hover, &:focus {
           box-shadow: var(--space-2) var(--space-2) var(--space-2) var(--darken-3);
@@ -109,27 +128,6 @@
         text-decoration: none;
         color: inherit;
 
-        .info {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-        }
-
-        p {
-          grid-column: 1 / -1;
-        }
-
-        figure {
-          grid-column: 3;
-          padding: var(--space-2);
-          display: flex;
-          align-items: center;
-          justify-content: flex-end;
-
-          img {
-            order: 2;
-          }
-        }
       }
     }
 
