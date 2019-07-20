@@ -21,37 +21,38 @@
     }
   }
 
-    a.speaker {
-      padding: var(--space-4);
-      border: thin solid var(--darken-1);
-      box-shadow: var(--space-1) var(--space-1) var(--space-2) var(--darken-2);
-      transition: box-shadow var(--animation);
-      border-radius: var(--space-2);
-      display: flex;
-      flex-direction: row;
-      height: 100%;
+  a.speaker {
+    padding: var(--space-4);
+    border: thin solid var(--darken-1);
+    box-shadow: var(--space-1) var(--space-1) var(--space-2) var(--darken-2);
+    transition: box-shadow var(--animation);
+    border-radius: var(--space-2);
+    display: flex;
+    flex-direction: row;
+    height: 100%;
 
-      .speaker-img {
-        margin-right: var(--space-4);
+    .speaker-img {
+      margin-right: var(--space-4);
+    }
+
+    .speaker-company {
+      margin-top: var(--space-3);
+      text-align: center;
+
+      img {
+        max-width: 100%;
       }
 
-      .speaker-company {
-        margin-top: var(--space-3);
-        text-align: center;
-
-        img {
-          max-width: 100%;
-        }
-        figcaption {
-          display: block;
-          max-width: 200px;
-        }
-      }
-
-      &:hover, &:focus {
-        box-shadow: var(--space-2) var(--space-2) var(--space-2) var(--darken-3);
+      figcaption {
+        display: block;
+        max-width: 200px;
       }
     }
 
-
+    &:hover, &:focus {
+      box-shadow: var(--space-2) var(--space-2) var(--space-2) var(--darken-3);
+    }
   }
+
+
+}

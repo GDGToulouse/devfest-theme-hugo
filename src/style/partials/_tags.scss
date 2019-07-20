@@ -41,3 +41,28 @@ section .tags {
   border: thin solid var(--darken-2);
   text-shadow: var(--extruded-light);
 }
+
+
+.tag-open {
+  background-image: url('/images/backgrounds/open.png');
+}
+
+.tag-pause {
+  background-image: url('/images/backgrounds/pause.png');
+}
+
+.tag-lunch {
+  background-image: url('/images/backgrounds/lunch.png');
+}
+
+.tag-party {
+  background-image: url('/images/backgrounds/party.png');
+}
+
+.tag-keynote {
+  background: var(--general);
+}
+
+.tag-office-hours {
+  background: var(--general);
+}

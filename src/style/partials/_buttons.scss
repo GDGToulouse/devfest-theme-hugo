@@ -75,3 +75,19 @@ span.btn[aria-disabled] {
   filter: grayscale(100%);;
 }
 
+
+a.goto-top {
+  position: fixed;
+  display: flex;
+  bottom: 2em;
+  right: 2em;
+  width: 1em;
+  height: 1em;
+  justify-content: center;
+  border: .75em solid var(--primary);
+  align-items: center;
+  font-size: 200%;
+  background-color: var(--primary);
+  color: var(--primary-txt);
+  border-radius: 50%;
+}
