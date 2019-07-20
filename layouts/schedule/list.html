@@ -11,6 +11,14 @@
 	{{ end }}
 </nav>
 
+{{ $.Scratch.Set "maxEnd" 0 }}
+{{ range $key, $slot := $.Site.Data.slots }}
+  {{ if gt $slot.row.end ($.Scratch.Get "maxEnd") }}
+		{{ $.Scratch.Set "maxEnd" $slot.row.end }}
+	{{ end}}
+{{ end }}
+
+{{ $maxEnd := $.Scratch.Get "maxEnd" }}
 
 <section class="schedule">
 
@@ -23,7 +31,7 @@
 	{{ $dayEndM := index $time 1 }}
 
 	<article id="day_{{$day.day}}" class="day"
-	         style="--dayStartH: {{ $dayStartH }}; --dayStartM: {{ $dayStartM }}; --rooms: {{ len .rooms }};--dayEndH: {{ $dayEndH }}; --dayEndM: {{ $dayEndM }};">
+	         style="--rooms: {{ len .rooms }}; --end: {{ $maxEnd }};">
 
 		<h2>{{- partial "date-long.html" (dict "time" .day "lang" $lang) }}</h2>
 
@@ -34,7 +42,7 @@
 		{{ $time := split $slot.start ":" }}
 		{{ $hh := index $time 0 }}
 		{{ $mm := index $time 1 }}
-		<div class="slot" style="--duration: {{ $slot.duration }}; --hh: {{ $hh }}; --mm: {{ $mm }};">
+		<div class="slot" style="--duration: {{ $slot.duration }}; --row-start: {{ $slot.row.start }}; --row-end: {{ $slot.row.end }};">
 			<span class="hh">{{ $hh }}</span>
 			<span class="mm">{{ $mm }}</span>
 		</div>
@@ -45,7 +53,9 @@
 		{{ range $index, $room := .rooms }}
 		{{ range where (where $.Site.Data.rooms "key" $room.room) "full" "!=" true }}
 		<!-- Room {{ $room.room }} -->
-		<h3 class="room" style="--room: {{ $index }}">{{ .label }}</h3>
+		<div class="room {{ if (modBool $index 2)}}even{{end}}" style="--room: {{ $index }};">
+			<h3>{{ .label }}</h3>
+		</div>
 
 		{{ range $room.slots }}
 		{{ range $slotKey, $sessionKey := . }}
@@ -55,7 +65,7 @@
 		{{ $hh := index $time 0 }}
 		{{ $mm := index $time 1 }}
 		<div class="session tag-{{ anchorize (delimit ($sessionPage.Params.tags | default (slice)) " " ) }}"
-		style="--room: {{ $index }}; --duration: {{ $slot.duration }}; --hh: {{ $hh }}; --mm: {{ $mm }};">
+		style="--room: {{ $index }}; --row-start: {{ $slot.row.start }}; --row-end: {{ $slot.row.end }};">
 
 		<span class="start">
 					<span class="hh">{{ $hh }}</span>
