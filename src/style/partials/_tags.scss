@@ -30,6 +30,14 @@
   background-color: var(--wtf);
 }
 
+.tag-keynote {
+  background-color: var(--keynote);
+}
+
+.tag-office-hours {
+  background-color: var(--office-hours);
+}
+
 .tag-general {
   background-color: var(--general);
 }
@@ -57,12 +65,4 @@ section .tags {
 
 .tag-party {
   background-image: url('/images/backgrounds/party.png');
-}
-
-.tag-keynote {
-  background: var(--general);
-}
-
-.tag-office-hours {
-  background: var(--general);
 }

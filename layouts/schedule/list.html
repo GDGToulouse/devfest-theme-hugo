@@ -12,9 +12,9 @@
 </nav>
 
 {{ $.Scratch.Set "maxEnd" 0 }}
-{{ range $key, $slot := $.Site.Data.slots }}
-  {{ if gt $slot.row.end ($.Scratch.Get "maxEnd") }}
-		{{ $.Scratch.Set "maxEnd" $slot.row.end }}
+{{ range $.Site.Data.slots }}
+	{{ if gt .row.end ($.Scratch.Get "maxEnd") }}
+	{{ $.Scratch.Set "maxEnd" .row.end }}
 	{{ end}}
 {{ end }}
 
@@ -37,8 +37,7 @@
 
 		{{ with (index .rooms 0) }}
 		{{ range .slots }}
-		{{ range $slotKey, $sessionKey := . }}
-		{{ $slot := index $.Site.Data.slots $slotKey }}
+		{{ $slot := index (where $.Site.Data.slots "key" .slot) 0 }}
 		{{ $time := split $slot.start ":" }}
 		{{ $hh := index $time 0 }}
 		{{ $mm := index $time 1 }}
@@ -48,19 +47,17 @@
 		</div>
 		{{ end }}
 		{{ end }}
-		{{ end }}
 
 		{{ range $index, $room := .rooms }}
-		{{ range where (where $.Site.Data.rooms "key" $room.room) "full" "!=" true }}
+		{{ range where (where $.Site.Data.rooms "key" $room.room) "skip" "!=" true }}
 		<!-- Room {{ $room.room }} -->
 		<div class="room {{ if (modBool $index 2)}}even{{end}}" style="--room: {{ $index }};">
 			<h3>{{ .label }}</h3>
 		</div>
 
 		{{ range $room.slots }}
-		{{ range $slotKey, $sessionKey := . }}
-		{{ $sessionPage := $.Site.GetPage (path.Join "/sessions" $sessionKey) }}
-		{{ $slot := index $.Site.Data.slots $slotKey }}
+		{{ $sessionPage := $.Site.GetPage (path.Join "/sessions" .talk) }}
+		{{ $slot := index (where $.Site.Data.slots "key" .slot) 0 }}
 		{{ $time := split $slot.start ":" }}
 		{{ $hh := index $time 0 }}
 		{{ $mm := index $time 1 }}
@@ -68,13 +65,12 @@
 		style="--room: {{ $index }}; --row-start: {{ $slot.row.start }}; --row-end: {{ $slot.row.end }};">
 
 		<span class="start">
-					<span class="hh">{{ $hh }}</span>
-					<span class="mm">{{ $mm }}</span>
-				</span>
+			<span class="hh">{{ $hh }}</span>
+			<span class="mm">{{ $mm }}</span>
+		</span>
 		{{ partial "schedule-session" $sessionPage }}
 
 		</div>
-		{{ end }}
 		{{ end }}
 		<!-- End room {{ $room.room }} -->
 		{{ end }}

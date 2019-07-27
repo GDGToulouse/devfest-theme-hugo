@@ -19,6 +19,7 @@
     "@babel/core": "^7.5.4",
     "@babel/polyfill": "^7.2.5",
     "@babel/preset-env": "^7.5.4",
+    "@types/js-yaml": "^3.12.1",
     "cssnano": "^4.1.8",
     "firebase": "^6.3.0",
     "html-minifier": "^4.0.0",

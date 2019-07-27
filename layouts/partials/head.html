@@ -16,7 +16,7 @@
 	{{ template "_internal/google_analytics_async.html" . }}
 	{{ end }}
 
-	{{ .Hugo.Generator }}
+	{{ hugo.Generator }}
 	<META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 	<title>{{ block "title" . }}{{ .Site.Title }} {{ with .Params.Title }} | {{ . }}{{ end }}{{ end }}</title>
@@ -41,10 +41,8 @@
 	{{ end }}
 	{{ end }}
 
-	{{ if .RSSLink }}
-	<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}"/>
-	<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}"/>
-	{{ end }}
+	<link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}"/>
+	<link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}"/>
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 	<link rel="stylesheet" href="/theme.css" media="all">
