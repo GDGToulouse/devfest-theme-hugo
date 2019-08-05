@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="kids">
+	<div class="hero" >
+		<div class="img" style="color: {{ .Params.color | default "#fff" }};background-image: url({{ .Params.image }})">
+			<div class="content">
+					<h1>
+						<span>{{ .Params.fullTitle }}</span>
+						<small>{{ .Params.brief }}</small>
+					</h1>
+			</div>
+		</div>
+	</div>
+	<section class="content">
+		{{ .Content }}
+	</section>
+</div>
+
+{{ end }}
