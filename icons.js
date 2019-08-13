@@ -1,5 +1,10 @@
 const {readFileSync, writeFileSync} = require('fs');
 const {sync: glob} = require('glob');
+const {Logger} = require('plop-logger');
+const {colorEmojiConfig} = require('plop-logger/lib/extra/colorEmojiConfig');
+
+Logger.config = colorEmojiConfig;
+const logger = Logger.getLogger('icons');
 
 const data = glob(`src/icons/*.svg`)
     .map(file => {
@@ -17,5 +22,5 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" class=
 </svg>`;
 
 const file = 'static/icons.svg';
-console.info('Generate ', file);
+logger.info('Generate', file);
 writeFileSync(file, svg, {flag: 'w'});
