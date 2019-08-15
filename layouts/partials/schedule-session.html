@@ -10,7 +10,9 @@
 		{{ if .Params.tags }}
 		<div class="tags">
 			{{ range .Params.tags }}
-			<span>{{ . }}</span>
+			{{ range first 1 (where $.Site.Data.categories "key" .) }}
+			<span>{{ .name }}</span>
+			{{ end }}
 			{{ end }}
 		</div>
 		{{ end }}
