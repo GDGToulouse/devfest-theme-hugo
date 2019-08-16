@@ -56,7 +56,7 @@
 		</div>
 
 		{{ range $room.slots }}
-		{{ $sessionPage := $.Site.GetPage (path.Join "/sessions" .talk) }}
+		{{ $sessionPage := index (where $.Site.AllPages "Params.key" .talk ) 0}}
 		{{ $slot := index (where $.Site.Data.slots "key" .slot) 0 }}
 		{{ $time := split $slot.start ":" }}
 		{{ $hh := index $time 0 }}

@@ -205,7 +205,7 @@
     grid-template-columns: auto repeat(var(--rooms), 1fr);
     --dayStart: 60 * var(--dayStartH) + var(--dayStartM);
     --dayEnd: 60 * var(--dayEndH) + var(--dayEndM);
-    grid-template-rows: 3em repeat(calc(var(--end) - 1), 4.5em);
+    grid-template-rows: 3em repeat(calc(var(--end) - 1), var(--base-grid-height, 6em));
     grid-gap: .125em .25em;
 
     &:target {
@@ -258,6 +258,26 @@
 
       .start {
         display: none;
+      }
+
+      .speakers.multi {
+        display: flex;
+        justify-content: space-evenly;
+
+        .speaker {
+          .speaker-img {
+            margin-right: var(--space-1);
+          }
+          .speaker-name {
+            display: none;
+          }
+
+          &:focus, &:hover {
+            .speaker-name {
+              display: block;
+            }
+          }
+        }
       }
     }
   }

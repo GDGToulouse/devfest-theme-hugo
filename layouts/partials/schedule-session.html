@@ -1,5 +1,5 @@
 <a href="{{ .Permalink }}">
-	<h4>
+	<h4 title="{{ .Title }}">
 		{{ .Title }}
 		<span class="language {{ anchorize .Params.language }}"></span>
 	</h4>
@@ -23,7 +23,7 @@
 	</div>
 
 	{{ if .Params.speakers }}
-	<ul class="speakers">
+	<ul class="speakers {{ if eq 1 (len .Params.speakers) }}single{{ else }}multi{{ end }}">
 		{{ range where $.Site.RegularPages "Params.key" "in" .Params.speakers }}
 		<li class="speaker">
 			<div class="speaker-img" style="background-image: url({{ .Params.photoURL }});"></div>
