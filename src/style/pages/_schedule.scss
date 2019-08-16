@@ -281,6 +281,56 @@
       }
     }
   }
+
+  .section.schedule main > section.schedule.horizontal .day {
+    overflow: auto;
+
+    grid-template-rows: auto repeat(var(--rooms), 1fr);
+    --dayStart: 60 * var(--dayStartH) + var(--dayStartM);
+    --dayEnd: 60 * var(--dayEndH) + var(--dayEndM);
+    grid-template-columns: 6em repeat(calc(var(--end) - 1), var(--base-grid-height, 6em));
+    grid-auto-flow: dense;
+
+    .slot {
+      display: block;
+      grid-row: 1 / 2;
+      --start: calc(1 + var(--row-start));
+      --end: calc(1 + var(--row-end));
+      grid-column: var(--start) / var(--end);
+
+      background-color: var(--color-hero);
+    }
+    .room {
+      grid-row: calc(var(--room) + 2);
+      grid-column: 1 / -1;
+      justify-content: flex-start;
+
+      h3 {
+        height: 100%;
+        width: auto;
+        max-width: 4em;
+        text-align: center;
+        text-orientation: upright;
+      }
+    }
+
+    .session {
+      --start: calc(1 + var(--row-start));
+      --end: calc(1 + var(--row-end));
+
+      grid-row: calc(var(--room) + 2);
+      grid-column: var(--start) / var(--end);
+
+      &.tag-open, &.tag-pause, &.tag-lunch, &.tag-party {
+        grid-row: 2 / -1;
+      }
+
+      h4 {
+        overflow: hidden;
+      }
+    }
+  }
+
 }
 
 

@@ -20,7 +20,7 @@
 
 {{ $maxEnd := $.Scratch.Get "maxEnd" }}
 
-<section class="schedule">
+<section class="schedule{{ if $.Params.horizontal}} horizontal{{ end  }}">
 
 	{{ range $day := $.Site.Data.schedule }}
 	{{ $time := split $day.start ":" }}
