@@ -3670,11 +3670,12 @@ pinkie@^2.0.0:
   integrity sha1-clVrgM+g1IqXToDnckjoDtT3+HA=
 
 plop-logger@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/plop-logger/-/plop-logger-2.3.0.tgz#083bea0177adc0b708ff449c59a5ec804a22d866"
-  integrity sha512-hF7gZjJaKGLnVaggnXfKvoUT5lrv7cyvU6BkI0YW94QhhOyR/FSMyuczeIEWtAc4YhBOe1D+cqerda3UqcsQmA==
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/plop-logger/-/plop-logger-2.4.0.tgz#b6032529842f1bf0394fc5a6791516e00314a2a8"
+  integrity sha512-fl/VXih1xs3/O718lH9wo+P8hTmFRynh+Y3yPsyYHo2ub2AhuwvqcQkS8dBusK7HnK1uJW6riqONd8GHITivkg==
   dependencies:
     ansi-colors "^4.1.1"
+    tslib "^1.10.0"
 
 posix-character-classes@^0.1.0:
   version "0.1.1"
@@ -5106,7 +5107,7 @@ trim-right@^1.0.1:
   dependencies:
     glob "^7.1.2"
 
-tslib@1.10.0:
+tslib@1.10.0, tslib@^1.10.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
   integrity sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==

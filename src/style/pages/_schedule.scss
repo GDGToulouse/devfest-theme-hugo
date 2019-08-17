@@ -147,9 +147,17 @@
 
       .info {
         flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
 
-        .tags {
-          float: right;
+        .complexity {
+          display: inline;
+          max-height: 1em;
+          svg {
+            height: 1.5em;
+            max-width: 1.5em;
+          }
         }
       }
 
