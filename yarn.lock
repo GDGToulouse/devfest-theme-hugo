@@ -1862,9 +1862,9 @@ ecc-jsbn@~0.1.1:
     safer-buffer "^2.1.0"
 
 electron-to-chromium@^1.3.191:
-  version "1.3.230"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.230.tgz#2d0618cb6f724391d5fd0926dde84d6c67cbcda9"
-  integrity sha512-r0RljY5DZi9RX4v8mjHxJkDWnQe+nsrkGlHtrDF2uvZcvAkw+iglvlQi1794gZhwRtJoDOomMJlDHL2LfXSCZA==
+  version "1.3.233"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.233.tgz#d12a0cabe68de4888c97fcb2b0040c50f5e5c212"
+  integrity sha512-5SGW8BObcSmsWHWBAEkBUHKQhBV3vR8MyLZ0ZHOQqh9lHAeD+l5Muosd07AIot7M4JmMblO7ezetxiN1G1/ACg==
 
 encoding@^0.1.11:
   version "0.1.12"
@@ -3670,9 +3670,9 @@ pinkie@^2.0.0:
   integrity sha1-clVrgM+g1IqXToDnckjoDtT3+HA=
 
 plop-logger@^2.3.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/plop-logger/-/plop-logger-2.4.0.tgz#b6032529842f1bf0394fc5a6791516e00314a2a8"
-  integrity sha512-fl/VXih1xs3/O718lH9wo+P8hTmFRynh+Y3yPsyYHo2ub2AhuwvqcQkS8dBusK7HnK1uJW6riqONd8GHITivkg==
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/plop-logger/-/plop-logger-2.5.0.tgz#3a80cf4edb98cc6c91a83cc39ba6eff9343308cd"
+  integrity sha512-sudMgIddrxQYw/UpLWjK//CcA4kCCTr87OWTPlf8gLCoBni2vodp5BbhCH6lMXXINUD//5yPmA9jAMwT3tUSCA==
   dependencies:
     ansi-colors "^4.1.1"
     tslib "^1.10.0"
