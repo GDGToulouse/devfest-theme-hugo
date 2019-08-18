@@ -1,5 +1,14 @@
 .section.schedule {
 
+  .hero {
+    .description {
+      display: flex;
+      p + p{
+        margin-left: 1em;
+      }
+    }
+  }
+
   nav.day-tabs {
     font-size: 2em;
     display: flex;
