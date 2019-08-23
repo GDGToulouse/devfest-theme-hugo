@@ -61,7 +61,7 @@
 		{{ $time := split $slot.start ":" }}
 		{{ $hh := index $time 0 }}
 		{{ $mm := index $time 1 }}
-		<div class="session tag-{{ anchorize (delimit ($sessionPage.Params.tags | default (slice)) " " ) }}"
+		<div class="session format-{{$sessionPage.Params.format}} tag-{{ anchorize (delimit ($sessionPage.Params.tags | default (slice)) " " ) }}"
 		style="--room: {{ $index }}; --row-start: {{ $slot.row.start }}; --row-end: {{ $slot.row.end }};">
 
 		<span class="start">

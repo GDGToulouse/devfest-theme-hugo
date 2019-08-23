@@ -3,7 +3,8 @@
   .hero {
     .description {
       display: flex;
-      p + p{
+
+      p + p {
         margin-left: 1em;
       }
     }
@@ -163,6 +164,7 @@
         .complexity {
           display: inline;
           max-height: 1em;
+
           svg {
             height: 1.5em;
             max-width: 1.5em;
@@ -285,6 +287,7 @@
           .speaker-img {
             margin-right: var(--space-1);
           }
+
           .speaker-name {
             display: none;
           }
@@ -317,6 +320,7 @@
 
       background-color: var(--color-hero);
     }
+
     .room {
       grid-row: calc(var(--room) + 2);
       grid-column: 1 / -1;
@@ -380,6 +384,32 @@
       .room {
         align-items: flex-start;
         margin-top: 1em;
+      }
+    }
+  }
+}
+
+@media print {
+  .section.schedule main section.schedule .session {
+    font-size: 24px;
+
+    &.format-quickie {
+      font-size: 18px;
+    }
+
+    a, h4 {
+      background: inherit;
+      text-shadow: none;
+      box-shadow: none;
+    }
+  }
+
+  .section.schedule main > section.schedule .day .session .speakers.multi {
+    display: block;
+
+    .speaker {
+      .speaker-name {
+        display: block;
       }
     }
   }
