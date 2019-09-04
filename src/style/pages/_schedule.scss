@@ -252,7 +252,7 @@
 
     .session {
       margin: .125em;
-      z-index: 1;
+      z-index: 2;
 
       --start: calc(1 + var(--row-start));
       --end: calc(1 + var(--row-end));
@@ -260,15 +260,20 @@
       grid-column: calc(var(--room) + 2);
       grid-row: var(--start) / var(--end);
 
+      &.tag-pause {
+        z-index: 0;
+        grid-column: 2 / -1;
+      }
+
       &.tag-open, &.tag-lunch, &.tag-party {
         h4 {
           font-size: 2em;
         }
       }
 
-      &.tag-open, &.tag-pause, &.tag-lunch, &.tag-party {
+      &.tag-open, &.tag-lunch, &.tag-party {
         grid-column: 2 / -1;
-        z-index: 0;
+        z-index: 1;
       }
 
       &.tag-office-hours {
