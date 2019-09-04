@@ -90,6 +90,10 @@ body > header {
       line-height: calc(var(--toolbar-height) - (4 * var(--space-2)));;
       color: inherit;
       font-weight: 200;
+
+      svg {
+        max-width: 3ch;
+      }
     }
 
     nav a {
