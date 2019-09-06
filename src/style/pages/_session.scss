@@ -1,5 +1,8 @@
 
 .talk {
+  margin: 2rem auto 0;
+  max-width: var(--block-text-max-width);
+
   .complexity::before {
     content: 'Niveau : ';
   }
@@ -18,6 +21,7 @@
       display: flex;
       align-items: center;
       padding: var(--space-1) var(--space-3);
+      background-color: var(--base);
       --img-size: 2rem;
 
       .speaker-img {
@@ -79,6 +83,11 @@
     .content {
       margin: var(--space-4) 0;
       flex: 1 1 auto;
+
+      p {
+        line-height: 1.5;
+        font-size: 110%;
+      }
     }
 
     .speakers .speaker {

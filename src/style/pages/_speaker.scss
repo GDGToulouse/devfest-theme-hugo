@@ -15,9 +15,7 @@
 
     header {
       align-self: center;
-      margin: 1em;
       padding-left: 0;
-      max-width: var(--theJdrSize);
 
       display: flex;
       align-items: center;
@@ -65,10 +63,14 @@
     .description {
 
       .talks {
+        margin: 1rem auto ;
+        max-width: var(--block-text-max-width);
+
         padding-left: 0;
         list-style: none;
 
         .talk {
+          margin-top: 1rem;
           border: thin solid var(--darken-1);
           display: inline-flex;
           padding: var(--space-2);
@@ -93,8 +95,8 @@
 
   section.speaker {
     align-self: center;
-    margin: 1em;
-    max-width: var(--theJdrSize);
+    margin: 1rem auto ;
+    max-width: var(--block-text-max-width);
 
     header {
       display: flex;
@@ -107,5 +109,11 @@
       display: flex;
       align-items: center;
     }
+
+    p {
+      line-height: 1.5;
+      font-size: 110%;
+    }
+
   }
 }
