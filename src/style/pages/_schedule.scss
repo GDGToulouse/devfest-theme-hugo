@@ -65,12 +65,20 @@
       border-radius: var(--space-3);
       background-color: var(--primary-txt);
 
-      font-size: 1.5em;
+      font-size: 1.25em;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       width: 100%;
-      height: 1.75em;
+      padding: var(--space-3);
+      height: 3em;
+      font-weight: bold;
+
+      small {
+        font-size: .75em;
+        font-weight: normal;
+      }
     }
   }
 
@@ -224,7 +232,7 @@
     grid-template-columns: auto repeat(var(--rooms), 1fr);
     --dayStart: 60 * var(--dayStartH) + var(--dayStartM);
     --dayEnd: 60 * var(--dayEndH) + var(--dayEndM);
-    grid-template-rows: 3em repeat(calc(var(--end) - 1), var(--base-grid-height, 6em));
+    grid-template-rows: 4em repeat(calc(var(--end) - 1), var(--base-grid-height, 6em));
     grid-gap: .125em .25em;
 
     &:target {
@@ -313,7 +321,7 @@
     grid-template-rows: auto repeat(var(--rooms), 1fr);
     --dayStart: 60 * var(--dayStartH) + var(--dayStartM);
     --dayEnd: 60 * var(--dayEndH) + var(--dayEndM);
-    grid-template-columns: 6em repeat(calc(var(--end) - 1), var(--base-grid-height, 6em));
+    grid-template-columns: 7em repeat(calc(var(--end) - 1), var(--base-grid-height, 6em));
     grid-auto-flow: dense;
 
     .slot {
@@ -332,9 +340,10 @@
       justify-content: flex-start;
 
       h3 {
+        padding: .25em;
         height: 100%;
-        width: auto;
-        max-width: 4em;
+        width: 5.5em;
+        max-width: 5.5em;
         text-align: center;
         text-orientation: upright;
       }

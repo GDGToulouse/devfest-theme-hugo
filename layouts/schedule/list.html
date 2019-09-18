@@ -52,7 +52,12 @@
 		{{ range where (where $.Site.Data.rooms "key" $room.room) "skip" "!=" true }}
 		<!-- Room {{ $room.room }} -->
 		<div class="room {{ if (modBool $index 2)}}even{{end}}" style="--room: {{ $index }};">
-			<h3>{{ .label }}</h3>
+			<h3>
+				{{ .label }}
+				{{ if .description }}
+				<small>{{ .description }}</small>
+				{{ end }}
+			</h3>
 		</div>
 
 		{{ range $room.slots }}
