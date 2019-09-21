@@ -182,15 +182,12 @@
 
       .speakers {
         border: thin solid transparent;
+        border-top: thin solid var(--darken-1);
         border-radius: var(--space-2);
         background: var(--base);
         padding: 0;
         margin: 0;
         list-style: none;
-      }
-
-      .speaker + .speaker {
-        border-top: thin solid var(--darken-1);
       }
 
       .speaker {
@@ -286,6 +283,11 @@
 
       &.tag-office-hours {
         margin: var(--space-3);
+
+        .speakers.multi {
+          padding-top: .125em;
+          flex-wrap: wrap;
+        }
       }
 
       .start {
@@ -297,11 +299,24 @@
         justify-content: space-evenly;
 
         .speaker {
+          position: relative;
+          border-top: none;
+
           .speaker-img {
             margin-right: var(--space-1);
           }
 
           .speaker-name {
+            background: var(--base);
+            z-index: 100;
+            border-radius: var(--space-2);
+            border: thin solid var(--darken-1);
+            box-shadow: 1px 1px var(--space-1) var(--darken-1);
+            padding: var(--space-1);
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translateX(50%) translateY(-75%);
             display: none;
           }
 
@@ -427,8 +442,13 @@
 
     .speaker {
       .speaker-name {
+        position: relative;
+        transform: none;
+        border: none;
         display: block;
+        box-shadow: none;
       }
     }
   }
+
 }
