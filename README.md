@@ -164,7 +164,7 @@ content:
 
 ### Home
 
-The Home page is build with markdown and calling some shortcodes. 
+The Home page is build with markdown and calling some shortcodes.
 
 #### Jumbo bloc
 
@@ -188,7 +188,7 @@ With main description and key figures.
 {{% home-info what="Participants:900,Day:1,Sessions:36,Parallel Tracks:4" class="primary" %}}
 ## What is DevFest Toulouse?
 
-The DevFest, or 'Developers Festival', is a technical conference for developers. 
+The DevFest, or 'Developers Festival', is a technical conference for developers.
 It is aimed at students, professionals or simply curious technophiles.
 {{% /home-info %}}
 ```
@@ -243,7 +243,7 @@ Display ticket information.
 {{% home-tickets %}}
 # Tickets
 
-<ul>  
+<ul>
 <li>{{< ticket name="Blind Birds"
            starts="2019-04-04"
            ends="2019-11-08"
@@ -330,7 +330,7 @@ Show your partners
 
 ### Partners
 
-A partner should have this params : 
+A partner should have these params :
 
 ```yaml
 title: NAME
@@ -343,11 +343,11 @@ socials: []
 
 ### Speakers
 
-A speaker should have this params :
+A speaker should have these params :
 
 ```yaml
 id: jane_doe
-name: Mme Jane Doe 
+name: Mme Jane Doe
 company: Super Company
 featured: false
 photo: /images/speakers/jane_doe.jpg
@@ -369,7 +369,7 @@ The body of the file is used as long bio.
 
 <!> this is not yet stable
 
-A sessions should have this params :
+A session should have these params :
 
 ```yaml
 id: an_id
