@@ -375,7 +375,7 @@ A session should have these params :
 id: an_id
 title: Super mega title
 language: Français
-complexity: Beginner
+level: Beginner
 tags:
   - Category
 presentation: URL of slides

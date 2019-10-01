@@ -2,7 +2,7 @@
 id: XXX
 title: lorem ipsum
 language: Français
-complexity: Débutant
+level: Débutant
 talkType: Conférence
 speakers:
   - guillaume_membre
