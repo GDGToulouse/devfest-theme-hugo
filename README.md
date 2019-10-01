@@ -382,7 +382,7 @@ presentation: URL of slides
 videoId: Youtub video id
 speakers:
   - speaker id
-talkType: Keynote
+format: Keynote
 ```
 
 The body of the file is used as description.

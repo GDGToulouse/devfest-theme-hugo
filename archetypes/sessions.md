@@ -3,7 +3,7 @@ id: XXX
 title: lorem ipsum
 language: Français
 level: Débutant
-talkType: Conférence
+format: Conférence
 speakers:
   - guillaume_membre
 tags:
