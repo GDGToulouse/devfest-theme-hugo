@@ -88,6 +88,16 @@
         line-height: 1.5;
         font-size: 110%;
       }
+
+      blockquote.twitter-tweet {
+        border: thin solid var(--darken-2);
+        border-radius: .5em;
+        padding: .75em;
+
+         p  {
+           margin: 0;
+         }
+      }
     }
 
     .speakers .speaker {
@@ -150,7 +160,18 @@
 
       .social-slides {
         width: auto;
-        color: inherit;
+        margin-top: 1em;
+        background: var(--primary);
+        color: var(--primary-txt);
+        font-size: 1.25em;
+        padding: .125em .75em;
+        border-radius: 1em;
+        &:focus, &:active , &:hover {
+          box-shadow: .0625em .0625em .125em var(--darken-3);
+        }
+        svg {
+          max-width: 2ch;
+        }
       }
     }
 

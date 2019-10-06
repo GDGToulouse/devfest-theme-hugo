@@ -20,6 +20,10 @@
 
 	<div class="complexity">{{ .Params.level }}</div>
 	<div class="type type-{{ anchorize .Params.format }}">{{ .Params.format }}</div>
+
+	{{ if .Params.presentation }}
+	<div class="presentation">{{ partial "icon.html" "slides" }}</div>
+	{{ end }}
 </div>
 
 
