@@ -10,8 +10,14 @@
 		{{ if .Params.level }}
 		<div class="complexity" title="{{ .Params.level }}">
 			<svg><use xlink:href="#level-{{ .Params.level }}"></use></svg>
+
+			{{ if .Params.presentation }}
+			<div class="presentation">{{ partial "icon.html" "slides" }}</div>
+			{{ end }}
+
 		</div>
 		{{ end }}
+
 
 		{{ if .Params.tags }}
 		<div class="tags">
@@ -22,7 +28,9 @@
 			{{ end }}
 		</div>
 		{{ end }}
+
 	</div>
+
 
 	{{ if .Params.speakers }}
 	<ul class="speakers {{ if eq 1 (len .Params.speakers) }}single{{ else }}multi{{ end }}">
