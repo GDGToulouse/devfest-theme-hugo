@@ -21,9 +21,14 @@
 	<div class="complexity">{{ .Params.level }}</div>
 	<div class="type type-{{ anchorize .Params.format }}">{{ .Params.format }}</div>
 
-	{{ if .Params.presentation }}
-	<div class="presentation">{{ partial "icon.html" "slides" }}</div>
-	{{ end }}
+	<div>
+		{{ if .Params.presentation }}
+		<div class="presentation">{{ partial "icon.html" "slides" }}</div>
+		{{ end }}
+		{{ if .Params.videoId }}
+		<div class="video">{{ partial "icon.html" "youtube" }}</div>
+		{{ end }}
+	</div>
 </div>
 
 

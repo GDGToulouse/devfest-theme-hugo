@@ -7,17 +7,6 @@
 	<hr>
 
 	<div class="info">
-		{{ if .Params.level }}
-		<div class="complexity" title="{{ .Params.level }}">
-			<svg><use xlink:href="#level-{{ .Params.level }}"></use></svg>
-
-			{{ if .Params.presentation }}
-			<div class="presentation">{{ partial "icon.html" "slides" }}</div>
-			{{ end }}
-
-		</div>
-		{{ end }}
-
 
 		{{ if .Params.tags }}
 		<div class="tags">
@@ -27,6 +16,20 @@
 			{{ end }}
 			{{ end }}
 		</div>
+		{{ end }}
+
+		{{ if .Params.level }}
+		<div class="complexity" title="{{ .Params.level }}">
+			<svg><use xlink:href="#level-{{ .Params.level }}"></use></svg>
+		</div>
+		{{ end }}
+
+		{{ if .Params.presentation }}
+		<div class="presentation">{{ partial "icon.html" "slides" }}</div>
+		{{ end }}
+
+		{{ if .Params.videoId }}
+		<div class="video">{{ partial "icon.html" "youtube" }}</div>
 		{{ end }}
 
 	</div>

@@ -165,18 +165,21 @@
 
       .info {
         flex-grow: 1;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
 
-        .complexity {
+
+        .complexity, .video, .presentation {
+          float: left;
+          clear: left;
           display: inline;
-          max-height: 1em;
+          max-height: 1.5em;
 
           svg {
             height: 1.5em;
             max-width: 1.5em;
           }
+        }
+        .tags {
+          float: right;
         }
       }
 
