@@ -1,8 +1,8 @@
 body > footer {
-  background-color: var(--darken-1);
-  color: var(--base-secondary-text);
+  background-color: var(--footer-bg);
+  color: var(--footer-fg);
   font-weight: 200;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
 
   .bottom-content {
     max-width: var(--theJdrSize);
@@ -31,6 +31,7 @@ body > footer {
       margin-bottom: 1rem;
 
       ul.social-list {
+        font-size: 1.75em;
         padding: 0;
         margin: 0;
         list-style: none;
@@ -40,12 +41,13 @@ body > footer {
         li {
           display: inline-block;
           padding: var(--space-2);
+          margin-right: var(--space-3);
         }
       }
     }
 
     .follow a.social {
-      opacity: .75;
+      opacity: 0.75;
       filter: grayscale(1);
       transition: filter var(--animation);
 
@@ -53,6 +55,10 @@ body > footer {
         opacity: 1;
         filter: grayscale(0);
       }
+    }
+
+    .blog {
+      display: none;
     }
 
     .blog a {
@@ -75,13 +81,6 @@ body > footer {
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: var(--space-4);
-
-    .subscribe {
-
-      a.btn {
-        color: var(--link-secondary-text);
-      }
-    }
 
     section {
       margin: var(--space-2) var(--space-4);

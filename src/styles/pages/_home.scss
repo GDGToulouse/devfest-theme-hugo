@@ -14,45 +14,40 @@
   }
 
   .info {
-    display: flex;
-    flex-wrap: wrap;
 
     .wrapper {
-      max-width: var(--theJdrSize);
+      display: grid;
       margin: 0 auto;
-      display: flex;
-    }
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: var(--space-3);
 
-    @include mq($until: md) {
-      text-align: center;
+      max-width: var(--theJdrSize);
+      width: 100%;
+
+      @include mq($until: md) {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     .inner {
       flex: 1 1 auto;
-      max-width: 33vw;
       display: flex;
       flex-direction: column;
       justify-content: center;
 
-      @include mq($until: xl) {
-        max-width: 100%;
-      }
-    }
-
-    .numbers {
-      flex: 1 0 33vw;
-      margin: 0 2rem;
-      min-width: 33vw;
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
+      grid-column: 1 / 2;
+      grid-row: 1 / -1;
 
       @include mq($until: md) {
-        margin: 0;
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
       }
     }
 
     .number {
+      justify-self: center;
+      min-width: 14ch;
       strong {
         font-size: 3.5rem;
         font-weight: 100;
@@ -62,7 +57,7 @@
           display: block;
           height: .125rem;
           width: 2rem;
-          background-color: var(--primary);
+          background-color: var(--darken-3);
         }
       }
 
@@ -153,8 +148,13 @@
     .map {
       display: block;
       height: 664px;
-      background-position: center center;
-      background-size: cover;
+
+      &> * {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+      }
     }
 
     .description {

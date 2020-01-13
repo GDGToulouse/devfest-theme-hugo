@@ -1,5 +1,5 @@
 :root {
-  --primary: #593a9f;
+  --primary: #336ed2;
   --primary-txt: #fff;
 
   --accent: grey;
@@ -68,9 +68,8 @@
   --keynote: paleturquoise;
 
   /* Jumbo section */
-  --jumbo-logo-width: 400px;
+  --jumbo-logo-width: 800px;
   --jumbo-overlay-opacity: 0.6;
-  --jumbo-overlay-transition: 0.5s;
 
   /* Partners */
   --partner-support-height: 60px;
@@ -97,4 +96,8 @@
 
   /* Schedule */
   --base-grid-height: 4.5em;
+
+  /* Footer */
+  --footer-bg: #222;
+  --footer-fg: #8a8a8a;
 }

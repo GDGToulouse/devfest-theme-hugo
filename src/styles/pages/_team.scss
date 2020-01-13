@@ -10,20 +10,33 @@
     display: flex;
     flex-wrap: wrap;
 
+
     & > li {
       flex: 1 1 300px;
       margin: 2rem;
       display: flex;
 
+      &.team-you {
+        order: 999;
+      }
+
       .photo {
         --size: 6rem;
         box-shadow: 0 0 0 var(--space-2) var(--darken-2);
-        min-width: var(--size, 6rem);
-        height: var(--size, 6rem);
+        min-width: var(--size);
+        min-height: var(--size);
+        max-width: var(--size);
+        max-height: var(--size);
         border-radius: 100%;
-        background-size: cover;
-
+        overflow: hidden;
         margin: var(--space-2);
+
+        & > * {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
       }
 
       .label {

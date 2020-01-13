@@ -7,11 +7,11 @@
   justify-content: center;
   align-items: center;
 
-  img.jumbo-logo {
+  .jumbo-logo {
     max-width: 100%;
     width: var(--jumbo-logo-width, 400px);
     height: auto;
-    filter: drop-shadow(0px 1px 1px var(--darken-3));
+    filter: drop-shadow(0px 2px 2px var(--darken-3));
   }
 
   p {
@@ -28,25 +28,20 @@
     right: 0;
     bottom: 0;
     left: 0;
-  }
+    // margin-top: -.25em;
 
-  #jumbo-img {
-    display: none;
-  }
-
-  #jumbo-overlay {
-    background-color: var(--primary);
-    transition: opacity var(--jumbo-overlay-transition, 0.4s);
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 1;
-    &.show {
-      opacity: var(--jumbo-overlay-opacity, 0.6);
+    &::after {
+      background-color: var(--primary);
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: var(--jumbo-overlay-opacity);
     }
   }
+
   .inner-wrapper{
     max-width: 75vw;
     .inner {

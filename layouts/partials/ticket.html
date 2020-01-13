@@ -7,7 +7,7 @@
 	{{ if .soldOut }}
 	<span class="btn" aria-disabled="true">{{ i18n "home_tickets_soldout" }}</span>
 	{{ else }}
-	<a href="{{ .url }}" class="btn primary" rel="noreferrer" target="_blank">
+	<a href="{{ .url }}" class="btn primary" rel="noopener noreferrer" target="_blank">
 		{{ partial "icon.html" "ticket" }}
 		{{- i18n "home_tickets_action" -}}
 	</a>

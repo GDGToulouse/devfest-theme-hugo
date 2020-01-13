@@ -22,7 +22,7 @@
 				<ul class="social-list">
 					{{ range .Site.Data.footer.follow }}
 					<li>
-						<a href="{{ .url }}" class="social" rel="noreferrer" target="_blank">
+						<a href="{{ .url }}" class="social" rel="noopener noreferrer" target="_blank">
 							{{ partial "icon.html" .name }}
 							{{ .name }}
 						</a>
@@ -48,7 +48,7 @@
 				<ul>
 					{{ range .links }}
 					<li>
-						<a href="{{ .url }}" {{ if .newTab }}target="_blank" rel="noopener" {{end}}>
+						<a href="{{ .url }}" {{ if .newTab }}target="_blank" rel="noopener noreferrer" {{end}}>
 							{{ if .nameKey }}
 							{{ i18n .nameKey }}
 							{{ else }}
@@ -66,7 +66,7 @@
 				<header>{{ i18n "newsletter" }}</header>
 				<p>{{ i18n "subscribe_notice" }}</p>
 				<a href="{{ .Site.Params.subscriptionUrl }}"
-				   class="btn" rel="noreferrer" target="_blank">
+				   class="btn" rel="noopener noreferrer" target="_blank">
 					{{ partial "icon.html" "subscribe" }}
 					{{- i18n "subscribe_action" -}}
 				</a>

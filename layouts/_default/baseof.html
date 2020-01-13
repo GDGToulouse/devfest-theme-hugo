@@ -4,7 +4,7 @@
 
 <body class="{{ .Kind }} {{ anchorize .URL }} {{ .Section }}">
 
-{{ readFile "themes/devfest-theme-hugo/static/icons.svg" | safeHTML }}
+{{ readFile "static/icons.svg" | safeHTML }}
 
 {{ block "header" . }}
 {{ partial "header.html" . }}
@@ -17,7 +17,7 @@
 </main>
 
 {{ block "footer.html" . }}
-{{ partial "footer.html" . }}
+{{ partialCached "footer.html" . }}
 {{ end }}
 
 <script src="/theme.js" async></script>

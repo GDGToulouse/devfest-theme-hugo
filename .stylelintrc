@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "@wemake-services/stylelint-config-scss"
+  ],
+  "rules": {
+    "color-format/format": null,
+    "custom-property-empty-line-before": null,
+    "no-descending-specificity": null,
+    "selector-max-compound-selectors": null,
+    "scss/selector-no-redundant-nesting-selector": null
+  }
+}

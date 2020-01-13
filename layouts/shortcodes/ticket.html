@@ -15,7 +15,7 @@
 	{{ else if .Get "close" }}
 	<span class="btn" aria-disabled="true">{{ i18n "home_tickets_close" }}</span>
 	{{ else }}
-	<a href="{{ .Get "url" }} "class="btn primary" rel="noreferrer" target="_blank">
+	<a href="{{ .Get "url" }} "class="btn primary" rel="noopener noreferrer" target="_blank">
 		{{ partial "icon.html" "ticket" }}
 		{{- i18n "home_tickets_action" -}}
 	</a>

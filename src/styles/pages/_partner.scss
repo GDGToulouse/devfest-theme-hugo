@@ -12,17 +12,22 @@
       grid-area: logo;
       height: 8em;
       width: 12em;
-      display: inline-block;
-
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-origin: content-box;
       padding: .25em;
-
       margin-right: 1em;
       box-shadow: .125em .125em .25em rgba(0, 0, 0, .5);
-    }
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+        &> * {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain;
+          object-position: 50% 50%;
+        }
+      }
+
 
     h1 {
       grid-area: title;
@@ -32,6 +37,13 @@
     a {
       grid-area: website;
       align-self: start;
+    }
+  }
+
+  .content {
+
+    img {
+      max-width: 25vw;
     }
   }
 
