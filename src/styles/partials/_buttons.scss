@@ -91,3 +91,11 @@ a.goto-top {
   color: var(--primary-txt);
   border-radius: 50%;
 }
+
+@media (prefers-color-scheme: dark) {
+  button,
+  a.btn, span.btn,
+  input[type=button], input[type=reset], input[type=submit] {
+    background: none;
+  }
+}

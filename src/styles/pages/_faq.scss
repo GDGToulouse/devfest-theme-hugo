@@ -8,14 +8,24 @@
     }
   }
 
+  .hero .description {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   main h1, #TableOfContents, main .content {
     max-width: var(--theJdrSize);
     margin: 0 auto;
   }
 
+  main .content {
+    margin-top: 1rem;
+  }
+
   .content {
+
     h1, h2, h3, h4, h5, h6 {
-      color: var(--primary);
+      color: var(--toc-text);
     }
 
     h3, h4, h5, h6, & > ul, & > ol, & > p {

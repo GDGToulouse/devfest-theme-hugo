@@ -116,8 +116,7 @@
       text-align: center;
 
       .youtube-player {
-        border: 4px solid white;
-        background-color: black;
+        border: 4px solid var(--base, white);
       }
     }
 
