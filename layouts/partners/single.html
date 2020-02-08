@@ -11,13 +11,12 @@
 	{{ end }}
 </section>
 
-<section class="content">
+<section class="content" {{ if .Params.lang }}lang="{{ .Params.lang }}"{{ end }}>
 	{{ .Content }}
-
 </section>
 
 {{ if .Params.why }}
-<section class="why">
+<section class="why" {{ if .Params.lang }}lang="{{ .Params.lang }}"{{ end }}>
 	<h2>{{index .Site.Data.partner .Params.lang "why" }}</h2>
 	<p>{{ .Params.why }}</p>
 </section>
@@ -40,7 +39,7 @@
 {{ end }}
 
 {{ if .Params.jobs }}
-<section class="jobs">
+<section class="jobs" {{ if .Params.lang }}lang="{{ .Params.lang }}"{{ end }}>
 	<h2>{{index .Site.Data.partner .Params.lang "jobs" }}</h2>
 	<ul>
 		{{ range .Page.Params.jobs }}

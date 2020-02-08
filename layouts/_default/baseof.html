@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ $.Site.LanguageCode | default " en" }}">
+<html lang="{{ $.Site.Home.Language | default "en" }}">
 {{ partial "head.html" . }}
 
 <body class="{{ .Kind }} {{ anchorize .URL }} {{ .Section }}">
@@ -20,10 +20,7 @@
 {{ partialCached "footer.html" . }}
 {{ end }}
 
-<script src="/theme.js" async></script>
-{{ block "scripts" . }}
-<!-- No extra scripts -->
-{{ end }}
+{{ partial "scripts" . }}
 </body>
 
 </html>

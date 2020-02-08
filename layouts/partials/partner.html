@@ -1,5 +1,5 @@
 {{ $img := relURL (path.Join "images" "partners" .Params.category .Params.key) }}
 <a class="partner" href="{{ .URL }}" title="{{ .Title }}">
-{{ partial "picture" (dict "img" $img ) }}
+{{ partial "picture" (dict "img" $img "ext" "png") }}
 <span class="visually-hidden">{{ .Title }}</span>
 </a>

@@ -21,7 +21,7 @@ body>footer {
     flex-wrap: wrap;
     text-transform: uppercase;
 
-    header {
+    .header {
       margin-right: var(--space-2);
     }
 
@@ -97,7 +97,7 @@ body>footer {
         margin-right: 0;
       }
 
-      header {
+      .header {
         font-size: 1.125rem;
         font-weight: 600;
         margin-bottom: var(--space-2);

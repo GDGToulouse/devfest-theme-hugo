@@ -8,6 +8,7 @@
 {{- $img := index . "img" }}
 {{- $class := index . "class" }}
 {{- $widths := index . "widths" }}
+{{- $ext := default "jpg" (index . "ext") }}
 <picture {{ if $class }}class="{{ $class }}"{{ end }}>
 	{{ if $widths }}
 		{{ $max := 0 }}
@@ -21,6 +22,6 @@
 	{{ else }}
 	<source srcset="{{ $img }}.webp" type="image/webp">
 	{{ end }}
-	<source srcset="{{ $img }}.jpg" type="image/jpeg">
-	<img src="{{ $img }}.jpg" alt="">
+	<source srcset="{{ $img }}.{{$ext}}">
+	<img src="{{ $img }}.{{$ext}}" alt="">
 </picture>

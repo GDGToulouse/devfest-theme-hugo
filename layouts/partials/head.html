@@ -46,9 +46,6 @@
 	<link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}"/>
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap">
-	<link rel="stylesheet" href="/styles/{{ .Type }}{{ if ne .Type "" }}-{{ end }}{{ .Kind }}.css" media="all">
+	{{ partial "stylesheets" . }}
 
-	{{ block "headextra" . }}
-	<!-- No extra headextra -->
-	{{ end }}
 </head>

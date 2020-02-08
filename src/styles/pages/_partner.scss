@@ -3,30 +3,29 @@
   .header {
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-areas:
-      "logo title"
-      "logo website";
+    grid-template-areas: "logo title" "logo website";
     align-items: center;
 
     .card {
+      background-color: ghostwhite;
       grid-area: logo;
       height: 8em;
       width: 12em;
       padding: .25em;
       margin-right: 1em;
       box-shadow: .125em .125em .25em rgba(0, 0, 0, .5);
-      
+
       display: flex;
       justify-content: center;
       align-items: center;
 
-        &> * {
-          max-width: 100%;
-          max-height: 100%;
-          object-fit: contain;
-          object-position: 50% 50%;
-        }
+      & > * {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        object-position: 50% 50%;
       }
+    }
 
 
     h1 {
@@ -34,6 +33,7 @@
       align-self: end;
       font-size: 2.5em;
     }
+
     a {
       grid-area: website;
       align-self: start;
@@ -44,6 +44,7 @@
 
     img {
       max-width: 25vw;
+      background: ghostwhite;
     }
   }
 
@@ -58,6 +59,7 @@
       display: flex;
       align-items: center;
       font-size: 2em;
+
       li {
         margin: .25em;
       }
@@ -98,7 +100,6 @@
             width: 2ch;
           }
         }
-
 
 
       }
