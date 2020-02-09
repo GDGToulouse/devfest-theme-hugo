@@ -1,4 +1,4 @@
-{{ $photo := relURL (path.Join "images" "team" .key) }}
+{{- $photo := relURL (path.Join "images" "team" .key) }}
 {{ partial "picture" (dict "img" $photo "class" "photo" ) }}
 
 <div class="label">
