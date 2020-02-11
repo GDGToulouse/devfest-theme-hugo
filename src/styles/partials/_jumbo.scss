@@ -7,6 +7,10 @@
   justify-content: center;
   align-items: center;
 
+  .inner-wrapper {
+    text-align: center;
+  }
+
   .jumbo-logo {
     max-width: 100%;
     width: var(--jumbo-logo-width, 400px);
