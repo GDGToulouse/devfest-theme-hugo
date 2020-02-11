@@ -14,7 +14,9 @@
 	<article>
 		<a class="visually-hidden" aria-hidden="true" href="{{ .Permalink }}">{{ .Title }}</a>
 		<a class="blog" href="{{ .Permalink }}">
-			<div class="img" style="background-image: url({{ .Params.image }});"></div>
+			{{ $img := (replace .Params.image "." "-mini.") }}
+			{{ partial "picture" (dict "img" $img "class" "img") }}
+			
 			<div class="info">
 				<div class="date">{{ partial "date-short.html" (dict "time" .Date "lang" $lang) }}</div>
 				<h2>{{ .Title }}</h2>

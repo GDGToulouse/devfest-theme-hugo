@@ -1,17 +1,35 @@
 .page.blog {
   .hero {
     .img {
-      padding: var(--container-margin);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
-
-      text-shadow: 1px 0 0 var(--lighten-3);
+      display: block;
       min-height: 45vmin;
+      max-height: 45vmin;
+      overflow: hidden;
+
+      &> * {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+      }
+    }
+
+    .image-info {
+      margin: -1.5em 1em;
+      opacity: .5;
+
+      &.dark {
+        color: #000;
+        text-shadow: 0 1px hsla(0, 100%, 100%, .5);
+      }
+      &.light {
+        color: #fff;
+        text-shadow: 0 1px rgba(0, 0, 0, .5);
+      }
     }
 
     h1 {
-      color: var(--primary);
+      color: var(--toc-text);
       padding-left: 0;
       padding-right: 0;
       small {
@@ -44,7 +62,7 @@
     }
 
     h1,h2,h3,h4,h5,h6 {
-      color: var(--primary);
+      color: var(--toc-text);
       font-style: normal;
       font-weight: 400;
     }
