@@ -68,3 +68,12 @@ a, a:visited {
 body > main > section.container, body > header.container, body > footer.container {
   padding: 4rem var(--container-margin);
 }
+
+
+[id]::before { /* https://stackoverflow.com/a/24298427 */
+  content: '';
+  display: block;
+  height:      var(--toolbar-height);
+  margin-top: -var(--toolbar-height);
+  visibility: hidden;
+}
