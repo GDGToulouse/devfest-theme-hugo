@@ -2,4 +2,4 @@
 {{- $time := time (index . "time") }}
 {{- $lang := index . "lang" }}
 	{{ $time.Day }}
-{{- if eq $lang "fr" }}{{ index $monthFr (sub $time.Month 1) }}{{- else }} {{ dateFormat "January" $time}}{{ end }}
+{{ if eq $lang "fr" }}{{ index $monthFr (sub $time.Month 1) }}{{- else }} {{ dateFormat "January" $time}}{{ end }}

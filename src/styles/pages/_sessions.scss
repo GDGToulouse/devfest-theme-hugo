@@ -1,0 +1,81 @@
+.section.sessions, .taxonomy.tags {
+
+  ul.talks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    li.talk {
+      margin: 1rem;
+      flex: 1 0 320px;
+    }
+
+    a {
+      border: thin solid var(--darken-1);
+      box-shadow: var(--space-1) var(--space-1) var(--space-2) var(--darken-2);
+      transition: box-shadow var(--animation);
+      border-radius: var(--space-2);
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      height: 100%;
+
+      &:hover, &:focus {
+        box-shadow: var(--space-2) var(--space-2) var(--space-2) var(--darken-3);
+      }
+
+      h2, .info {
+        padding: var(--space-4);
+      }
+
+      h2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      hr {
+        width: calc(100% - var(--space-3));
+        margin: 0 auto;
+      }
+
+      .info {
+        flex-grow: 1;
+
+        .tags {
+          float: right;
+        }
+
+        .presentation, .video {
+          svg {
+            min-height: 1.25em;
+            max-width: 3ch;
+          }
+        }
+      }
+
+      .speakers {
+        border: thin solid transparent;
+        border-radius: var(--space-2);
+        background: var(--base);
+        padding-left: 0;
+      }
+
+      .speaker + .speaker {
+        border-top: thin solid var(--darken-1);
+      }
+
+    }
+  }
+}
+
+@supports (grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))) {
+  .section.sessions, .taxonomy.tags {
+    ul.talks {
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+  }
+}

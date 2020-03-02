@@ -1,0 +1,151 @@
+body>footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-fg);
+  font-weight: 200;
+  padding: 0.5em 1em;
+
+  .bottom-content {
+    max-width: var(--theJdrSize);
+    margin: 0 auto;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  // Header
+  .footer-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+
+    .header {
+      margin-right: var(--space-2);
+    }
+
+    &>div {
+      display: flex;
+      align-items: center;
+
+      ul.social-list {
+        font-size: 1.5em;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+
+        li {
+          display: inline-block;
+          padding: var(--space-2);
+          margin-right: var(--space-3);
+        }
+      }
+    }
+
+    .follow a.social {
+      opacity: 0.75;
+      filter: grayscale(1);
+      transition: filter var(--animation);
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+        filter: grayscale(0);
+      }
+    }
+
+    .blog {
+      display: none;
+    }
+
+    .blog a {
+      text-decoration: underline;
+    }
+
+    .email a {
+      display: flex;
+      align-items: center;
+
+      .icon {
+        width: 1em;
+        height: 1em;
+      }
+    }
+  }
+
+  // Content
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    section {
+      margin: var(--space-2) var(--space-4);
+
+      @include mq($until: md) {
+        margin: var(--space-2) 0;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .header {
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: var(--space-2);
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        margin: var(--space-1) 0;
+        font-weight: 100;
+
+        li {
+          margin: var(--space-2) 0;
+
+          a {
+            padding: var(--space-3) 0;
+          }
+        }
+      }
+    }
+  }
+
+  // Footer
+  .footer-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include mq($until: md) {
+      flex-direction: column;
+      align-items: start;
+
+      >* {
+        margin: var(--space-2) 0;
+      }
+    }
+
+    img {
+      height: 2rem;
+      width: auto;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .follow a.social {
+    filter: grayscale(0.75);
+  }
+}

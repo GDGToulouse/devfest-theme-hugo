@@ -1,0 +1,25 @@
+#TableOfContents ul {
+  padding-left: 1em;
+  list-style: none;
+
+  li {
+    font-size: 1rem;
+    margin: var(--space-1) 0;
+    padding: var(--space-1) 0;
+
+    a {
+      color: var(--toc-text);
+      text-decoration: none;
+
+      &:focus, &:hover {
+        text-decoration: underline;
+
+      }
+    }
+  }
+
+}
+
+#TableOfContents > ul > li > ul > li > a {
+  font-weight: bold ;
+}

@@ -1,0 +1,78 @@
+.section.team {
+
+  h2 {
+    margin: var(--space-4) 0;
+  }
+
+  ul.members {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+
+    & > li {
+      flex: 1 1 300px;
+      margin: 2rem;
+      display: flex;
+
+      &.team-you {
+        order: 999;
+      }
+
+      .photo {
+        --size: 6rem;
+        box-shadow: 0 0 0 var(--space-2) var(--darken-2);
+        min-width: var(--size);
+        min-height: var(--size);
+        max-width: var(--size);
+        max-height: var(--size);
+        border-radius: 100%;
+        overflow: hidden;
+        margin: var(--space-2);
+
+        & > * {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+      }
+
+      .label {
+        display: flex;
+        margin-left: var(--space-3);
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      ul.socials {
+        list-style: none;
+        //display: flex;
+        margin: 0;
+        padding: 0;
+        font-size: 1.5em;
+
+        li {
+          display: inline-block;
+          opacity: .5;
+          filter: grayscale(1);
+          transition: filter var(--animation);
+
+          &:hover,
+          &:focus {
+            opacity: 1;
+            filter: grayscale(0);
+          }
+        }
+      }
+    }
+  }
+
+
+  .partners-group ul li  {
+    flex-basis: 260px;
+    margin: var(--space-3);
+    height: var(--partner-gold-height);
+  }
+}

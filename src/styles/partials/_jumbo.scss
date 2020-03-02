@@ -1,0 +1,118 @@
+
+.jumbo {
+  position: relative;
+  height: calc(100vh - var(--toolbar-height));
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .inner-wrapper {
+    text-align: center;
+  }
+
+  .jumbo-logo {
+    max-width: 100%;
+    width: var(--jumbo-logo-width, 400px);
+    height: auto;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, .5));
+  }
+
+  p {
+    margin: var(--space-2) 0;
+    font-size: 2rem;
+  }
+
+  .jumbo-cover {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    // margin-top: -.25em;
+
+    &::after {
+      background-color: var(--primary);
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: var(--jumbo-overlay-opacity);
+    }
+  }
+
+  .inner-wrapper{
+    max-width: 75vw;
+    .inner {
+      padding: var(--space-4);
+      color: var(--primary-txt);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      h2 {
+        font-size: 2rem;
+        margin: var(--space-3) 0;
+        font-weight: bold;
+      }
+      h3 {
+        font-size: 1.8rem;
+        margin: var(--space-3) 0;
+      }
+      a {
+        align-self: center;
+        margin: .5em;
+      }
+    }
+
+  }
+
+  .scroll-down {
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    transform: translateX(50vw);
+    transform-origin: center center;
+    color: #fff;
+
+    .icon {
+      height: 2.5em;
+      width: 1.5em;
+
+      .scroller {
+        animation: scrollDownMove .8s ease-in-out alternate infinite;
+      }
+    }
+
+  }
+}
+
+
+@keyframes scrollDownMove {
+  from {
+    transform: translateY(-.15em);
+  }
+  to {
+    transform: translateY(.65em);
+  }
+}
+
+@include mq($until: lg) {
+  .jumbo .inner {
+    max-width: 80vw;
+    padding: 0;
+  }
+  .jumbo .inner h1 {
+    img {
+      max-width: 100%;
+    }
+
+    font-size: 1.5rem;
+  }
+}

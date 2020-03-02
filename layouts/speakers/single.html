@@ -10,7 +10,7 @@
 			<ul class="socials">
 				{{ range .Page.Params.socials }}
 				<li>
-					<a href="{{ .link }}" class="social" rel="noreferrer" target="_blank">
+					<a href="{{ .link }}" class="social" rel="noopener noreferrer" target="_blank">
 						{{ partial "icon.html" .icon }}
 						{{ .name }}
 					</a>

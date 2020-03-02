@@ -16,7 +16,7 @@
 
 	<div class="info">
 		<div class="complexity">{{ .Params.level }}</div>
-		<div class="type type-{{ anchorize .Params.talkType }}">{{ .Params.talkType }}</div>
+		<div class="type type-{{ anchorize .Params.format }}">{{ .Params.format }}</div>
 
 		<div class="detail">
 			<ul class="speakers">
@@ -50,8 +50,11 @@
 		{{ if .Params.presentation }}
 		<a class="social-slides"
 		   href="{{ .Params.presentation }}"
-		   rel="noreferrer"
-		   target="_blank">Voir les slides</a>
+		   rel="noopener noreferrer"
+		   target="_blank">
+			{{ partial "icon.html" "slides" }}
+			Voir les slides
+		</a>
 		{{ end }}
 
 	</div>

@@ -1,0 +1,29 @@
+{{/*
+	usage {{ partial "picture" (dict "img" XXX "class" XXX "widths" (slice 500 320, ...))}}
+	argument: a dictionary
+	"img": mandartory, image path
+	"class": the picture class if any
+	"widths": array of sizes if any
+ */}}
+{{- $img := index . "img" }}
+{{- $imgName := index (split (path.Base $img) ".") 0 }}
+{{- $imgBase := path.Join (path.Dir $img) $imgName }}
+{{- $class := index . "class" }}
+{{- $widths := index . "widths" }}
+{{- $ext := path.Ext $img }}
+<picture {{ if $class }}class="{{ $class }}"{{ end }}>
+	{{ if $widths }}
+		{{ $max := 0 }}
+		{{ range $widths }}
+			{{ if (gt . $max) }}
+				{{ $max := . }}
+			{{ end }}
+	<source srcset="{{ $imgBase }}-{{.}}.webp" type="image/webp" media="(max-width: {{.}}px)">
+		{{ end }}
+	<source srcset="{{ $imgBase }}.webp" type="image/webp" media="(min-width: {{ $max }}px)">
+	{{ else }}
+	<source srcset="{{ $imgBase }}.webp" type="image/webp">
+	{{ end }}
+	<source srcset="{{ $img }}">
+	<img src="{{ $img }}" alt="">
+</picture>

@@ -1,5 +1,5 @@
 <a href="{{ .Permalink }}">
-	<h4>
+	<h4 title="{{ .Title }}">
 		{{ .Title }}
 		<span class="language {{ anchorize .Params.language }}"></span>
 	</h4>
@@ -7,21 +7,36 @@
 	<hr>
 
 	<div class="info">
+
 		{{ if .Params.tags }}
 		<div class="tags">
 			{{ range .Params.tags }}
-			<span>{{ . }}</span>
+			{{ range first 1 (where $.Site.Data.categories "key" .) }}
+			<span>{{ .name }}</span>
+			{{ end }}
 			{{ end }}
 		</div>
 		{{ end }}
 
 		{{ if .Params.level }}
-		<div class="complexity">{{ .Params.level }}</div>
+		<div class="complexity" title="{{ .Params.level }}">
+			<svg><use xlink:href="#level-{{ .Params.level }}"></use></svg>
+		</div>
 		{{ end }}
+
+		{{ if .Params.presentation }}
+		<div class="presentation">{{ partial "icon.html" "slides" }}</div>
+		{{ end }}
+
+		{{ if .Params.videoId }}
+		<div class="video">{{ partial "icon.html" "youtube" }}</div>
+		{{ end }}
+
 	</div>
 
+
 	{{ if .Params.speakers }}
-	<ul class="speakers">
+	<ul class="speakers {{ if eq 1 (len .Params.speakers) }}single{{ else }}multi{{ end }}">
 		{{ range where $.Site.RegularPages "Params.key" "in" .Params.speakers }}
 		<li class="speaker">
 			<div class="speaker-img" style="background-image: url({{ .Params.photoURL }});"></div>

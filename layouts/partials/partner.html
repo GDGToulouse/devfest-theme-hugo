@@ -1,4 +1,6 @@
-<a class="partner"
-   href="{{ .URL }}"
-   title="{{ .Title }}"
-   style="background-image: url({{ .Params.logo }});">{{ .Title }}</a>
+{{- $path := path.Join "images" "partners" .Params.category .Params.key }}
+{{- $img := printf "%s.%s" (relURL $path) "png" }}
+<a class="partner" href="{{ .URL }}" title="{{ .Title }}">
+{{ partial "picture" (dict "img" $img "ext" "png") }}
+<span class="visually-hidden">{{ .Title }}</span>
+</a>

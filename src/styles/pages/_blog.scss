@@ -1,0 +1,94 @@
+.page.blog {
+  .hero {
+    .img {
+      display: block;
+      min-height: 45vmin;
+      max-height: 45vmin;
+      overflow: hidden;
+
+      &> * {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+      }
+    }
+
+    .image-info {
+      margin: -1.5em 1em;
+      opacity: .5;
+
+      &.dark {
+        color: #000;
+        text-shadow: 0 1px hsla(0, 100%, 100%, .5);
+      }
+      &.light {
+        color: #fff;
+        text-shadow: 0 1px rgba(0, 0, 0, .5);
+      }
+    }
+
+    h1 {
+      color: var(--toc-text);
+      padding-left: 0;
+      padding-right: 0;
+      small {
+        display: block;
+      }
+    }
+  }
+
+  main h1, main .content {
+    max-width: var(--theJdrSize);
+    margin: 0 auto;
+  }
+
+  .content {
+    padding-left: 0;
+    padding-right: 0;
+    margin: 2rem var(--container-margin);
+
+    @include mq($until: md) {
+      margin: 1rem;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .centered-img {
+      text-align: center;
+      margin: var(--space-3) 0;
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+      color: var(--toc-text);
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    h1, h2, h3 {
+      margin-top: 1.25rem; // 10px
+      margin-bottom: 0.625rem; // 10px
+    }
+
+    h4, h5, h6 {
+      margin-top: 0.625rem; // 10px
+      margin-bottom: 0.625rem; // 10px
+    }
+
+    p {
+      text-align: justify;
+      margin-bottom: 1.5rem;
+      line-height: 1.7rem;
+    }
+
+    ul {
+      margin-left: 1rem;
+
+      li {
+        line-height: 1.7rem;
+      }
+    }
+  }
+}

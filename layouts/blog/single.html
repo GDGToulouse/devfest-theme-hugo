@@ -1,16 +1,22 @@
 {{ define "main" }}
 
 <div class="hero" >
-	<div class="img" style="color: {{ .Params.color | default "#fff" }};background-image: url({{ .Params.image }})"></div>
-
+	{{ partial "picture" (dict "img" .Params.image "class" "img" "widths" (slice 540 720 960 1140) )}}
+	{{ if .Params.imageInfo }}
+	<div class="image-info {{ .Params.infoClass | default "light" }}">
+		{{- .Params.imageInfo }}
+	</div>
+	{{ end }}
+	
 	<div class="description">
 		<h1>
 			<span>{{ .Title }}</span>
 			<small>{{ .Params.brief }}</small>
 		</h1>
-<!--
+		{{- if .Params.toc }}
 		<hr>
-		{{ .TableOfContents }} -->
+		{{ .TableOfContents }} 
+		{{ end }}
 	</div>
 </div>
 

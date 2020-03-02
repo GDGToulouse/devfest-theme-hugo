@@ -70,6 +70,7 @@ googleAnalytics = "UA-XXXXXXXX-X"
     manifest = "/manifest.json"
     safariPinnedTab = "/safari-pinned-tab.svg"
     themeColor = "#673ab7"
+    googleWebmasterKey = "googleXXXXXXX" # https://support.google.com/webmasters/answer/9008080#html_verification
 
 [params.logos]
     jumbo = "/images/logos/devfest_color_text.png"

@@ -3,7 +3,7 @@
 
 		<div class="footer-header">
 			<div class="share">
-				<header>{{ i18n "footer_share" }}</header>
+				<div class="header">{{ i18n "footer_share" }}</div>
 				<ul class="social-list">
 					{{ range .Site.Data.footer.share }}
 					<li>
@@ -13,16 +13,16 @@
 				</ul>
 			</div>
 			<div class="blog">
-				<header>
+				<div class="header">
 					{{ i18n "footer_follow_blog" }} <a href="{{ "blog/" | relLangURL }}">{{ i18n "footer_follow_blog_blog" }}</a>
-				</header>
+				</div>
 			</div>
 			<div class="follow">
-				<header>{{ i18n "footer_follow_us" }}</header>
+				<div class="header">{{ i18n "footer_follow_us" }}</div>
 				<ul class="social-list">
 					{{ range .Site.Data.footer.follow }}
 					<li>
-						<a href="{{ .url }}" class="social" rel="noreferrer" target="_blank">
+						<a href="{{ .url }}" class="social" rel="noopener noreferrer" target="_blank">
 							{{ partial "icon.html" .name }}
 							{{ .name }}
 						</a>
@@ -43,12 +43,12 @@
 		<div class="footer-content">
 			{{ range .Site.Data.footer.content }}
 			<section>
-				<header>{{ i18n .title }}</header>
+				<div class="header">{{ i18n .title }}</div>
 				{{ if .links }}
 				<ul>
 					{{ range .links }}
 					<li>
-						<a href="{{ .url }}" {{ if .newTab }}target="_blank" rel="noopener" {{end}}>
+						<a href="{{ .url }}" {{ if .newTab }}target="_blank" rel="noopener noreferrer" {{end}}>
 							{{ if .nameKey }}
 							{{ i18n .nameKey }}
 							{{ else }}
@@ -63,10 +63,10 @@
 			{{ end }}
 			{{ if .Site.Params.subscriptionUrl }}
 			<section class="subscribe">
-				<header>{{ i18n "newsletter" }}</header>
+				<div class="header">{{ i18n "newsletter" }}</div>
 				<p>{{ i18n "subscribe_notice" }}</p>
 				<a href="{{ .Site.Params.subscriptionUrl }}"
-				   class="btn" rel="noreferrer" target="_blank">
+				   class="btn" rel="noopener noreferrer" target="_blank">
 					{{ partial "icon.html" "subscribe" }}
 					{{- i18n "subscribe_action" -}}
 				</a>
