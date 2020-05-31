@@ -22,7 +22,7 @@ if (workbox) {
           maxEntries: 20, // Cache only 20 images.
           maxAgeSeconds: 7 * 24 * 60 * 60, // Cache for a maximum of a week.
         })
-      ],
+      ]
     })
   );
 
@@ -31,7 +31,7 @@ if (workbox) {
     /^https:\/\/fonts\.googleapis\.com/,
     new workbox.strategies.StaleWhileRevalidate({
       cacheName: 'google-fonts-stylesheets',
-    }),
+    })
   );
 
   // Cache the underlying font files with a cache-first strategy for 1 year.
@@ -46,9 +46,9 @@ if (workbox) {
         new workbox.expiration.Plugin({
           maxAgeSeconds: 60 * 60 * 24 * 365,
           maxEntries: 30,
-        }),
-      ],
-    }),
+        })
+      ]
+    })
   );
 
 
