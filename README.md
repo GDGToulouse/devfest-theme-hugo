@@ -350,8 +350,8 @@ A speaker should have these params :
 id: jane_doe
 name: Mme Jane Doe
 company: Super Company
-featured: false
-photo: /images/speakers/jane_doe.jpg
+feature: false
+photoURL: /images/speakers/jane_doe.jpg
 socials:
   - icon: twitter
     link: 'https://twitter.com/jane_doe'
