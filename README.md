@@ -380,7 +380,7 @@ level: Beginner
 tags:
   - Category
 presentation: URL of slides
-videoId: Youtub video id
+videoId: Youtube video id
 speakers:
   - speaker id
 format: Keynote
