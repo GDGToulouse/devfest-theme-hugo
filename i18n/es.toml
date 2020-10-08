@@ -1,0 +1,102 @@
+##########
+# Header #
+##########
+
+[language_switch]
+other = "Cambiar a"
+
+########
+# Home #
+########
+
+[home_venue]
+other = "El lugar"
+
+[home_location_direction]
+other = "Dirección"
+
+[home_tickets_action]
+other = "Compre el boleto"
+
+[home_tickets_soldout]
+other = "Agotado"
+
+[home_tickets_close]
+other = "No está disponible."
+
+[home_partners]
+other = "Socios"
+
+##########
+# Footer #
+##########
+
+[footer_share]
+other = "Comparte"
+
+[facebook_share_label]
+other = "Compartir en Facebook"
+
+[twitter_share_text]
+other = "Ven y únete a nosotros en @DevFestToulouse la inevitable conferencia para desarrolladores de software en Toulouse, Francia #DevFestToulouse"
+
+[twitter_share_label]
+other = "Compartir en Twitter"
+
+[footer_follow_blog]
+other = "Siga nuestro"
+
+[footer_follow_blog_blog]
+other = "blog"
+
+[footer_follow_us]
+other = "Síganos"
+
+[footer_about]
+other = "Acerca de"
+
+[footer_previous_edition]
+other = "Ediciones anteriores"
+
+[footer_become_partners]
+other = "Conviértete en socio"
+
+[footer_become_partners_label]
+other = "Propuesta de asociación"
+
+[footer_coc]
+other = "Código de Conducta"
+
+[footer_documents]
+other = "Documentos"
+
+################
+# Subscription #
+################
+[newsletter]
+other = "Boletín de noticias"
+
+[subscribe_notice]
+other = "No hay spam, sólo las últimas noticias y actualizaciones!"
+
+[subscribe_action]
+other = "Suscríbase a"
+
+############
+# Partners #
+############
+[partner_who]
+other = "¿Quiénes son ustedes?"
+
+[partner_what]
+other = "¿Qué estás haciendo?"
+
+[partner_mission]
+other = "¿Cuál es su misión?"
+
+[partners_socials]
+other = "¿Dónde te encuentro?"
+
+[partners_jobs]
+other = "Estás reclutando:"
+

@@ -4,7 +4,11 @@
 
 <body class="{{ .Kind }} {{ anchorize .URL }} {{ .Section }}">
 
+{{ if (fileExists "static/icons.svg") -}}
 {{ readFile "static/icons.svg" | safeHTML }}
+{{- else if (fileExists "themes/devfest-theme-hugo/static/icons.svg") -}}
+{{ readFile "themes/devfest-theme-hugo/static/icons.svg" | safeHTML }}
+{{- end }}
 
 {{ block "header" . }}
 {{ partial "header.html" . }}

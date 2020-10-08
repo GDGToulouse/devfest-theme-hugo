@@ -78,6 +78,9 @@
       small {
         font-size: .75em;
         font-weight: normal;
+        max-height: 1.5rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
   }
@@ -117,7 +120,6 @@
       }
 
       h4 {
-        color: white;
         text-shadow: 2px 1px 1px black;
       }
     }
@@ -152,6 +154,7 @@
       }
 
       h4 {
+        color: var(--base);
         text-shadow: 2px 1px 1px white;
         display: flex;
         justify-content: space-between;

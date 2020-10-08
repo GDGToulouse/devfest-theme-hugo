@@ -1,7 +1,7 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
 <div class="album">
 {{ range (split (.Get "images") ",") }}
-{{ partial "picture" (dict "img" . "class" "img" "widths" (slice 540 720 960 1140)) }}
+{{ partial "picture" (dict "img" . "class" "img" "widths" .Site.Params.pictureSizes.album) }}
 {{ end }}
 <div class="inner">{{ .Inner }}</div>
 

@@ -1,10 +1,10 @@
-{{- if (eq .name "facebook") -}}
+{{- if (eq (lower .name) "facebook") -}}
 <a href="https://www.facebook.com/sharer.php?u={{ .url }}"
   class="social" rel="noopener noreferrer" target="_blank">
 	{{ partial "icon.html" .name }}
 	<span class="visually-hidden">{{ i18n "facebook_share_label" }}</span>
 </a>
-{{- else if (eq .name "twitter") -}}
+{{- else if (eq (lower .name) "twitter") -}}
 {{ $text := i18n "twitter_share_text" }}
 <a href="https://twitter.com/share?url={{ .url }}&text={{ $text }}"
   class="social" rel="noopener noreferrer" target="_blank">

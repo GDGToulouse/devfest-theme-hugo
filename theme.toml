@@ -5,7 +5,7 @@ description = "A theme for a conference website. Created for DevFest Toulouse 20
 homepage = "https://github.com/GDGToulouse/devfest-theme-hugo"
 tags = ["conference", "DevFest"]
 features =  ["conference", "responsive", "l10n", "google-analytics"]
-min_version = "0.50"
+min_version = "0.76"
 
 [author]
   name = "GDG Toulouse"

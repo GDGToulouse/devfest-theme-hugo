@@ -3,11 +3,17 @@
 ##########
 
 [language_switch]
-other = "Basculer en"
+other = "Switch to"
 
 ########
 # Home #
 ########
+
+[home_venue]
+other = "The venue"
+
+[home_location_direction]
+other = "Direction"
 
 [home_tickets_action]
 other = "Buy Ticket"
@@ -18,8 +24,8 @@ other = "Sold Out"
 [home_tickets_close]
 other = "Not available"
 
-[home_location_direction]
-other = "Direction"
+[home_partners]
+other = "Partners"
 
 ##########
 # Footer #
@@ -50,7 +56,7 @@ other = "Follow us"
 other = "About"
 
 [footer_previous_edition]
-other = "Previous edition"
+other = "Previous editions"
 
 [footer_become_partners]
 other = "Become partner"
@@ -61,6 +67,8 @@ other = "Partnership Proposition"
 [footer_coc]
 other = "Code of Conduct"
 
+[footer_documents]
+other = "Documents"
 
 ################
 # Subscription #
@@ -73,3 +81,22 @@ other = "No spam, only the latest news and updates!"
 
 [subscribe_action]
 other = "Subscribe"
+
+############
+# Partners #
+############
+[partner_who]
+other = "Who are you?"
+
+[partner_what]
+other = "What are you doing?"
+
+[partner_mission]
+other = "What is your mission?"
+
+[partners_socials]
+other = "Where to find you?"
+
+[partners_jobs]
+other = "You are recruiting:"
+

@@ -49,7 +49,7 @@
 		{{ end }}
 
 		{{ range $index, $room := .rooms }}
-		{{ range where (where $.Site.Data.rooms "key" $room.room) "skip" "!=" true }}
+		{{ range where (where $.Site.Data.rooms "key" $room.room) "hidden" "!=" true }}
 		<!-- Room {{ $room.room }} -->
 		<div class="room {{ if (modBool $index 2)}}even{{end}}" style="--room: {{ $index }};">
 			<h3>

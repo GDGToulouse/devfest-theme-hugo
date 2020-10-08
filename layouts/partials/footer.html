@@ -31,9 +31,9 @@
 				</ul>
 			</div>
 			<div class="email">
-				<a href="mailto:{{ .Site.Params.email }}">
+				<a href="mailto:{{ .Site.Data.footer.contact }}">
 					{{ partial "icon.html" "email" }}
-					{{- .Site.Params.email -}}
+					{{- .Site.Data.footer.contact -}}
 				</a>
 			</div>
 		</div>

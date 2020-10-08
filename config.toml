@@ -1,0 +1,9 @@
+
+
+[params]
+map="/images/map.png"
+
+[params.pictureSizes] 
+location = []
+hero = []
+album = []

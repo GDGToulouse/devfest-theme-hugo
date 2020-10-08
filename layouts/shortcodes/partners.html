@@ -5,17 +5,22 @@
 </div>
 
 {{ $site := .Site }}
+{{ $allPartners := where .Site.AllPages "Section" "partners" }}
 {{ range (split (.Get "categories") ",") }}
-<section class="partners-group partner-{{ . }}">
+{{ $key := . }}
+{{ range first 1 (where $.Site.Data.partners "key" $key) }}
+{{ $label := .name }}
+<section class="partners-group partner-{{ $key }}">
 <h3 class="fancy">
-<span>{{ . }}</span>
+<span>{{ $label }}</span>
 </h3>
 <ul>
-	{{ $partners := where $site.AllPages "Params.category" . }}
+{{ $partners := where $allPartners "Params.category" $key }}
 {{ range sort $partners ".Params.order" "asc" }}
 <li>{{ partial "partner.html" . }}</li>
 {{ end }}
 </ul>
 </section>
+{{ end }}
 {{ end }}
 </section>

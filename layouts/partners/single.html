@@ -1,7 +1,6 @@
 {{ define "main" }}
 
 <section class="header">
-
 	{{ $img := relURL (path.Join "images" "partners" .Params.category .Params.key) }}
 	{{ partial "picture" (dict "img" $img "class" "card") }}
 
@@ -15,16 +14,31 @@
 	{{ .Content }}
 </section>
 
-{{ if .Params.why }}
-<section class="why" {{ if .Params.lang }}lang="{{ .Params.lang }}"{{ end }}>
-	<h2>{{index .Site.Data.partner .Params.lang "why" }}</h2>
-	<p>{{ .Params.why }}</p>
+{{ if .Params.who }}
+<section class="who" {{ if .Params.lang }}lang="{{ .Params.lang }}"{{ end }}>
+	<h2>{{ i18n "partner_who" }}</h2>
+	<p>{{ .Params.who }}</p>
 </section>
 {{ end }}
 
+{{ if .Params.what }}
+<section class="what" {{ if .Params.lang }}lang="{{ .Params.lang }}"{{ end }}>
+	<h2>{{ i18n "partner_what" }}</h2>
+	<p>{{ .Params.what }}</p>
+</section>
+{{ end }}
+
+{{ if .Params.mission }}
+<section class="mission" {{ if .Params.lang }}lang="{{ .Params.lang }}"{{ end }}>
+	<h2>{{ i18n "partner_mission" }}</h2>
+	<p>{{ .Params.mission }}</p>
+</section>
+{{ end }}
+
+
 {{ if .Params.socials }}
 <section class="socials">
-	<h2>{{index .Site.Data.partner .Params.lang "socials" }}</h2>
+	<h2>{{ i18n "partners_socials" }}</h2>
 	<ul>
 		{{ range .Page.Params.socials }}
 		<li>
@@ -38,9 +52,10 @@
 </section>
 {{ end }}
 
+
 {{ if .Params.jobs }}
 <section class="jobs" {{ if .Params.lang }}lang="{{ .Params.lang }}"{{ end }}>
-	<h2>{{index .Site.Data.partner .Params.lang "jobs" }}</h2>
+	<h2>{{i18n "partners_jobs" }}</h2>
 	<ul>
 		{{ range .Page.Params.jobs }}
 		<li class="job">

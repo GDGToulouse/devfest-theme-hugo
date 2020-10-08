@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <div class="hero" >
-	{{ partial "picture" (dict "img" .Params.image "class" "img" "widths" (slice 540 720 960 1140) )}}
+	{{ partial "picture" (dict "img" .Params.image "class" "img" "widths" .Site.Params.pictureSizes.hero)}}
 	{{ if .Params.imageInfo }}
 	<div class="image-info {{ .Params.infoClass | default "light" }}">
 		{{- .Params.imageInfo }}

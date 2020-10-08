@@ -1,25 +1,36 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
 <section class="location">
 
-	{{ partial "picture" (dict "img" (.Get "image") "class" "map" "widths" (slice 540 720 960 1140)) }}
+	{{ partial "picture" (dict "img" .Site.Params.map "class" "map" "widths" .Site.Params.pictureSizes.location) }}
 
 	<div class="resolution"></div>
 
 	<div class="description">
-		<div class="inner">
-			{{ .Inner }}
-		</div>
-
+		<h2>{{ i18n "home_venue" }}</h2>		
+		
+		{{ with .Site.Data.venue.geolocation }}
 		<div class="direction">
-			{{ .Get "address" }}
-
-			<a href="https://www.google.com/maps/dir/?api=1&destination={{ .Get "latitude" }},{{ .Get "longitude" }}"
+			<a href="https://www.google.com/maps/dir/?api=1&destination={{ .lat }},{{ .lng }}"
 				class="btn btn-icon-only" target="_blank" rel="noopener noreferrer"
 			   aria-label="{{ i18n "home_location_direction" }}">
 				{{ partial "icon.html" "direction" }}
 			</a>
-
 		</div>
+		{{ end }}
+		
+		{{ with .Site.Data.venue }}
+		<h3>{{ .title }}</h3>
+		{{ end }}
+
+		{{ with .Site.Data.venue.address }}
+		<address>
+			<div class="line1">{{ .line1 }}</div>
+			<div class="line2">{{ .line2 }}</div>
+			<div><span class="zipcode">{{ .zipcode }}</span> <span class="city">{{ .city }}</span></div>
+			<div class="country">{{ .country }}</div>
+		</address>
+		{{ end }}
+		
 
 	</div>
 </section>

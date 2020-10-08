@@ -1,5 +1,5 @@
 {{- $path := path.Join "images" "partners" .Params.category .Params.key }}
-{{- $img := printf "%s.%s" (relURL $path) "png" }}
+{{- $img := .Params.logo }}
 <a class="partner" href="{{ .URL }}" title="{{ .Title }}">
 {{ partial "picture" (dict "img" $img "ext" "png") }}
 <span class="visually-hidden">{{ .Title }}</span>

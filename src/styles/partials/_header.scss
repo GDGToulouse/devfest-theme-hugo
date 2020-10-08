@@ -143,8 +143,16 @@ body > header {
           content: '🇫🇷';
         }
 
-        &.lang-gb::before {
+        &.lang-en::before {
           content: '🇬🇧';
+        }
+
+        &.lang-de::before {
+          content: '🇩🇪';
+        }
+
+        &.lang-es::before {
+          content: '🇪🇸';
         }
       }
 

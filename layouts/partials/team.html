@@ -1,11 +1,11 @@
-{{- $photo := relURL (path.Join "images" "team" .key) }}
+{{- $photo := relURL .Params.photo }}
 {{ partial "picture" (dict "img" $photo "class" "photo" ) }}
 
 <div class="label">
-	<h3>{{ .title }}</h3>
-	<h4>{{ .subtitle }}</h4>
+	<h3>{{ .Params.title }}</h3>
+	<h4>{{ .Params.subtitle }}</h4>
 	<ul class="socials">
-		{{ range .socials }}
+		{{ range .Params.socials }}
 		<li>
 			<a class="social" rel="noopener noreferrer" href="{{ .link }}" target="_blank">
 				{{ partial "icon.html" (lower .name) }}

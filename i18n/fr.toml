@@ -9,6 +9,12 @@ other = "Switch to"
 # Home #
 ########
 
+[home_venue]
+other = "Le lieu"
+
+[home_location_direction]
+other = "Itinéraire"
+
 [home_tickets_action]
 other = "Billeterie"
 
@@ -18,8 +24,8 @@ other = "Rupture de stock"
 [home_tickets_close]
 other = "Non disponible"
 
-[home_location_direction]
-other = "Itinéraire"
+[home_partners]
+other = "Partenaires"
 
 ##########
 # Footer #
@@ -50,7 +56,7 @@ other = "Suivez nous sur"
 other = "A propos"
 
 [footer_previous_edition]
-other = "Précédente édition"
+other = "Précédente éditions"
 
 [footer_become_partners]
 other = "Devenir partenaire"
@@ -60,6 +66,9 @@ other = "Proposition de partenariat"
 
 [footer_coc]
 other = "Code de conduite"
+
+[footer_documents]
+other = "Documents"
 
 ################
 # Subscription #
@@ -72,3 +81,21 @@ other = "Pas de spam, juste les dernières infos !"
 
 [subscribe_action]
 other = "Souscrire"
+
+############
+# Partners #
+############
+[partner_who]
+other = "Qui êtes vous ?"
+
+[partner_what]
+other = "Que faisez vous ?"
+
+[partner_mission]
+other = "Quel est votre mission ?"
+
+[partners_socials]
+other = "Oú vous trouvez ?"
+
+[partners_jobs]
+other = "Vous recrutez :"

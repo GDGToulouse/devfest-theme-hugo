@@ -1,15 +1,17 @@
 {{/*
-	usage {{ partial "picture" (dict "img" XXX "class" XXX "widths" (slice 500 320, ...))}}
+	usage {{ partial "picture" (dict "img" XXX "class" XXX "widths" (slice 500 320, ...) "webp" bool)}}
 	argument: a dictionary
 	"img": mandatory, image path
 	"class": the picture class if any
 	"widths": array of sizes if any
+	"webp": if we use a webp format
  */}}
 {{- $img := index . "img" }}
 {{- $imgName := index (split (path.Base $img) ".") 0 }}
 {{- $imgBase := path.Join (path.Dir $img) $imgName }}
 {{- $class := index . "class" }}
 {{- $widths := index . "widths" }}
+{{- $webp := index . "webp" }}
 {{- $ext := path.Ext $img }}
 <picture {{ if $class }}class="{{ $class }}"{{ end }}>
 	{{ if $widths }}
@@ -21,7 +23,7 @@
 	<source srcset="{{ $imgBase }}-{{.}}.webp" type="image/webp" media="(max-width: {{.}}px)">
 		{{ end }}
 	<source srcset="{{ $imgBase }}.webp" type="image/webp" media="(min-width: {{ $max }}px)">
-	{{ else }}
+	{{ else if $webp }}
 	<source srcset="{{ $imgBase }}.webp" type="image/webp">
 	{{ end }}
 	<source srcset="{{ $img }}">
