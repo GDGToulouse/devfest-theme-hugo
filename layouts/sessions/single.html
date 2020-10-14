@@ -1,7 +1,7 @@
 {{ define "main" }}
 <section class="talk">
 
-	<header class="tag-{{ anchorize (delimit .Params.tags "" ) }}">
+	<header class="tag-{{ anchorize (delimit (.Params.tags | default (slice))  "" ) }}">
 	<div class="tags">
 		{{ range .Params.tags }}
 			{{ range first 1 (where $.Site.Data.categories "key" .) }}
