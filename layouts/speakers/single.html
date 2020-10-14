@@ -26,7 +26,7 @@
 			{{ range where .Site.RegularPages "Params.speakers" "intersect" (slice .Page.Params.key) }}
 			<li>
 				<a href="{{ .Permalink }}" class="visually-hidden">{{ .Title }}</a>
-				<a href="{{ .Permalink }}" class="talk tag-{{ anchorize (delimit .Params.tags "" ) }}">
+				<a href="{{ .Permalink }}" class="talk tag-{{ anchorize (delimit (.Params.tags | default (slice))  "" ) }}">
 				<div class="tags">
 					{{ range .Params.tags }}
 						{{ range first 1 (where $.Site.Data.categories "key" .) }}
