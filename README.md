@@ -8,6 +8,8 @@ See a real usage here: <https://2019.devfesttoulouse.fr/>
 
 ## Building my conference site from scratch
 
+Note that requires the [Node](https://nodejs.org/en/) toolchains
+
 1. Install [Hugo](https://gohugo.io)
 2. Create a new site by running:
 
@@ -16,6 +18,11 @@ hugo new site my-conf
 cd my-conf
 mkdir themes
 git submodule add https://github.com/GDGToulouse/devfest-theme-hugo.git themes/devfest-theme-hugo
+
+pushd themes/devfest-theme-hugo
+npm install
+npm run build
+popd
 ```
 
 3. Then edit your `config.toml` file with
