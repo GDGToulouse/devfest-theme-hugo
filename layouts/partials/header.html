@@ -24,10 +24,10 @@
 					{{ partial "icon.html" "external" }}
 					{{ .Name }}
 				</a>
-				{{ else if (isset .Page.Params "icon") }}
+				{{ else if (isset .Params "icon") }}
 				<a href="{{ .URL | relLangURL }}" class="link-icon" title="{{ .Name }}" aria-label="{{ .Name }}">
 					<span class="visually-hidden">{{ .Name }}</span>
-					{{ partial "icon.html" .Page.Params.icon }}
+					{{ partial "icon.html" .Params.icon }}
 				</a>
 				{{ else }}
 				<a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
