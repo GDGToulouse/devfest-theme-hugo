@@ -25,12 +25,12 @@
 					{{ .Name }}
 				</a>
 				{{ else if (isset .Params "icon") }}
-				<a href="{{ .URL | relLangURL }}" class="link-icon" title="{{ .Name }}" aria-label="{{ .Name }}">
+				<a href="{{ .URL }}" class="link-icon" title="{{ .Name }}" aria-label="{{ .Name }}">
 					<span class="visually-hidden">{{ .Name }}</span>
 					{{ partial "icon.html" .Params.icon }}
 				</a>
 				{{ else }}
-				<a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+				<a href="{{ .URL }}">{{ .Name }}</a>
 				{{ end }}
 				</li>
 				{{ end }}
